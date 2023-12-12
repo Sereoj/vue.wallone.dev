@@ -13,8 +13,4 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  @import url('assets/style/styles.scss');
-  body{
-    background: $main-color;
-  }
 </style>
