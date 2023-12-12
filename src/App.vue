@@ -1,16 +1,20 @@
 <template>
-  <LoginView/>
+  <AuthLayout/>
 </template>
 
 <script>
-import LoginView from './components/pages/LoginView.vue'
+import AuthLayout from "@/layouts/AuthLayout";
 
 export default {
   name: 'App',
   components: {
-    LoginView
+    AuthLayout,
   }
 }
 </script>
-<style>
+<style lang="scss" scoped>
+  @import url('assets/style/styles.scss');
+  body{
+    background: $main-color;
+  }
 </style>
