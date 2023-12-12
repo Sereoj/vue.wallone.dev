@@ -27,7 +27,7 @@ export default {
 
 <style lang="sass" scoped>
 @import '@/assets/style/variables.sass'
-
+@import '@/assets/style/fonts.sass'
 
 a 
   text-decoration: none
@@ -44,12 +44,11 @@ a
 .logo-name
   @extend %logo-font
 
-.brand-name 
-  font-family: Roboto
+.brand-name
+  font-family: 'Roboto', serif, Arial
   font-size: 16px
 
 .auth
   background: url('@/assets/images/auth.jpg')
-  
   height: 100vh
 </style>
