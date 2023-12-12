@@ -1,13 +1,17 @@
-/* Все шрифры и настройки к шрифтам
- *
- *
+/* 
+ *  Все шрифры и настройки к шрифтам
  *  */
-
+@import './variables.sass'
 
 $font-path: "@/assets/fonts/"
 
+
+$primary-font: 'Roboto'
+$logo-font: 'Fredoka'
+
 $default-font-size-label: 24px
 $default-font-size: 20px
+$default-font-p: 16px
 
 
 @font-face
@@ -16,14 +20,24 @@ $default-font-size: 20px
   font-weight: 400
 
 @font-face
-  font-family: 'Roboto'
+  font-family: $primary-font
   src: url($font-path + '/Roboto-Regular.ttf')
   font-weight: 400
 
-%logo-font
-  font-family: Fredoka, sans-serif, Arial
-  font-size: 22px
+%default
   font-style: normal
   font-weight: 400
   line-height: normal
+
+%logo-font
+  font-family: $logo-font
+  font-size: 22px
   letter-spacing: 0.44px
+
+%h2
+  color: $primary
+  font-family: $primary-font
+
+%p
+  font-family: $primary-font
+  font-size: $default-font-p

@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid row">
-    <div class="col-3 auth">
+    <div class="col-5 auth">
       <div class="logo">
         <div class="d-flex align-items-center">
           <img src="@/assets/logo.png" alt="Logo" height="52">
@@ -12,7 +12,7 @@
       </div>
     </div>
   
-    <div class="container col-9 m-auto">
+    <div class="container col-7 m-auto">
       <login-view />
     </div>
   </div>
@@ -26,15 +26,11 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '@/assets/style/variables.sass'
-@import '@/assets/style/fonts.sass'
+@import '@/assets/style/styles.sass'
 
 a 
-  text-decoration: none
   color: $primary
-  font-style: normal
-  font-weight: 400
-  line-height: normal
+  @extend %default
 
 .logo 
   margin: 38px 0 0 48px
@@ -45,10 +41,12 @@ a
   @extend %logo-font
 
 .brand-name
-  font-family: 'Roboto', serif, Arial
-  font-size: 16px
+  font-size: $default-font-p
 
 .auth
-  background: url('@/assets/images/auth.jpg')
+  background: url('@/assets/images/auth.jpg') no-repeat
+  background-position: center
+  background-size: cover
+  object-fit: cover
   height: 100vh
 </style>

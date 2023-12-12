@@ -1,5 +1,5 @@
-@import "variables.sass"
 @import "reset.scss"
+@import "variables.sass"
 @import "fonts.sass"
 
 /* Основной файл подключение всех стилей
@@ -10,10 +10,44 @@
 body
     background: $background
     color: $primary
+    @extend %p
+
+.btn
+    height: 40px
+    min-width: 224px
+    $color: $primary
+    font-size: $default-font-size
+    padding: 0
+
+.btn-primary
+    background: $seccond
+
+.btn-primary:hover
+    background: $btn-hover
 
 label
-    font-family: 'Roboto', Arial, sans-serif
-    color: $primary
     font-size: $default-font-size-label
-    font-weight: 400
-    word-wrap: break-word
+
+.form-control
+    border: 0
+    background: $componentColor
+    color: $primary
+
+.form-control:focus 
+    box-shadow: 0 0 0 0 2px $seccond
+    background: $componentColor
+    color: $primary
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+  &::placeholder
+    @content
+
+.form-control
+  @include placeholder
+    color: $primary2
