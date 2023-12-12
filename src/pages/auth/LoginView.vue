@@ -1,13 +1,9 @@
 <template>
-  <div>
-    <ul>
-      <li class="active"><a href="#">Авторизация</a></li>
-      <li><a href="#">Регистрация</a></li>
-    </ul>
-    <text-box name="login" placeholder="Привет"/>
+  <div class="container">
+    <text-box name="login" title="Логин" placeholder="Привет"/>
     <pass-word/>
 
-    <button>Вход</button>
+    <input type="submit" class="btn btn-primary" value="Войти" />
   </div>
 </template>
 

@@ -9,6 +9,7 @@
     "start": "webpack-dev-server --open --mode development"
   },
   "dependencies": {
+    "bootstrap": "^5.3.2",
     "core-js": "^3.8.3",
     "normalize-scss": "^8.0.0",
     "vue": "^3.3.11"
