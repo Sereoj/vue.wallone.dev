@@ -19,6 +19,14 @@ import TextBox from "@/components/elements/TextBox";
 import PassWord from "@/components/elements/PassWord";
 
 export default {
-  components: { PassWord, TextBox }
-}   
+  components: { PassWord, TextBox },
+  data() {
+    return {
+      //
+    };
+  },
+  mounted() {
+    document.title = 'Wallone • Авторизация'
+  }
+}
 </script>
