@@ -1,5 +1,5 @@
 <template>
-  <AuthLayout/>
+  <AuthLayout />
 </template>
 
 <script>
