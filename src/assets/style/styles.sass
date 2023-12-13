@@ -31,6 +31,7 @@ label
 .form-control
     border: 0
     background: $componentColor
+    height: 40px
     color: $primary
 
 .form-control:focus 
@@ -44,6 +45,8 @@ label
   &::-moz-placeholder
     @content
   &:-ms-input-placeholder
+    @content
+  &:-moz-placeholder
     @content
   &::placeholder
     @content

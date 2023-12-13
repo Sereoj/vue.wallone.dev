@@ -24,15 +24,16 @@ export default {
         font-size: $default-font-p
 
     .form-check-input
-        background: $componentColor
+        --bs-form-check-bg: $componentColor
+        background-color: $componentColor
         border: none
         height: 32px
         width: 32px
         margin: 0
         padding: 0
-    
+
     .form-check-input:checked
-        background: $componentColor
+        background-color: $componentColor
         color: $primary
         border: 2px solid $primary2
 

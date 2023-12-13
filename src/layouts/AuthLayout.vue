@@ -5,23 +5,25 @@
         <div class="d-flex align-items-center">
           <img src="@/assets/logo.png" alt="Logo" height="52">
           <div class="ms-2">
-            <a href="#" class="logo-name"><h1>Wallone</h1></a>
-            <a href="#" class="brand-name">#Brand</a>
+            <a href="/" class="logo-name"><h1>Wallone</h1></a>
+            <a href="/tags/popular" class="brand-name">#One Day Container</a>
           </div>
         </div>
       </div>
     </div>
   
     <div class="container col-7 m-auto">
-      <login-view />
+      <LoginView/>
+      <RegisterView hidden/>
     </div>
   </div>
 </template>
 
 <script>
 import LoginView from "@/pages/auth/LoginView";
+import RegisterView from "@/pages/auth/RegisterView";
 export default {
-  components: { LoginView }
+  components: {RegisterView, LoginView }
 }
 </script>
 
@@ -44,8 +46,7 @@ a
   font-size: $default-font-p
 
 .auth
-  background: url('@/assets/images/auth.jpg') no-repeat
-  background-position: center
+  background: url('@/assets/images/auth.jpg') no-repeat center
   background-size: cover
   object-fit: cover
   height: 100vh
