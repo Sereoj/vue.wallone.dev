@@ -1,49 +1,68 @@
 <template>
   <div class="container-fluid row">
     <div class="col-5 auth">
+     
       <div class="logo">
         <div class="d-flex align-items-center">
           <img src="@/assets/logo.png" alt="Logo" height="52">
-          <div class="ms-2">
-            <a href="/" class="logo-name"><h1>Wallone</h1></a>
-            <a href="/tags/popular" class="brand-name">#One Day Container</a>
+          <div class="ms-3">
+            <a href="/" class="logo__name">
+              <h1>Wallone</h1>
+            </a>
+            <a href="/tags/popular" class="logo__brand">#One Day Container</a>
           </div>
         </div>
       </div>
     </div>
-  
+
     <div class="container col-7 m-auto">
-      <LoginView/>
-      <RegisterView hidden/>
+      <!-- TODO: здесь располагается шапка с ссылками -->
+      <div class="col-10 m-auto">
+        <ul class="d-flex mb-5">
+          <li><router-link to="/login" id="tabLinkLogin" class="h2 active">Авторизация</router-link></li>
+          <li><router-link to="/register" id="tabLinkRegister" class="h2 ms-4">Регистрация</router-link></li>
+        </ul>
+
+        <!-- ! Отображение страниц регистрации, авторизации и т.п. -->
+        <router-view></router-view>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
-import LoginView from "@/pages/auth/LoginView";
-import RegisterView from "@/pages/auth/RegisterView";
 export default {
-  components: {RegisterView, LoginView }
+  components: {
+    //
+  }
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '@/assets/style/styles.sass'
+.h2 
+  @extend %h2
+  color: $primary2
 
-a 
+.active
   color: $primary
-  @extend %default
+  padding-bottom: 6px
+  border-bottom: 2px solid $seccond
 
 .logo 
   margin: 38px 0 0 48px
-  width: 150px
+  max-width: 15vw
   word-break: break-all
+  color: $primary
 
-.logo-name
+.logo__name
   @extend %logo-font
+  color: inherit
 
-.brand-name
+.logo__brand
   font-size: $default-font-p
+  color: inherit
 
 .auth
   background: url('@/assets/images/auth.jpg') no-repeat center
