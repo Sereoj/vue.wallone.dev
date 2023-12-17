@@ -21,6 +21,11 @@ const routes = [
     name: 'Forgot Password',
     component: () => import(/* webpackChunkName: "config" */ '@/pages/auth/ForgotView.vue')
   },
+  {
+    path: '/change-password',
+    name: 'Change Password',
+    component: () => import(/* webpackChunkName: "config" */ '@/pages/auth/ChangePasswordView.vue')
+  },
 ]
 
 const router = createRouter({
