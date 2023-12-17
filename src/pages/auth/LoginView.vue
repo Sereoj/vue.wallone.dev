@@ -1,12 +1,12 @@
 <template>
-      <TextBox name="login" title="Email или логин" placeholder="help@wallone.ru" />
+    <TextBox name="login" title="Email или логин" placeholder="help@wallone.ru" />
     <PassWord name="password" title="Пароль"/>
 
     <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня" checked />
 
     <div class="d-flex align-items-center mt-4">
       <input type="submit" class="btn btn-primary" value="Войти" />
-      <a href="/forgot-password" class="missing_pass ms-5">Забыли пароль?</a>
+      <router-link to="/forgot-password" class="missing_pass ms-5">Забыли пароль?</router-link>
     </div>
 </template>
 
