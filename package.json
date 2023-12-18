@@ -13,6 +13,7 @@
     "core-js": "^3.8.3",
     "normalize-scss": "^8.0.0",
     "vue": "^3.3.11",
+    "vue-adblock-detector": "^1.2.4",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
 <template>
+  <h2>Смена пароля</h2>
   <PassWord name="password" title="Пароль"/>
   <PassWord name="password_configuration" title="Повторите пароль"/>
   <div class="d-flex align-items-center mt-5">

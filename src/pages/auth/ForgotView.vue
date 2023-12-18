@@ -1,4 +1,5 @@
 <template>
+  <h2>Восстановление пароля</h2>
   <TextBox name="email" title="Email" placeholder="help@wallone.ru" />
   <div class="d-flex align-items-center mt-5">
     <input type="submit" class="btn btn-primary" value="Восстановить пароль" />
