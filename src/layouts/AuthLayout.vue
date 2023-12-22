@@ -1,10 +1,9 @@
 <template>
   <div class="container-fluid row">
     <div class="col-5 auth">
-     
       <div class="logo">
         <div class="d-flex align-items-center">
-          <img src="@/assets/logo.png" alt="Logo" height="52">
+          <img class="logo__image" src="@/assets/logo.png" alt="Logo">
           <div class="ms-3">
             <a href="/" class="logo__name">
               <h1>Wallone</h1>
