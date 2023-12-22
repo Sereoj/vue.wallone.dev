@@ -1,0 +1,73 @@
+@import "reset.scss"
+@import "variables.sass"
+@import "fonts.sass"
+
+/* Основной файл подключение всех стилей
+ * Стилизация базовых элементов
+ *
+ *  */
+
+body
+    background: $background
+    color: $primary
+    @extend %p
+
+.btn
+    height: 40px
+    min-width: 224px
+    $color: $primary
+    font-size: $default-font-size
+    padding: 0
+
+.btn-primary
+    background: $seccond
+
+.btn-primary:hover
+    background: $btn-hover
+
+label
+    font-size: $default-font-size-label
+
+.form-control
+    border: 0
+    background: $componentColor
+    height: 40px
+    color: $primary
+
+.form-control:focus
+    box-shadow: 0 0 0 1px $seccond
+    background: $componentColor
+    color: $primary
+
+input[type="checkbox"]
+    box-shadow: none
+
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::placeholder
+    @content
+
+.form-control
+  @include placeholder
+    color: $primary2
+
+.fs-16
+  font-size: $default-font-p
+
+.fs-20
+  font-size: $default-font-size
+
+.fs-24
+  font-size: $default-font-size-label
+
+.logo__image
+  height: 52px
+  width: 52px
