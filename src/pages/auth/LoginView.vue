@@ -29,9 +29,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import '@/assets/style/styles.sass'
 .missing_pass
-  font-size: $default-font-size-label
-  &:hover
-    color: $btn-hover
+  font-size: 24px
+
 </style>

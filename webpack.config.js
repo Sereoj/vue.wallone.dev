@@ -18,31 +18,31 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader'
             },
-            {
-                test: /.s[ac]ss$/i,
-                use: [
-                    'vue-style-loader',
-                    'css-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1
-                        },
-                    },
-                    'postcss-loader',
-                    'sass-loader',
-                    {
-                        loader: "sass-loader",
-                        options: {
-                            sourceMap: true,
-                            minimize: true,
-                            sassOptions: {
-                                outputStyle: "compressed",
-                            },
-                        }
-                    }
-                ]
-            },
+            // {
+            //     test: /.s[ac]ss$/i,
+            //     use: [
+            //         'vue-style-loader',
+            //         'css-loader',
+            //         {
+            //             loader: 'css-loader',
+            //             options: {
+            //                 importLoaders: 1
+            //             },
+            //         },
+            //         'postcss-loader',
+            //         'sass-loader',
+            //         {
+            //             loader: "sass-loader",
+            //             options: {
+            //                 sourceMap: true,
+            //                 minimize: true,
+            //                 sassOptions: {
+            //                     outputStyle: "compressed",
+            //                 },
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'url-loader',

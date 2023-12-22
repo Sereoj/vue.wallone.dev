@@ -4,7 +4,7 @@
      
       <div class="logo">
         <div class="d-flex align-items-center">
-          <img src="@/assets/logo.png" alt="Logo" height="52">
+          <img src="@/assets/logo.png" alt="Logo" height="84">
           <div class="ms-3">
             <a href="/" class="logo__name">
               <h1>Wallone</h1>
@@ -16,6 +16,7 @@
     </div>
 
     <div class="container col-7 m-auto">
+
       <!-- TODO: здесь располагается шапка с ссылками -->
       <div class="col-10 m-auto">
         <ul class="d-flex mb-5">
@@ -40,17 +41,18 @@ export default {
 </script>
 
 <style lang="sass">
-@import '@/assets/style/styles.sass'
-.h2 
-  @extend %h2
+@import "@/assets/style/variables"
+@import "@/assets/style/fonts"
+
+.h1
+  color: $primary2
+  margin: 0
+  padding: 0
+
+.h2
   color: $primary2
 
-.active
-  color: $primary
-  padding-bottom: 6px
-  border-bottom: 2px solid $seccond
-
-.logo 
+.logo
   margin: 38px 0 0 48px
   max-width: 15vw
   word-break: break-all
@@ -61,12 +63,22 @@ export default {
   color: inherit
 
 .logo__brand
-  font-size: $default-font-p
+  font-size: 20px
   color: inherit
+  font-family: "Roboto"
+
+.active
+  color: $primary
+  padding-bottom: 6px
+  border-bottom: 2px solid $seccond
 
 .auth
   background: url('@/assets/images/auth.jpg') no-repeat center
   background-size: cover
   object-fit: cover
   height: 100vh
+
+ul li
+  list-style: none
+
 </style>
