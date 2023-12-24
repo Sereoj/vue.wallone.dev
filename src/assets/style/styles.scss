@@ -1,6 +1,6 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
-@import "variables";
+@import "fonts";
 
 $body-color:                   $white;
 $body-bg:                      $background;
@@ -55,23 +55,17 @@ $btn-padding-x: 16px;
   min-width: 224px;
 }
 
+.d-flex {
+  flex-wrap: wrap;
+}
+
 @import "bootstrap/scss/bootstrap";
+@import "reset";
 
 /* Основной файл подключение всех стилей
    Стилизация базовых элементов
 */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 a {
-  text-decoration: none;
   color: $seccond;
-}
-
-ul {
-  padding: 0;
 }
