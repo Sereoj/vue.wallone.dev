@@ -1,5 +1,5 @@
 <template>
-    <TextBox name="login" title="Email или логин" placeholder="help@wallone.ru" />
+    <TextBox name="login" title="Email или логин" placeholder="help@wallone.ru"/>
     <PassWord name="password" title="Пароль"/>
 
     <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня" checked />
@@ -17,20 +17,15 @@ import CheckBox from "@/components/elements/CheckBox";
 import router from "@/router";
 
 export default {
+  components: { PassWord, TextBox, CheckBox },
+  mounted() {
+    document.title = 'Wallone • Авторизация'
+  },
   methods: {
     router() {
       return router
     }
   },
-  components: { PassWord, TextBox, CheckBox },
-  data() {
-    return {
-      //
-    };
-  },
-  mounted() {
-    document.title = 'Wallone • Авторизация'
-  }
 }
 </script>
 
