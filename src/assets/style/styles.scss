@@ -21,7 +21,7 @@ $input-border: none;
 
 $input-placeholder-color: $primary2;
 $input-height: 40px;
-$input-focus-box-shadow: 0 0 0 2px $seccond;
+$input-focus-box-shadow: 0 0 0 2px $second;
 
 // Labels
 $form-label-color: $primary;
@@ -46,17 +46,13 @@ $form-check-input-focus-box-shadow: none;
 
 
 // Buttons
-$btn-color: $seccond;
+$btn-color: $second;
 $btn-font-size: 1.25rem;
 $btn-padding-y: 0.25rem;
 $btn-padding-x: 1rem;
 
 .btn {
   min-width: 14rem;
-}
-
-.d-flex {
-  flex-wrap: wrap;
 }
 
 @import "bootstrap/scss/bootstrap";
@@ -67,5 +63,5 @@ $btn-padding-x: 1rem;
 */
 
 a {
-  color: $seccond;
+  color: $second;
 }

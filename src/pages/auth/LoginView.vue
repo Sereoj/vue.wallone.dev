@@ -5,8 +5,8 @@
     <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня" checked />
 
     <div class="d-flex align-items-center mt-4">
-      <input type="submit" class="btn btn-primary" value="Войти" />
-      <router-link to="/forgot-password" class="missing_pass ms-5">Забыли пароль?</router-link>
+      <input type="submit" class="btn btn-primary me-5" value="Войти" />
+      <router-link to="/forgot-password" class="missing_pass">Забыли пароль?</router-link>
     </div>
 </template>
 
@@ -14,8 +14,14 @@
 import TextBox from "@/components/elements/TextBox";
 import PassWord from "@/components/elements/PassWord";
 import CheckBox from "@/components/elements/CheckBox";
+import router from "@/router";
 
 export default {
+  methods: {
+    router() {
+      return router
+    }
+  },
   components: { PassWord, TextBox, CheckBox },
   data() {
     return {
