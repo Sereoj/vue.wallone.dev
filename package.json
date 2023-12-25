@@ -9,6 +9,9 @@
     "start": "webpack-dev-server --open --mode development"
   },
   "dependencies": {
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
     "core-js": "^3.8.3",
     "normalize-scss": "^8.0.0",

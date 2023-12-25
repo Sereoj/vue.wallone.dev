@@ -19,7 +19,7 @@
 
       <!-- TODO: здесь располагается шапка с ссылками -->
       <div class="col-10 m-auto">
-        <ul class="d-flex mb-5">
+        <ul class="d-flex mb-5" v-if="isAuthPage()">
           <li>
             <router-link to="/login" id="tabLinkLogin" class="h2">Авторизация</router-link>
           </li>
