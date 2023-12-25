@@ -6,7 +6,8 @@ export default {
   ],
   data() {
     return {
-      showPassword: false
+      showPassword: false,
+      password: ''
     }
   }
 }
@@ -15,7 +16,7 @@ export default {
 <template>
   <div class="mb-3">
     <label :for="name" class="form-label">{{ title }}</label>
-    <input v-bind:type="[showPassword ? 'text' : 'password']" :name="name" :id="name" class="form-control">
+    <input v-bind:type="[showPassword ? 'text' : 'password']" :name="name" :id="name" class="form-control" v-model="password">
     <button v-on:click="showPassword = !showPassword">
       Иконка нафиг
     </button>
