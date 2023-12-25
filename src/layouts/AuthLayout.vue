@@ -3,9 +3,7 @@
     <div class="col-5 auth d-none d-lg-block">
       <LogoBox class="m-3"/>
     </div>
-
     <div class="container col-sm-12 col-lg-7 m-auto">
-
       <!-- TODO: здесь располагается шапка с ссылками -->
       <div class="col-10 m-auto">
         <ul class="d-flex mb-5" v-if="isAuthPage">
@@ -27,25 +25,25 @@
 
 <script>
 import LogoBox from "@/components/blocks/LogoBox.vue";
+import {useRoute} from 'vue-router'
+
 export default {
   components: {
     LogoBox
   },
   data() {
     return {
-      //
+      path: "login"
     }
   },
   computed: {
-    currentRouteName() {
-      return this.$route.name;
+    isAuthPage() {
+      const route = useRoute();
+      return route.path.slice(1) === 'register' || route.path.slice(1) === 'login'
     }
   },
   methods: {
-    isAuthPage() {
-      return this.currentRouteName() === 'register' || this.currentRouteName() === 'login'
-    }
-  }
+  },
 }
 </script>
 
