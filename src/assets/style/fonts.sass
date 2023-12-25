@@ -3,19 +3,19 @@
  *  */
 @import './variables.sass'
 
-$font-path: "@/assets/fonts/"
-
-
+// Шрифты
 $primary-font: 'Roboto'
 $logo-font: 'Fredoka'
+$font-path: "@/assets/fonts/"
 
-$default-font-size-label: 1.5rem
-$default-font-size: 1.25rem
-$default-font-p: 1rem
+// Размеры шрифтов
+$font-size-label: 1.5rem
+$font-size: 1.25rem
+$font-p: 1rem
 
-
+// Подключение шрифтов
 @font-face
-  font-family: 'Fredoka'
+  font-family: $logo-font
   src: url($font-path + '/Fredoka.ttf')
   font-weight: 400
 
@@ -35,9 +35,9 @@ $default-font-p: 1rem
   letter-spacing: 0.028rem
 
 %h2
-  color: $primary
   font-family: $primary-font
+  color: $primary
 
 %p
   font-family: $primary-font
-  font-size: $default-font-p
+  font-size: $font-p
