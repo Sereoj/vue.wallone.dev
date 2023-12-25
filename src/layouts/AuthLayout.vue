@@ -66,21 +66,6 @@ export default {
 .h2
   color: $primary2
 
-.logo
-  margin: 2.38rem 0 0 3.2rem
-  max-width: 20rem
-  word-break: break-all
-  color: $primary
-
-.logo__name h1
-  @extend %logo-font
-  color: $primary
-
-.logo__brand
-  font-size: 1rem
-  color: inherit
-  font-family: "Roboto", serif
-
 .active
   color: $primary
   padding-bottom: 0.375rem

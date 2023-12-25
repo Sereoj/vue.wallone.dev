@@ -55,6 +55,11 @@ $btn-padding-x: 1rem;
   min-width: 14rem;
 }
 
+// Dropdowns
+$dropdown-bg: none;
+$dropdown-border-color: $second;
+$dropdown-border-radius: 0rem 0rem 0.9rem 0.9rem;;
+
 @import "bootstrap/scss/bootstrap";
 @import "reset";
 
