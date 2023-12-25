@@ -1,18 +1,7 @@
 <template>
   <div class="container-fluid row" style="height: 100vh">
     <div class="col-5 auth d-none d-lg-block">
-
-      <div class="logo">
-        <div class="d-flex align-items-center">
-          <a href="/" class="logo__name">
-            <img src="@/assets/logo.png" alt="Logo" height="52" class="me-3">
-            <div>
-              <h1>Wallone</h1>
-              <a href="/tags/popular" class="logo__brand">#One Day Container</a>
-            </div>
-          </a>
-        </div>
-      </div>
+      <LogoBox class="m-3"/>
     </div>
 
     <div class="container col-sm-12 col-lg-7 m-auto">
@@ -37,9 +26,10 @@
 </template>
 
 <script>
+import LogoBox from "@/components/blocks/LogoBox.vue";
 export default {
   components: {
-    //
+    LogoBox
   },
   data() {
     return {

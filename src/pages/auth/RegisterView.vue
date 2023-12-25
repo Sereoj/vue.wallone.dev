@@ -14,6 +14,11 @@
   <div class="d-flex align-items-center mt-5">
     <input type="submit" class="btn btn-primary" value="Регистрация" />
   </div>
+<!--  <div class="d-flex mt-5 d-none d-lg-block">-->
+<!--    <div style="background: #2B2B2B; width: 47vw; height: 4rem;" class="container">-->
+<!--      <img src="@/assets/banners/appwizard.png" style="width: 80%; height: 100%">-->
+<!--    </div>-->
+<!--  </div>-->
 </template>
 
 <script>

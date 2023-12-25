@@ -7,6 +7,11 @@
       <input type="submit" class="btn btn-primary me-5" value="Войти" v-on="auth"/>
       <router-link to="/forgot-password" class="missing_pass">Забыли пароль?</router-link>
     </div>
+<!--  <div class="d-flex mt-5 d-none d-lg-block">-->
+<!--    <div style="background: #2B2B2B; width: 47vw; height: 4rem;" class="container">-->
+<!--      <img src="@/assets/banners/appwizard.png" style="width: 80%; height: 100%">-->
+<!--    </div>-->
+<!--  </div>-->
 </template>
 
 <script>
