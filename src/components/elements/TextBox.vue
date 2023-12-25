@@ -6,10 +6,6 @@ const model = ref([])
 console.log(props)
 </script>
 
-<script>
-
-</script>
-
 <template>
   <div class="mb-3">
     <label :for="name" class="form-label">{{ title }}</label>

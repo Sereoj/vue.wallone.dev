@@ -51,9 +51,20 @@ $btn-font-size: 1.25rem;
 $btn-padding-y: 0.25rem;
 $btn-padding-x: 1rem;
 
+//forms
+$form-text-font-size: 0.875rem;
+$form-text-color: $primary;
+$form-text-font-style: normal;
+$form-text-font-weight: 400;
+
 .btn {
   min-width: 14rem;
 }
+
+// Dropdowns
+$dropdown-bg: none;
+$dropdown-border-color: $second;
+$dropdown-border-radius: 0rem 0rem 0.9rem 0.9rem;;
 
 @import "bootstrap/scss/bootstrap";
 @import "reset";

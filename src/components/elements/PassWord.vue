@@ -19,6 +19,7 @@ export default {
     <input v-bind:type="[showPassword ? 'text' : 'password']" :name="name" :id="name" class="form-control" v-model="password">
     <button v-on:click="showPassword = !showPassword">
       Иконка нафиг
+      <!--      TODO: Иконка нафиг-->
     </button>
   </div>
 </template>
