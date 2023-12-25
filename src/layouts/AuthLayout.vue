@@ -8,7 +8,7 @@
 
       <!-- TODO: здесь располагается шапка с ссылками -->
       <div class="col-10 m-auto">
-        <ul class="d-flex mb-5" v-if="isAuthPage()">
+        <ul class="d-flex mb-5" v-if="isAuthPage">
           <li>
             <router-link to="/login" id="tabLinkLogin" class="h2">Авторизация</router-link>
           </li>
@@ -36,9 +36,14 @@ export default {
       //
     }
   },
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    }
+  },
   methods: {
     isAuthPage() {
-      return this.$route.name === 'Register' || this.$route.name === 'Login'
+      return this.currentRouteName() === 'register' || this.currentRouteName() === 'login'
     }
   }
 }
