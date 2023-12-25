@@ -67,14 +67,14 @@ export default {
   color: inherit
 
 .logo__brand
-  font-size: 20px
+  font-size: 1.25rem
   color: inherit
   font-family: "Roboto"
 
 .active
   color: $primary
-  padding-bottom: 6px
-  border-bottom: 2px solid $seccond
+  padding-bottom: 0.375rem
+  border-bottom: 0.125rem solid $seccond
 
 .auth
   background: url('@/assets/images/auth.jpg') no-repeat center

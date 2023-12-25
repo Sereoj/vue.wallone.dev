@@ -47,12 +47,12 @@ $form-check-input-focus-box-shadow: none;
 
 // Buttons
 $btn-color: $seccond;
-$btn-font-size: 20px;
-$btn-padding-y: 4px;
-$btn-padding-x: 16px;
+$btn-font-size: 1.25rem;
+$btn-padding-y: 0.25rem;
+$btn-padding-x: 1rem;
 
 .btn {
-  min-width: 224px;
+  min-width: 14rem;
 }
 
 .d-flex {
