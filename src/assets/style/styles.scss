@@ -69,6 +69,9 @@ $dropdown-bg: $background;
 $dropdown-border-color: $second;
 $dropdown-border-radius: 0rem 0rem 0.9rem 0.9rem;;
 
+// Borders
+$border-width: 2px;
+
 @import "bootstrap/scss/bootstrap";
 @import "reset";
 
