@@ -1,13 +1,13 @@
 <template>
-  <svg>
-    <use xlink:href="/path/to/spritemap.svg#sprite-phone"></use>
-  </svg>
+  <div class="icon"></div>
 </template>
 
-<style>
-.icon {
-  fill: #007AFF;
-  width: 20px;
-  height: 20px;
-}
+<style lang="sass">
+@import "src/assets/style/sprites"
+
+.icon
+  @include sprite('academic-cap')
+  fill: #007AFF
+  width: 20px
+  height: 20px
 </style>

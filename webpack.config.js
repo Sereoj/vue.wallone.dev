@@ -63,19 +63,14 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
-        new SVGSpritemapPlugin(path.join(__dirname, "src/images/*.svg"), {
-            output: {
-                filename: path.join(__dirname, 'src/images/output/sprites.svg'),
-                chunk: { keep: false },
-                svgo: {
-                    plugins: [
-                        { addClassesToSVGElement: { className: 'svg-sprite' } },
-                        { removeTitle: true }
-                    ]
+        new SVGSpritemapPlugin(path.resolve("src/images/*.svg"), {
+            styles: path.resolve('src/assets/style/_sprites.scss'),
+            sprite: {
+                prefix: 'i-',
+                generate: {
+                    use: true
                 }
-            },
-            sprite: { prefix: false },
-            styles: path.join(__dirname, 'src/assets/style/_sprites.scss')
+            }
         })
     ]
 };

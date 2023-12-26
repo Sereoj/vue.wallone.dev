@@ -1,0 +1,1186 @@
+$sprites: (
+    'academic-cap': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m12.014 14 9-5-9-5-9 5 9 5Z' stroke='%23939393'/%3e%3cpath d='m12.014 14 6.16-3.422c.81 2.058 1.04 4.3.665 6.479a11.952 11.952 0 0 0-6.825 2.998 11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.48L12.014 14Z' stroke='%23939393'/%3e%3cpath d='m12.014 14 9-5-9-5-9 5 9 5Zm0 0 6.16-3.422c.81 2.058 1.04 4.3.665 6.479a11.952 11.952 0 0 0-6.825 2.998 11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12.014 14Zm-4 6v-7.5l4-2.222' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'adjustments': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 6V4m0 2a2 2 0 1 0 0 4m0-4a2 2 0 0 1 0 4m0 0v10m-6-2a2 2 0 1 0 0-4m0 4a2 2 0 1 1 0-4m0 4v2m0-6V4m12 14a2 2 0 0 0 0-4m0 4a2 2 0 1 1 0-4m0 4v2m0-6V4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'annotation': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.014 8h10m-10 4h4m1 8-4-4h-3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3l-4 4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'archive': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.014 8h14m-14 0a2 2 0 1 1 0-4h14a2 2 0 0 1 0 4m-14 0v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8m-9 4h4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-circle-down': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m15.014 13-3 3m0 0-3-3m3 3V8m0 13a9 9 0 1 1 0-18 9 9 0 0 1 0 18Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-circle-left': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m11.014 15-3-3m0 0 3-3m-3 3h8m-13 0a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-circle-right': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.014 9 3 3m0 0-3 3m3-3h-8m13 0a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-circle-up': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m9.014 11 3-3m0 0 3 3m-3-3v8m0-13a9 9 0 1 1 0 18 9 9 0 0 1 0-18Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-down': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m19.014 14-7 7m0 0-7-7m7 7V3' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-left': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m10.014 19-7-7m0 0 7-7m-7 7h18' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-narrow-down': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m16.014 17-4 4m0 0-4-4m4 4V3' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-narrow-left': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 12h18m-14 4-4-4 4 4Zm-4-4 4-4-4 4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-narrow-right': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m17.014 8 4 4m0 0-4 4m4-4h-18' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-narrow-up': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m8.014 7 4-4m0 0 4 4m-4-4v18' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-right': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m14.014 5 7 7m0 0-7 7m7-7h-18' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrow-up': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m5.014 10 7-7m0 0 7 7m-7-7v18' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'arrows-expand': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.014 20h-4m-12-12V4v4Zm0-4h4-4Zm0 0 5 5-5-5Zm16 4V4v4Zm0-4h-4 4Zm0 0-5 5 5-5Zm-16 12v4-4Zm0 4h4-4Zm0 0 5-5-5 5Zm16 0-5-5 5 5Zm0 0v-4 4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'at-symbol': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.014 12a4 4 0 1 0-8 0 4 4 0 0 0 8 0Zm0 0v1.5a2.5 2.5 0 0 0 5 0V12a9 9 0 1 0-4.5 7.794' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'backspace': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m12.014 14 2-2m0 0 2-2m-2 2-2-2m2 2 2 2m-13-2 6.414 6.414a2 2 0 0 0 1.414.586h8.172a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-8.172a2 2 0 0 0-1.414.586L3.014 12Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'badge-check': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m9.014 12 2 2 4-4M7.849 4.697a3.42 3.42 0 0 0 1.946-.806 3.42 3.42 0 0 1 4.438 0 3.42 3.42 0 0 0 1.946.806 3.42 3.42 0 0 1 3.138 3.138 3.42 3.42 0 0 0 .806 1.946 3.42 3.42 0 0 1 0 4.438 3.42 3.42 0 0 0-.806 1.946 3.42 3.42 0 0 1-3.138 3.138 3.42 3.42 0 0 0-1.946.806 3.42 3.42 0 0 1-4.438 0 3.42 3.42 0 0 0-1.946-.806 3.42 3.42 0 0 1-3.138-3.138 3.42 3.42 0 0 0-.806-1.946 3.42 3.42 0 0 1 0-4.438 3.42 3.42 0 0 0 .806-1.946 3.42 3.42 0 0 1 3.138-3.138Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'ban': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.378 18.364A9 9 0 1 0 5.65 5.636m12.728 12.728L5.65 5.636m12.728 12.728A9 9 0 0 1 5.65 5.636' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'beaker': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.442 15.428a2 2 0 0 0-1.022-.547l-2.387-.477a6 6 0 0 0-3.86.517l-.318.158a6 6 0 0 1-3.86.517l-1.931-.386a2 2 0 0 0-1.806.547M8.014 4h8l-1 1v5.172a2 2 0 0 0 .586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.842c-1.782 0-2.674-2.154-1.414-3.414l5-5a2 2 0 0 0 .586-1.414V5l-1-1Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'bell': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.014 17h5l-1.405-1.405a2.032 2.032 0 0 1-.595-1.437V11a6.002 6.002 0 0 0-4-5.659V5a2 2 0 1 0-4 0v.341c-2.33.824-4 3.047-4 5.659v3.159c0 .538-.214 1.055-.595 1.436L4.014 17h5m6 0h-6m6 0v1a3 3 0 0 1-6 0v-1' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'book-open': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 6.253v13m0-13C10.846 5.477 9.26 5 7.514 5s-3.332.477-4.5 1.253v13C4.182 18.477 5.768 18 7.514 18s3.332.477 4.5 1.253m0-13C13.182 5.477 14.768 5 16.514 5c1.747 0 3.332.477 4.5 1.253v13C19.846 18.477 18.26 18 16.514 18c-1.746 0-3.332.477-4.5 1.253' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'bookmark-alt': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.014 4v12l-4-2-4 2V4h8Zm-10 16h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-12a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'bookmark': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.6 3.586A2 2 0 0 0 5.013 5v16l7-3.5 7 3.5V5a2 2 0 0 0-2-2h-10a2 2 0 0 0-1.415.586Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'briefcase': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.014 13.255a23.93 23.93 0 0 1-9 1.745c-3.183 0-6.22-.62-9-1.745m9-1.255h.01m3.99-6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2h8Zm-11 14h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-14a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cake': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.014 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 0 1-3 0 2.704 2.704 0 0 0-3 0 2.704 2.704 0 0 1-3 0 2.704 2.704 0 0 0-3 0 2.704 2.704 0 0 1-3 0 2.7 2.7 0 0 0-1.5-.454m6-9.546v2m3-2v2m3-2v2m-6-5h.01m2.99 0h.01m2.99 0h.01m5.99 18v-7a2 2 0 0 0-2-2h-14a2 2 0 0 0-2 2v7h18Zm-3-9v-2a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v2h12Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'calculator': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 7h6m0 10v-3m-3 3h.01m-3.01 0h.01m-.01-3h.01m2.99 0h.01m2.99-3h.01m-3.01 0h.01m-3.01 0h.01m-2.01 10h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'calendar': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 7V3m8 4V3m-9 8h10m-12 10h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-14a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'camera': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.6 7.586A2 2 0 0 0 3.013 9v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-.93a2 2 0 0 1-1.664-.89l-.812-1.22A2 2 0 0 0 13.944 4h-3.86a2 2 0 0 0-1.664.89l-.812 1.22A2 2 0 0 1 5.944 7h-.93a2 2 0 0 0-1.415.586Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M14.135 15.121a3 3 0 1 0-4.243-4.242 3 3 0 0 0 4.243 4.242Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cash': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.014 9V7a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2m2 4h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2Zm7-5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chart-bar': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 19v-6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2Zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chart-pie': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.406 4.96a9.001 9.001 0 0 1 4.608-1.905V13h9.945A9 9 0 1 1 6.406 4.96Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M15.014 9h5.488a9.026 9.026 0 0 0-5.488-5.488V9Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chart-square-bar': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.014 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-12a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chat-alt-2': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.014 8h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2v4l-4-4h-4a1.995 1.995 0 0 1-1.414-.586m0 0L11.014 14h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2v4l.586-.586Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chat-alt': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 10h.01m3.99 0h.01m3.99 0h.01m-7.01 6h-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-5l-5 5v-5Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chat': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 12h.01m3.99 0h.01m3.99 0h.01m4.99 0c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3.014 20l1.395-3.72c-.883-1.238-1.395-2.706-1.395-4.28 0-4.418 4.03-8 9-8s9 3.582 9 8Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'check-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m9.014 12 2 2 4-4m6 2a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'check': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m5.014 13 4 4 10-10' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chevron-double-down': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m19.014 13-7 7-7-7m14-8-7 7-7-7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chevron-double-left': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m11.014 19-7-7 7-7m8 14-7-7 7-7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chevron-double-right': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.014 5 7 7-7 7m-8-14 7 7-7 7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chevron-double-up': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m5.014 11 7-7 7 7m-14 8 7-7 7 7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chevron-down': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m19.014 9-7 7-7-7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chevron-left': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m15.014 19-7-7 7-7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chevron-right': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m9.014 5 7 7-7 7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chevron-up': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m5.014 15 7-7 7 7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'chip': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 3v2m6-2v2m-6 14v2m6-2v2m-10-12h-2m2 6h-2m18-6h-2m2 6h-2m-12 4h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Zm2-10h6v6h-6V9Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'clipboard-check': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 5h-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m-6 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9 2 2 4-4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'clipboard-copy': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 5h-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1m-10-13a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m-6 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m0 0h2a2 2 0 0 1 2 2v3m2 4h-10m0 0 3-3m-3 3 3 3' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'clipboard-list': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 5h-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m-6 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-3 7h3m-3 4h3m-6-4h.01m-.01 4h.01' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'clipboard': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 5h-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m-6 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'clock': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 8v4l3 3m6-3a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cloud-download': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.014 16a4 4 0 0 1-.88-7.903A5.001 5.001 0 0 1 15.914 6h.1a5 5 0 0 1 1 9.9m-8 3.1 3 3m0 0 3-3m-3 3V10' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cloud-upload': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.014 16a4 4 0 0 1-.88-7.903A5.001 5.001 0 0 1 15.914 6h.1a5 5 0 0 1 1 9.9m-2-2.9-3-3m0 0-3 3m3-3v12' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cloud': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.185 17.828a4 4 0 0 1 1.949-6.731 5.002 5.002 0 1 1 9.78-2.096 5 5 0 1 1 .1 9.999h-9a4 4 0 0 1-2.829-1.172Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'code': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m10.014 20 4-16m4 4 4 4-4 4m-12 0-4-4 4-4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cog': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.689 4.317c-.426-1.756-2.924-1.756-3.35 0a1.723 1.723 0 0 1-2.572 1.065c-1.544-.94-3.31.827-2.37 2.37a1.724 1.724 0 0 1-1.066 2.573c-1.756.426-1.756 2.924 0 3.35a1.725 1.725 0 0 1 1.065 2.572c-.94 1.544.827 3.31 2.37 2.37a1.724 1.724 0 0 1 2.573 1.066c.426 1.756 2.924 1.756 3.35 0a1.724 1.724 0 0 1 2.572-1.065c1.544.94 3.31-.827 2.37-2.37a1.725 1.725 0 0 1 1.066-2.573c1.756-.426 1.756-2.924 0-3.35a1.724 1.724 0 0 1-1.065-2.572c.94-1.544-.827-3.31-2.37-2.37a1.724 1.724 0 0 1-2.573-1.066Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M14.135 14.121A3 3 0 1 0 9.892 9.88a3 3 0 0 0 4.243 4.242Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'collection': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.014 11h-14m14 0a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-14a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2m14 0V9a2 2 0 0 0-2-2m-12 4V9a2 2 0 0 1 2-2m10 0V5a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2v2m10 0h-10' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'color-swatch': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.014 21a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12a4 4 0 0 1-1.172 2.828M7.014 21a4 4 0 0 0 2.828-1.172M7.014 21h12a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H16.67m-6.829 6.828 8.486-8.485a2 2 0 0 0 0-2.828l-2.83-2.829a2 2 0 0 0-2.827 0l-1.657 1.657m-4 9.657h.01' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'credit-card': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 10h18m-14 5h1m4 0h1m-7 4h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3h-12a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cube-transparent': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m14.014 10-2 1m0 0-2-1m2 1v2.5m8-6.5-2 1m2-1-2-1m2 1v2.5m-6-5.5-2-1-2 1m-6 3 2-1m-2 1 2 1m-2-1v2.5m8 11.5-2-1m2 1 2-1m-2 1v-2.5m-6-.5-2-1v-2.5m14 3.5 2-1v-2.5' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cube': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m20.014 7-8-4-8 4m16 0-8 4m8-4v10l-8 4m-8-14 8 4m-8-4v10l8 4m0-10v10' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'currency-bangladeshi': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.014 11V9a2 2 0 0 0-2-2m2 4v4a2 2 0 0 0 4 0v-1m-4-3h-2m2 0h4m6 1a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'currency-dollar': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8v8m0-8c1.11 0 2.08.402 2.599 1m-2.6-1V7m0 9v1m0-1c-1.11 0-2.08-.402-2.598-1m11.599-3a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'currency-euro': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.135 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.17-1.952 3.07-1.952 4.242 0M8.014 10.5h4m-4 3h4m9-1.5a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'currency-pound': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.014 9a2 2 0 1 0-4 0v5a2 2 0 0 1-2 2h6m-6-4h4m8 0a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'currency-rupee': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 8h6m-5 0a3 3 0 0 1 0 6h-1l3 3m-3-6h6m6 1a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'currency-yen': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m9.014 8 3 5m0 0 3-5m-3 5v4m-3-5h6m-6 3h6m6-3a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'cursor-click': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m15.014 15-2 5-4-11 11 4-5 2Zm0 0 5 5M7.202 2.239l.777 2.897m-2.83 2.829-2.897-.777M13.964 4.05l-2.122 2.122m-5.657 5.656-2.12 2.122' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'database': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7m-16 0c0 2.21 3.582 4 8 4s8-1.79 8-4m-16 0c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'desktop-computer': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 13h18m-11.25 4-.75 3-1 1h8l-1-1-.75-3h-4.5Zm-4.75 0h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-14a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'device-mobile': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 18h.01m-4.01 3h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'device-tablet': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 18h.01m-5.01 3h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'document-add': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 13h6m-3-3v6m5 5h-10a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H12.6a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'document-download': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 10v6m0 0-3-3m3 3 3-3m2 8h-10a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H12.6a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'document-duplicate': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 7v8a2 2 0 0 0 2 2h6m-8-10V5a2 2 0 0 1 2-2H14.6a1 1 0 0 1 .707.293l4.414 4.414a1 1 0 0 1 .293.707V15a2 2 0 0 1-2 2h-2m-8-10h-2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'document-remove': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 13h6m2 8h-10a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H12.6a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'document-report': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 17v-2m3 2v-4m3 4v-6m2 10h-10a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H12.6a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'document-search': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.014 21h7a2 2 0 0 0 2-2V9.414a1 1 0 0 0-.293-.707l-5.414-5.414A1 1 0 0 0 12.6 3H7.014a2 2 0 0 0-2 2v11m0 5 4.879-4.879m0 0a3 3 0 1 0 4.277-4.207 3 3 0 0 0-4.277 4.207Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'document-text': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 12h6m-6 4h6m2 5h-10a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H12.6a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'document': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.014 21h-10a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H12.6a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'dots-circle-horizontal': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 12h.01m3.99 0h.01m3.99 0h.01m4.99 0a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'dots-horizontal': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.014 12h.01m6.99 0h.01m6.99 0h.01m-13.01 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'dots-vertical': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 5v.01m0 6.99v.01m0 6.99v.01m0-13.01a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'download': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 16v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1m-4-4-4 4m0 0-4-4m4 4V4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'duplicate': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 16h-2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2m-6 12h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'emoji-happy': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.842 14.828a4 4 0 0 1-5.656 0M9.014 10h.01m5.99 0h.01m5.99 2a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'emoji-sad': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.186 16.172a4 4 0 0 1 5.656 0M9.014 10h.01m5.99 0h.01m5.99 2a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'exclamation-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 8v4m0 4h.01m8.99-4a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'exclamation': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.746 4c-.77-1.333-2.694-1.333-3.464 0L3.354 16c-.77 1.333.192 3 1.732 3Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'external-link': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.014 6h-4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4m-4-10h6m0 0v6m0-6-10 10' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'eye-off': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.889 18.825c-.618.117-1.246.175-1.875.175-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 0 1 1.563-3.029m5.858.908a3 3 0 0 1 4.243 4.243M9.892 9.879l4.243 4.243M9.892 9.879l4.242 4.241m0 .002 3.292 3.29M9.894 9.88l-3.29-3.29m0 0L3.014 3m3.59 3.59A9.953 9.953 0 0 1 12.014 5c4.478 0 8.268 2.943 9.543 7a10.024 10.024 0 0 1-4.132 5.411M6.604 6.59l10.82 10.821m0 0L21.015 21' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'eye': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.135 14.121A3 3 0 1 0 9.892 9.88a3 3 0 0 0 4.243 4.242Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M2.472 12c1.274-4.057 5.065-7 9.542-7 4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'fast-forward': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.241 12.447a.999.999 0 0 1-.294.353l-5.333 4a1 1 0 0 1-1.6-.8V8a1 1 0 0 1 1.6-.8l5.333 4a.999.999 0 0 1 .294 1.247ZM20.241 12.447a.999.999 0 0 1-.294.353l-5.333 4a1 1 0 0 1-1.6-.8V8a1 1 0 0 1 1.6-.8l5.333 4a.999.999 0 0 1 .294 1.247Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'film': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.014 4v16m10-16v16m-14-12h4m10 0h4m-18 4h18m-18 4h4m10 0h4m-17 4h16a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-16a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'filter': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.307 3.293A1 1 0 0 0 3.014 4v2.586a1 1 0 0 0 .293.707l6.414 6.414a1 1 0 0 1 .293.707V21l4-4v-2.586a1 1 0 0 1 .293-.707l6.414-6.414a1 1 0 0 0 .293-.707V4a1 1 0 0 0-1-1h-16a1 1 0 0 0-.707.293Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'finger-print': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 11c0 3.517-1.01 6.8-2.753 9.571m-3.44-2.04.054-.09a13.916 13.916 0 0 0 2.139-7.44 4 4 0 1 1 8 0c0 1.016-.07 2.018-.203 3m-2.118 6.843A21.882 21.882 0 0 0 15.185 17m3.839 1.132c.645-2.266.99-4.659.99-7.132a8 8 0 0 0-12-6.93m-5 11.294c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'fire': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 21A8 8 0 0 0 17.67 7.343C16.104 5.777 14.014 5 12 3c-2.486 2-2.986 5-2.986 7-2-1-2.657-2.657-2.657-2.657A8 8 0 0 0 12.014 21Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M11.141 16.87A3 3 0 0 1 9.014 14h2l1.015-3a3 3 0 1 1-.888 5.87Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'flag': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 21v-4m0 0V5a2 2 0 0 1 2-2h6.5l1 1h8.5l-3 6 3 6h-8.5l-1-1h-6.5a2 2 0 0 0-2 2Zm9-13.5V9' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'folder-add': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 13h6m-3-3v6m-9 1V7a2 2 0 0 1 2-2h6l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-14a2 2 0 0 1-2-2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'folder-download': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 10v6m0 0-3-3m3 3 3-3m-12 4V7a2 2 0 0 1 2-2h6l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-14a2 2 0 0 1-2-2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'folder-open': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.014 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4l2 2h4a2 2 0 0 1 2 2v1m-12 9h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'folder-remove': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 13h6m-12 4V7a2 2 0 0 1 2-2h6l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-14a2 2 0 0 1-2-2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'folder': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 17V7a2 2 0 0 1 2-2h6l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-14a2 2 0 0 1-2-2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'gift': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 8v13m0-13V6a2 2 0 1 1 2 2h-2Zm0 0V5.5a2.5 2.5 0 1 0-2.5 2.5h2.5Zm-7 4h14m-14 0a2 2 0 1 1 0-4h14a2 2 0 0 1 0 4m-14 0v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'globe-alt': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.014 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9h-18m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m0 0a9 9 0 0 0-9 9' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'globe': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.069 11h1.945a2 2 0 0 1 2 2v1a2 2 0 0 0 2 2 2 2 0 0 1 2 2v2.945m-3-17.01V5.5a2.5 2.5 0 0 0 2.5 2.5h.5a2 2 0 0 1 2 2 2 2 0 0 0 4 0 2 2 0 0 1 2-2h1.064m-5.064 12.488V18a2 2 0 0 1 2-2h3.064m.936-4a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'hand': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.014 11.5V14m0-2.5v-6a1.5 1.5 0 0 1 3 0m-3 6a1.5 1.5 0 0 0-3 0v2a7.5 7.5 0 0 0 15 0v-5a1.5 1.5 0 0 0-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 1 1 3 0v1m3 3v-3a1.5 1.5 0 0 0-3 0m3 3V11m-3-5.5V11' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'hashtag': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m7.014 20 4-16m2 16 4-16m-11 5h14m-16 6h14' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'heart': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.356 7.778a4.5 4.5 0 0 1 7.34-1.46l1.318 1.318 1.318-1.318a4.5 4.5 0 1 1 6.364 6.364l-7.682 7.682-7.682-7.682a4.499 4.499 0 0 1-.976-4.904Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'home': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m3.014 12 2-2m0 0 7-7 7 7m-14 0v10a1 1 0 0 0 1 1h3m10-11 2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'identification': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.014 6h-5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-5m-4 0V5a2 2 0 1 1 4 0v1m-4 0a2 2 0 1 0 4 0m-5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 0c1.306 0 2.417.835 2.83 2m-2.83-2a3.001 3.001 0 0 0-2.83 2m8.83-5h3m-3 4h2' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'inbox-in': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 4h-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2m-4-1v8m0 0 3-3m-3 3-3-3m-5 5H6.6a1 1 0 0 1 .707.293l2.414 2.414a1 1 0 0 0 .707.293H13.6a1 1 0 0 0 .707-.293l2.414-2.414a1 1 0 0 1 .707-.293h2.586' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'inbox': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.014 13V6a2 2 0 0 0-2-2h-12a2 2 0 0 0-2 2v7m16 0v5a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2v-5m16 0h-2.586a1 1 0 0 0-.707.293l-2.414 2.414A1 1 0 0 1 13.6 16h-3.172a1 1 0 0 1-.707-.293l-2.414-2.414A1 1 0 0 0 6.6 13H4.014' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'information-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.014 16h-1v-4h-1m1-4h.01m8.99 4a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'key': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.014 7a2 2 0 0 1 2 2m4 0a6.001 6.001 0 0 1-7.743 5.743L11.014 17h-2v2h-2v2h-3a1 1 0 0 1-1-1v-2.586a1 1 0 0 1 .293-.707l5.964-5.964A6 6 0 1 1 21.014 9Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'library': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 14v3m4-3v3m4-3v3m-13 4h18m-18-11h18m-18-3 9-4 9 4h-18Zm1 3h16v11h-16V10Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'light-bulb': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.677 17h4.673M12.014 3v1m6.364 1.636-.707.707M21.014 12h-1m-16 0h-1m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547a3.373 3.373 0 0 0-.988 2.386V19a2 2 0 0 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'lightning-bolt': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.014 3v7h7l-9 11v-7h-7l9-11Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'link': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.842 10.172a4 4 0 0 0-5.656 0l-4 4a4 4 0 1 0 5.656 5.656l1.102-1.101m-.758-4.9a4 4 0 0 0 5.656 0l4-4a4 4 0 0 0-5.656-5.655l-1.1 1.1' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'location-marker': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.67 16.657 13.429 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0v0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M14.135 13.121A3 3 0 1 0 9.892 8.88a3 3 0 0 0 4.243 4.242Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'lock-closed': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 15v2m-6 4h12a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-12a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2Zm10-10V7a4 4 0 0 0-8 0v4h8Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'lock-open': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 11V7a4 4 0 0 1 8 0m-4 8v2m-6 4h12a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-12a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'login': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m11.014 16-4-4m0 0 4-4m-4 4h14m-5 4v1a3 3 0 0 1-3 3h-7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v1' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'logout': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m17.014 16 4-4m0 0-4-4m4 4h-14m6 4v1a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'mail-open': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 19v-8.93a2 2 0 0 1 .89-1.664l7-4.666a2 2 0 0 1 2.22 0l7 4.666a2 2 0 0 1 .89 1.664V19m-18 0a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2m-18 0 6.75-4.5m11.25 4.5-6.75-4.5m-4.5 0L3.014 10m6.75 4.5 1.14.76a2 2 0 0 0 2.22 0l1.14-.76m0 0 6.75-4.5' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'mail': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m3.014 8 7.89 5.26a2 2 0 0 0 2.22 0L21.014 8m-16 11h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-14a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'map': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m9.014 20-5.447-2.724a1 1 0 0 1-.553-.894V5.618a1 1 0 0 1 1.447-.894L9.014 7m0 13V7m0 13 6-3m-6-10 6-3m0 13 4.553 2.276a1 1 0 0 0 1.447-.894V7.618a1 1 0 0 0-.553-.894L15.014 4m0 13V4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'menu-alt-1': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 18h16m-16-12h16-16Zm0 6h8-8Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'menu-alt-2': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 18h7m-7-12h16-16Zm0 6h16-16Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'menu-alt-3': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.014 18h7m-16-12h16-16Zm0 6h16-16Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'menu-alt-4': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 16h16m-16-8h16-16Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'menu': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 18h16m-16-12h16-16Zm0 6h16-16Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'microphone': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.014 11a7 7 0 0 1-7 7m0 0a7 7 0 0 1-7-7m7 7v4m0 0h-4m4 0h4m-4-8a3 3 0 0 1-3-3V5a3 3 0 1 1 6 0v6a3 3 0 0 1-3 3Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'minus-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.014 12h-6m12 0a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'minus': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.014 12h-12' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'moon': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.208 15.822a9 9 0 0 0 5.16-.468A9.004 9.004 0 0 1 12.014 21 9.003 9.003 0 0 1 8.66 3.646a9 9 0 0 0 6.548 12.176Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'music-note': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 19V6l12-3v13m-12 3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2Zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2Zm-12-6 12-3' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'newspaper': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.014 20h-14a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2m-4-3h-4m-2 12h6m-6-8h6v4h-6V8Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'office-building': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19.014 21V5a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v16m14 0h-14m14 0h2m-2 0h-5m-9 0h-2m2 0h5m4 0v-5a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v5m4 0h-4m-1-14h1m-1 4h1m4-4h1m-1 4h1' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'paper-airplane': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m12.014 19 9 2-9-18-9 18 9-2Zm0 0v-8' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'paper-clip': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.186 7 8.6 13.586a2 2 0 1 0 2.828 2.828l6.414-6.586a4 4 0 0 0-5.656-5.656L5.77 10.757a6 6 0 0 0 8.486 8.486L20.514 13' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'pause': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.014 9v6m4-6v6m7-3a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'pencil-alt': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.014 5h-5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5M17.6 3.586a2 2 0 1 1 2.828 2.828L11.842 15H9.014v-2.828L17.6 3.586Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'pencil': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m15.246 5.232 3.536 3.536m-2.036-5.036a2.5 2.5 0 1 1 3.536 3.536L6.514 21.036h-3.5v-3.572L16.746 3.732Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'phone-incoming': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m21.014 3-6 6m0 0V4m0 5h5m-15-6a2 2 0 0 0-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 0 0 2-2v-3.28a1 1 0 0 0-.684-.948l-4.493-1.498a1 1 0 0 0-1.21.502l-1.13 2.257a11.042 11.042 0 0 1-5.516-5.517l2.257-1.128a1 1 0 0 0 .502-1.21L9.242 3.683A1 1 0 0 0 8.292 3H5.015Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'phone-missed-call': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m16.014 8 2-2m0 0 2-2m-2 2-2-2m2 2 2 2m-15-5a2 2 0 0 0-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 0 0 2-2v-3.28a1 1 0 0 0-.684-.948l-4.493-1.498a1 1 0 0 0-1.21.502l-1.13 2.257a11.042 11.042 0 0 1-5.516-5.517l2.257-1.128a1 1 0 0 0 .502-1.21L9.242 3.683A1 1 0 0 0 8.292 3H5.015Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'phone-outgoing': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.014 3h5m0 0v5m0-5-6 6m-10-6a2 2 0 0 0-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 0 0 2-2v-3.28a1 1 0 0 0-.684-.948l-4.493-1.498a1 1 0 0 0-1.21.502l-1.13 2.257a11.042 11.042 0 0 1-5.516-5.517l2.257-1.128a1 1 0 0 0 .502-1.21L9.242 3.683A1 1 0 0 0 8.292 3H5.015Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'phone': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.6 3.586A2 2 0 0 0 3.013 5v1c0 8.284 6.716 15 15 15h1a2 2 0 0 0 2-2v-3.279a1 1 0 0 0-.684-.949l-4.493-1.498a1 1 0 0 0-1.21.502l-1.13 2.257a11.042 11.042 0 0 1-5.516-5.516l2.257-1.13a1 1 0 0 0 .502-1.21L9.242 3.684A1 1 0 0 0 8.294 3h-3.28a2 2 0 0 0-1.415.586Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'photograph': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 16 8.6 11.414a2 2 0 0 1 2.828 0L16.014 16m-2-2 1.586-1.586a2 2 0 0 1 2.828 0L20.014 14m-6-6h.01m-8.01 12h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-12a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'play': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m11.569 9.036 3.197 2.132a1.003 1.003 0 0 1 0 1.665l-3.197 2.132a1 1 0 0 1-1.555-.832V9.87a1 1 0 0 1 1.555-.834Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M20.329 15.444a9 9 0 1 0-16.63-6.888 9 9 0 0 0 16.63 6.888Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'plus-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 9v3m0 0v3m0-3h3m-3 0h-3m12 0a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'plus': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 6v6m0 0v6m0-6h6m-6 0h-6' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'presentation-chart-bar': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 13v-1m4 1v-3m4 3V8m-8 13 4-4 4 4m-13-17h18m-17 0h16v12a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1V4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'presentation-chart-line': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m7.014 12 3-3 3 3 4-4m-9 13 4-4 4 4m-13-17h18m-17 0h16v12a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1V4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'printer': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.014 17h2a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-14a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2m2 4h6a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2Zm8-12V5a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2v4h10Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'puzzle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.6 2.586A2 2 0 0 0 11.014 4v1a1 1 0 0 1-1 1h-3a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1h-1a2 2 0 1 0 0 4h1a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-1a2 2 0 1 1 0-4h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-3a1 1 0 0 1-1-1V4A2 2 0 0 0 11.6 2.586Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'qrcode': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01m-.01 0h4.01m-.01 8h4m-16-8h4m12 0h.01M5.014 8h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1Zm12 0h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1Zm-12 12h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'question-mark-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.242 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01m8.99-5a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'receipt-refund': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.014 15v-1a4 4 0 0 0-4-4h-4m0 0 3 3m-3-3 3-3m9 14V5a2 2 0 0 0-2-2h-12a2 2 0 0 0-2 2v16l4-2 4 2 4-2 4 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'receipt-tax': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m9.014 14 6-6m-5.5.5h.01m4.99 5h.01m4.49 7.5V5a2 2 0 0 0-2-2h-10a2 2 0 0 0-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2Zm-9-12.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm5 5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'refresh': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 4v5h.582m0 0a8.001 8.001 0 0 1 15.356 2M4.596 9h4.418m11 11v-5h-.581m0 0a8.003 8.003 0 0 1-15.357-2m15.357 2h-4.42' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'reply': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 10h10a8 8 0 0 1 8 8v2m-18-10 6 6m-6-6 6-6' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'rewind': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.785 11.553c.07-.14.17-.26.295-.353h0l5.334-4a1 1 0 0 1 1.6.8v8a1 1 0 0 1-1.6.8l-5.334-4a.999.999 0 0 1-.295-1.247ZM3.785 11.553a1 1 0 0 1 .295-.353l5.334-4a1 1 0 0 1 1.6.8v8a1 1 0 0 1-1.6.8l-5.334-4a1 1 0 0 1-.295-1.247Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'rss': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.014 5c7.18 0 13 5.82 13 13m-13-7a7 7 0 0 1 7 7m-6 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'save-as': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.014 16v2a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h2m3-4h-1a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1m-1 4-3 3m0 0-3-3m3 3V3' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'save': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.014 7h-3a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3m-1 4-3 3m0 0-3-3m3 3V4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'scale': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m3.014 6 3 1m0 0-3 9a5.002 5.002 0 0 0 6 0l-3-9Zm0 0 3 9m-3-9 6-2m0 0 6 2m-6-2V3m0 2v16m6-14 3-1m-3 1-3 9a5.002 5.002 0 0 0 6 0l-3-9Zm-6 14h-3m3 0h3' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'scissors': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.135 14.121 19.014 19m-7-7 7-7m-7 7-2.88 2.879M12.015 12l-2.88-2.879m0 5.758a3 3 0 1 0-4.242 4.243 3 3 0 0 0 4.243-4.243Zm0-5.758a3 3 0 1 0-4.242-4.243 3 3 0 0 0 4.243 4.243Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'search-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m8.014 16 2.879-2.879m0 0a3 3 0 1 0 4.276-4.206 3 3 0 0 0-4.276 4.206ZM21.013 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'search': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m21.014 21-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'selector': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m8.014 9 4-4 4 4m0 6-4 4-4-4' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'server': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.014 12h14m-14 0a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2m-14 0a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2m-2-4h.01m-.01 8h.01' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'share': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.698 13.342c.202-.404.316-.86.316-1.342 0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 1 1 0-2.684m0 2.684 6.632 3.316m-6.632-6 6.632-3.316m0 9.316a3 3 0 1 0 5.368 2.684 3 3 0 0 0-5.368-2.684Zm0-9.316a3.001 3.001 0 1 0 5.368-2.685 3.001 3.001 0 0 0-5.368 2.685Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'shield-check': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m9.014 12 2 2 4-4m5.618-4.016a11.955 11.955 0 0 1-8.618-3.04 11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3.014 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'shield-exclamation': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 9v2m0 4h.01m8.608-9.016a11.955 11.955 0 0 1-8.618-3.04 11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3.014 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'shopping-bag': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.014 11V7a4 4 0 0 0-8 0v4m-3-2h14l1 12h-16l1-12Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'shopping-cart': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 3h2l.4 2m0 0h15.6l-4 8h-10m-1.6-8 1.6 8m0 0L4.72 15.293c-.63.63-.184 1.707.707 1.707h11.586m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'sort-ascending': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.014 8v12m-14-16h13-13Zm0 4h9-9Zm0 4h6-6Zm10 0 4-4-4 4Zm4-4 4 4-4-4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'sort-descending': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m17.014 20 4-4m-18-12h13-13Zm0 4h9-9Zm0 4h9-9Zm14-4v12V8Zm0 12-4-4 4 4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'sparkles': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.014 3v4-4Zm-2 2h4-4Zm3 12v4-4Zm-2 2h4-4Zm9-16L15.3 9.857 21.014 12 15.3 14.143 13.014 21l-2.286-6.857L5.014 12l5.714-2.143L13.014 3Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'speakerphone': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.014 5.882V19.24a1.76 1.76 0 0 1-3.417.592l-2.147-6.15m0 0A3.999 3.999 0 0 1 7.014 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7.014c-.538 0-1.07-.108-1.564-.318ZM18.014 13a3 3 0 1 0 0-6v6Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'star': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.965 2.927c-.3-.92-1.602-.92-1.902 0l-1.52 4.674a1 1 0 0 1-.95.69H3.679c-.968 0-1.372 1.24-.588 1.81l3.976 2.888a1 1 0 0 1 .363 1.118l-1.518 4.674c-.3.921.755 1.688 1.538 1.118l3.976-2.888a1 1 0 0 1 1.176 0l3.976 2.888c.783.57 1.838-.196 1.538-1.118l-1.518-4.674a1 1 0 0 1 .363-1.118l3.976-2.888c.783-.57.38-1.81-.588-1.81h-4.915a1 1 0 0 1-.95-.69l-1.52-4.674Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'status-offline': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.378 5.636a9 9 0 0 1 0 12.728m0 0-2.83-2.829m2.83 2.829L21.014 21M15.55 8.464a4.998 4.998 0 0 1 0 7.072l-2.83-2.829m0 0a.998.998 0 0 0-.315-1.645 1 1 0 0 0-1.098.231m1.414 1.414-1.414-1.414m-2.83 4.243a4.978 4.978 0 0 1-1.413-2.83M5.65 18.364a9 9 0 0 1-2.167-9.238m7.824 2.167L3.014 3' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'status-online': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.65 18.364a9 9 0 0 1 0-12.728m12.728 0a9 9 0 0 1 0 12.728m-9.9-2.829a5 5 0 0 1 0-7.07m7.072 0a5 5 0 0 1 0 7.07M13.014 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'stop': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.329 15.444a9 9 0 1 0-16.63-6.888 9 9 0 0 0 16.63 6.888Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M9.014 10a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'sun': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 3v1m0 16v1m9-9h-1m-16 0h-1m15.364 6.364-.707-.707M6.357 6.343l-.707-.707m12.728 0-.707.707M6.357 17.657l-.707.707M16.014 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'support': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m18.378 5.636-3.536 3.536m3.536-3.536a9 9 0 0 0-12.728 0m12.728 0a9 9 0 0 1 0 12.728m-3.536-9.192a4 4 0 0 0-5.656 0m5.656 0a4 4 0 0 1 0 5.656m0 0 3.536 3.536m-3.536-3.536a4 4 0 0 1-5.656 0m9.192 3.536a9 9 0 0 1-12.728 0m3.536-9.192L5.65 5.636m3.536 3.536a4 4 0 0 0 0 5.656M5.65 5.636a9 9 0 0 0 0 12.728m3.536-3.536L5.65 18.364' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'switch-horizontal': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m4.014 17 4-4m0-6h12-12Zm12 0-4-4 4 4Zm0 0-4 4 4-4Zm-4 10h-12 12Zm-12 0 4 4-4-4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'switch-vertical': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m17.014 20-4-4m-6 0V4v12Zm0-12-4 4 4-4Zm0 0 4 4-4-4Zm10 4v12V8Zm0 12 4-4-4 4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'table': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 10h18m-18 4h18m-9-4v8m-7 0h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-14a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'tag': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.014 7h.01m-.01-4h5a1.99 1.99 0 0 1 1.414.586l7 7a2 2 0 0 1 0 2.828l-7 7a2 2 0 0 1-2.828 0l-7-7A1.995 1.995 0 0 1 3.014 12V7a4 4 0 0 1 4-4Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'template': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.307 4.293A1 1 0 0 0 4.014 5v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-14a1 1 0 0 0-.707.293ZM4.307 12.293a1 1 0 0 0-.293.707v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-.707.293ZM16.307 12.293a1 1 0 0 0-.293.707v6a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-2a1 1 0 0 0-.707.293Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'terminal': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m8.014 9 3 3-3 3m5 0h3m-11 5h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-14a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'thumb-down': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m17.013 4-3.76-.94a2 2 0 0 0-.485-.06H8.75a2 2 0 0 0-1.79 1.106l-3.5 7A2 2 0 0 0 5.25 14h6.764m4.999-10v9l-3.391 5.088a3.616 3.616 0 0 0-.608 2.008.905.905 0 0 1-.905.904h-.096a2 2 0 0 1-2-2v-5m7-10h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2.5' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'thumb-up': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.014 10h4.764a2 2 0 0 1 1.789 2.894l-3.5 7A2 2 0 0 1 15.277 21H11.26c-.163 0-.326-.02-.485-.06L7.014 20m7-10V5a2 2 0 0 0-2-2h-.095c-.5 0-.905.405-.905.905a3.61 3.61 0 0 1-.608 2.006L7.014 11v9m7-10h-2m-5 10h-2a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h2.5' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'ticket': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.014 5v2m0 4v2m0 4v2m-10-14a2 2 0 0 0-2 2v3a2 2 0 1 1 0 4v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a2 2 0 1 1 0-4V7a2 2 0 0 0-2-2h-14Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'translate': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.014 5h12m-6-2v2m1.048 9.5A18.021 18.021 0 0 1 6.426 9m6.088 9h7m-8.5 3 5-10 5 10m-8.25-16c-.967 5.77-4.68 10.61-9.75 13.129' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'trash': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.014 11v6m4-6v6m-10-10h16m-1 0-.867 12.142A2 2 0 0 1 16.152 21H7.876a2 2 0 0 1-1.995-1.858L5.014 7h14Zm-4 0V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3h6Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'trending-down': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.014 17h8m0 0V9m0 8-8-8-4 4-6-6' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'trending-up': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.014 7h8m0 0v8m0-8-8 8-4-4-6 6' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'truck': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.428 18.414a2 2 0 1 0-2.829-2.828 2 2 0 0 0 2.829 2.828ZM18.428 18.414a2 2 0 1 0-2.828-2.828 2 2 0 0 0 2.828 2.828Z' stroke='%23939393'/%3e%3cpath d='M13.014 16V6a1 1 0 0 0-1-1h-8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h1m8-1a1 1 0 0 1-1 1h-3m4-1V8a1 1 0 0 1 1-1H16.6a1 1 0 0 1 .707.293l3.414 3.414a1 1 0 0 1 .293.707V16a1 1 0 0 1-1 1h-1m-6-1a1 1 0 0 0 1 1h1m-10 0a2 2 0 0 0 4 0m-4 0a2 2 0 0 1 4 0m10 0a2 2 0 0 1-4 0m4 0a2 2 0 0 0-4 0' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'upload': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 16v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1m-4-8-4-4m0 0-4 4m4-4v12' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'user-add': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.014 9v3-3Zm0 3v3-3Zm0 0h3-3Zm0 0h-3 3Zm-5-5a4 4 0 1 1-8 0 4 4 0 0 1 8 0v0Zm-10 13a6 6 0 1 1 12 0v1h-12v-1Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'user-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.135 17.804A13.936 13.936 0 0 1 12.014 16c2.5 0 4.847.655 6.879 1.804M15.013 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'user-group': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.014 20h5v-2a3 3 0 0 0-5.356-1.857M17.014 20h-10m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.003 5.003 0 0 0-9.288 0M7.014 20h-5v-2a3 3 0 0 1 5.356-1.857M7.014 20v-2c0-.656.126-1.283.356-1.857M15.014 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-14 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'user-remove': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.014 12h-6m-2-5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-4 7a6 6 0 0 0-6 6v1h12v-1a6 6 0 0 0-6-6Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'user': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.842 9.828a4 4 0 1 0-5.657-5.657 4 4 0 0 0 5.657 5.657ZM7.064 16.05A7 7 0 0 1 19.014 21h-14a7 7 0 0 1 2.05-4.95Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'users': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.014 4.354a4 4 0 1 1 0 5.292m3 11.354h-12v-1a6 6 0 1 1 12 0v1Zm0 0h6v-1a6 6 0 0 0-9-5.197m1-7.803a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'variable': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.885 4a17.926 17.926 0 0 0-1.871 8c0 2.874.673 5.59 1.87 8m14.13 0a17.926 17.926 0 0 0 1.87-8c0-2.874-.672-5.59-1.87-8m-10 5h1.246a1 1 0 0 1 .96.725l1.587 5.55a1 1 0 0 0 .96.725h1.247m1-7h-.08a2 2 0 0 0-1.52.698l-4.8 5.604a2 2 0 0 1-1.52.698h-.08' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'video-camera': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m15.014 10 4.553-2.276a1 1 0 0 1 1.447.894v6.764a1 1 0 0 1-1.447.894L15.014 14v-4Zm-10 8h8a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'view-boards': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.014 17V7m0 10a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m0 10a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m-6-10a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m0 10V7m0 10a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'view-grid-add': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.014 14v6m-3-3h6m-14-7h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2Zm10 0h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2Zm-10 10h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'view-grid': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.6 4.586A2 2 0 0 0 4.013 6v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2a2 2 0 0 0-1.415.586ZM14.6 4.586A2 2 0 0 0 14.014 6v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2a2 2 0 0 0-1.414.586ZM4.6 14.586A2 2 0 0 0 4.013 16v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2a2 2 0 0 0-1.415.586ZM14.6 14.586A2 2 0 0 0 14.014 16v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2a2 2 0 0 0-1.414.586Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'view-list': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 18h16m-16-12h16-16Zm0 4h16-16Zm0 4h16-16Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'volume-off': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.014 15H5.6l4.707 4.707c.63.63 1.707.184 1.707-.707V5c0-.891-1.077-1.337-1.707-.707L5.6 9H4.014a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1ZM19.014 12l2 2m-4 0 2-2-2 2Zm2-2 2-2-2 2Zm0 0-2-2 2 2Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'volume-up': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.55 8.464a5.001 5.001 0 0 1 0 7.072m2.828-9.9a9 9 0 0 1 0 12.728M5.6 15H4.014a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1H5.6l4.707-4.707c.63-.63 1.707-.184 1.707.707v14c0 .891-1.077 1.337-1.707.707L5.6 15Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'wifi': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M8.125 16.404a5.5 5.5 0 0 1 7.778 0M12.013 20h.01m-7.08-7.07c3.905-3.906 10.237-3.906 14.142 0M1.408 9.392c5.857-5.857 15.355-5.857 21.213 0' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' transform='translate(.014)' d='M0 0h24v24H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e",
+    'x-circle': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m10.014 14 2-2m0 0 2-2m-2 2-2-2m2 2 2 2m7-2a9 9 0 1 1-18.001 0 9 9 0 0 1 18 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'x': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m6.014 6 12 12m-12 0 12-12-12 12Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'zoom-in': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.014 10h-3m14 11-6-6 6 6Zm-4-11a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-7-3v3-3Zm0 3v3-3Zm0 0h3-3Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e",
+    'zoom-out': "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.014 10h-6m14 11-6-6 6 6Zm-4-11a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z' stroke='%23939393' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e"
+);
+
+$sizes: (
+    'academic-cap': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'adjustments': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'annotation': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'archive': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-circle-down': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-circle-left': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-circle-right': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-circle-up': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-down': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-left': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-narrow-down': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-narrow-left': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-narrow-right': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-narrow-up': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-right': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrow-up': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'arrows-expand': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'at-symbol': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'backspace': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'badge-check': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'ban': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'beaker': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'bell': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'book-open': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'bookmark-alt': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'bookmark': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'briefcase': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cake': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'calculator': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'calendar': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'camera': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cash': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chart-bar': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chart-pie': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chart-square-bar': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chat-alt-2': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chat-alt': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chat': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'check-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'check': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chevron-double-down': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chevron-double-left': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chevron-double-right': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chevron-double-up': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chevron-down': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chevron-left': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chevron-right': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chevron-up': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'chip': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'clipboard-check': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'clipboard-copy': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'clipboard-list': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'clipboard': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'clock': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cloud-download': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cloud-upload': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cloud': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'code': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cog': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'collection': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'color-swatch': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'credit-card': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cube-transparent': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cube': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'currency-bangladeshi': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'currency-dollar': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'currency-euro': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'currency-pound': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'currency-rupee': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'currency-yen': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'cursor-click': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'database': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'desktop-computer': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'device-mobile': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'device-tablet': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'document-add': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'document-download': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'document-duplicate': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'document-remove': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'document-report': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'document-search': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'document-text': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'document': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'dots-circle-horizontal': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'dots-horizontal': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'dots-vertical': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'download': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'duplicate': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'emoji-happy': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'emoji-sad': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'exclamation-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'exclamation': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'external-link': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'eye-off': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'eye': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'fast-forward': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'film': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'filter': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'finger-print': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'fire': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'flag': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'folder-add': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'folder-download': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'folder-open': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'folder-remove': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'folder': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'gift': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'globe-alt': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'globe': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'hand': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'hashtag': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'heart': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'home': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'identification': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'inbox-in': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'inbox': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'information-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'key': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'library': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'light-bulb': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'lightning-bolt': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'link': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'location-marker': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'lock-closed': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'lock-open': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'login': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'logout': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'mail-open': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'mail': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'map': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'menu-alt-1': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'menu-alt-2': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'menu-alt-3': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'menu-alt-4': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'menu': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'microphone': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'minus-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'minus': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'moon': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'music-note': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'newspaper': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'office-building': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'paper-airplane': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'paper-clip': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'pause': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'pencil-alt': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'pencil': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'phone-incoming': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'phone-missed-call': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'phone-outgoing': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'phone': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'photograph': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'play': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'plus-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'plus': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'presentation-chart-bar': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'presentation-chart-line': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'printer': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'puzzle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'qrcode': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'question-mark-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'receipt-refund': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'receipt-tax': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'refresh': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'reply': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'rewind': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'rss': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'save-as': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'save': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'scale': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'scissors': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'search-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'search': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'selector': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'server': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'share': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'shield-check': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'shield-exclamation': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'shopping-bag': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'shopping-cart': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'sort-ascending': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'sort-descending': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'sparkles': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'speakerphone': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'star': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'status-offline': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'status-online': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'stop': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'sun': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'support': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'switch-horizontal': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'switch-vertical': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'table': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'tag': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'template': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'terminal': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'thumb-down': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'thumb-up': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'ticket': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'translate': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'trash': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'trending-down': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'trending-up': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'truck': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'upload': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'user-add': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'user-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'user-group': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'user-remove': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'user': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'users': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'variable': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'video-camera': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'view-boards': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'view-grid-add': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'view-grid': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'view-list': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'volume-off': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'volume-up': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'wifi': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'x-circle': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'x': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'zoom-in': (
+        'width': 25px,
+        'height': 24px
+    ),
+    'zoom-out': (
+        'width': 25px,
+        'height': 24px
+    )
+);
+
+$variables: (
+    /* EMPTY */
+);
+
+// https://github.com/waldemarfm/sass-svg-uri/blob/v1.0.0/_svg-uri.scss
+@function sprite-str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if type-of($replace) == 'null' {
+        $replace: '';
+    }
+
+    @if ( $index ) {
+        @return str-slice($string, 1, $index - 1) + $replace + sprite-str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+@function sprite-svg-uri($value) {
+    $output: $value;
+
+    $output: sprite-str-replace($output, '"', "'");
+    $output: sprite-str-replace($output, '<', '%3C');
+    $output: sprite-str-replace($output, '>', '%3E');
+    $output: sprite-str-replace($output, '&', '%26');
+    $output: sprite-str-replace($output, '#', '%23');
+
+    @return $output;
+}
+
+@mixin sprite($name, $user-variables: (), $include-size: false) {
+    $sprite: map-get($sprites, $name);
+
+    // Inject variables
+    $default-variables: map-get($variables, $name);
+    @if type-of($default-variables) == 'map' {
+        @each $key, $value in map-merge($default-variables, $user-variables) {
+            @if ( not map-has-key($default-variables, $key) ) {
+                @warn 'Sprite \'#{$name}\' does not support variable named \'#{$key}\'';
+            }
+
+            $sprite: sprite-str-replace($sprite, '___#{$key}___', sprite-svg-uri(quote(#{$value})));
+        }
+    } @else if type-of($user-variables) == 'map' {
+        @warn 'Sprite \'#{$name}\' does not contain any variables';
+    }
+
+    background: url($sprite) center no-repeat;
+
+    @if $include-size {
+        $size: map-get($sizes, $name);
+        @if $include-size == true {
+            background-size: map-get($size, width) map-get($size, height);
+        } @else if $include-size == 'box' {
+            width: map-get($size, width);
+            height: map-get($size, height);
+        }
+    }
+}
