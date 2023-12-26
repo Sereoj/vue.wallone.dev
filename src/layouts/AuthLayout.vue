@@ -4,7 +4,6 @@
       <LogoBox class="m-3"/>
     </div>
     <div class="container col-sm-12 col-lg-7 m-auto">
-      <!-- TODO: здесь располагается шапка с ссылками -->
       <div class="col-10 m-auto">
         <LogoBox class="m-3 mb-5"/>
         <ul class="d-flex mb-5" v-if="isAuthPage">

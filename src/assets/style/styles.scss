@@ -23,6 +23,9 @@ $input-placeholder-color: $primary2;
 $input-height: 40px;
 $input-focus-box-shadow: 0 0 0 2px $second;
 
+$input-group-addon-bg: $componentColor;
+$input-group-addon-border-color: none;
+
 // Labels
 $form-label-color: $primary;
 $form-label-font-size: 24px;
@@ -62,9 +65,12 @@ $form-text-font-weight: 400;
 }
 
 // Dropdowns
-$dropdown-bg: none;
+$dropdown-bg: $background;
 $dropdown-border-color: $second;
 $dropdown-border-radius: 0rem 0rem 0.9rem 0.9rem;;
+
+// Borders
+$border-width: 2px;
 
 @import "bootstrap/scss/bootstrap";
 @import "reset";
