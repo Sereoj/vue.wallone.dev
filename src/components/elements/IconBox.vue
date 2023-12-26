@@ -1,12 +1,20 @@
 <template>
-  <div class="icon"></div>
+  <div style=""></div>
 </template>
-
+<script>
+export default {
+  name: "IconBox",
+  props:[
+    'title',
+    'name',
+  ],
+}
+</script>
 <style lang="sass">
 @import "src/assets/style/sprites"
 
 .icon
-  @include sprite('academic-cap')
+  @include sprite('x')
   fill: #007AFF
   width: 20px
   height: 20px
