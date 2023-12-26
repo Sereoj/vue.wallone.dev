@@ -1,7 +1,7 @@
 <template>
   <form class="m-auto w-70" role="search">
     <div class="input-group">
-      <input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск" @click="isSearch = !isSearch">
+      <input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск" @click="isSearch = !isSearch" v-model="searchText" maxlength="64">
       <button class="input-group-text">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M6.51333 2C5.50981 2 4.54739 2.42143 3.83779 3.17157C3.12819 3.92172 2.72954 4.93913 2.72954 6C2.72954 7.06087 3.12819 8.07828 3.83779 8.82843C4.54739 9.57857 5.50981 10 6.51333 10C7.51685 10 8.47928 9.57857 9.18887 8.82843C9.89847 8.07828 10.2971 7.06087 10.2971 6C10.2971 4.93913 9.89847 3.92172 9.18887 3.17157C8.47928 2.42143 7.51685 2 6.51333 2ZM0.837647 6C0.837533 5.0557 1.04825 4.12471 1.45267 3.28274C1.85709 2.44077 2.44379 1.7116 3.16505 1.15453C3.88631 0.597453 4.72177 0.228212 5.60347 0.0768326C6.48517 -0.0745466 7.38822 -0.00378925 8.23918 0.28335C9.09013 0.570489 9.86497 1.0659 10.5007 1.7293C11.1363 2.39269 11.6149 3.20533 11.8975 4.10113C12.1801 4.99693 12.2587 5.95059 12.1269 6.88455C11.9951 7.81851 11.6566 8.7064 11.139 9.476L15.6956 14.293C15.868 14.4816 15.9633 14.7342 15.9611 14.9964C15.959 15.2586 15.8595 15.5094 15.6841 15.6948C15.5087 15.8802 15.2715 15.9854 15.0235 15.9877C14.7754 15.99 14.5365 15.8892 14.3581 15.707L9.80239 10.891C8.95327 11.5293 7.95434 11.9082 6.91505 11.9861C5.87577 12.0641 4.83623 11.8381 3.91037 11.333C2.9845 10.8278 2.20803 10.063 1.66603 9.12235C1.12404 8.18168 0.837444 7.10143 0.837647 6Z" fill="white"/>
@@ -9,11 +9,12 @@
       </button>
     </div>
 
-    <ul class="dropdown-menu" :class="isSearch ? 'show' : ''">
-      <li><a class="dropdown-item" href="#">Действие</a></li>
-      <li><a class="dropdown-item" href="#">Другое действие</a></li>
-      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-      <li><a class="dropdown-item" href="#">И еще что-то здесь</a></li>
+    <ul class="dropdown-menu m-auto w-70" :class="isSearch ? 'show' : ''">
+      <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
+      <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
+      <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
+      <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
+      <li><p class="dropdown-item">Не найдено</p></li>
     </ul>
   </form>
 </template>
@@ -23,6 +24,7 @@ export default {
   name: "SearchBox",
   data() {
     return {
+      searchText : "",
       isSearch: false
     }
   }
