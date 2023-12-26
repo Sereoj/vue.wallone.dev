@@ -1,5 +1,6 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader')
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
 
 module.exports = {
     entry: './src/main.js',
@@ -18,31 +19,31 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader'
             },
-            // {
-            //     test: /.s[ac]ss$/i,
-            //     use: [
-            //         'vue-style-loader',
-            //         'css-loader',
-            //         {
-            //             loader: 'css-loader',
-            //             options: {
-            //                 importLoaders: 1
-            //             },
-            //         },
-            //         'postcss-loader',
-            //         'sass-loader',
-            //         {
-            //             loader: "sass-loader",
-            //             options: {
-            //                 sourceMap: true,
-            //                 minimize: true,
-            //                 sassOptions: {
-            //                     outputStyle: "compressed",
-            //                 },
-            //             }
-            //         }
-            //     ]
-            // },
+            {
+                test: /.s[ac]ss$/i,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        },
+                    },
+                    'postcss-loader',
+                    'sass-loader',
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                            minimize: true,
+                            sassOptions: {
+                                outputStyle: "compressed",
+                            },
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'url-loader',
@@ -61,6 +62,20 @@ module.exports = {
         ]
     },
     plugins: [
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new SVGSpritemapPlugin(path.join(__dirname, "src/images/*.svg"), {
+            output: {
+                filename: path.join(__dirname, 'src/images/output/sprites.svg'),
+                chunk: { keep: false },
+                svgo: {
+                    plugins: [
+                        { addClassesToSVGElement: { className: 'svg-sprite' } },
+                        { removeTitle: true }
+                    ]
+                }
+            },
+            sprite: { prefix: false },
+            styles: path.join(__dirname, 'src/assets/style/_sprites.scss')
+        })
     ]
 };

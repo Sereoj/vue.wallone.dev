@@ -27,6 +27,7 @@
           <ul class="navbar-nav me-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle mb-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <IconBox/>
                   Профиль
               </a>
               <ul class="dropdown-menu text-center">
@@ -48,10 +49,12 @@
 
 <script>
 import LogoBox from "@/components/blocks/LogoBox.vue";
+import IconBox from "@/components/elements/IconBox";
 import SearchBox from "@/components/elements/SearchBox";
+
 export default {
   components: {
-    LogoBox, SearchBox
+    LogoBox, SearchBox,IconBox
   }
 }
 </script>
