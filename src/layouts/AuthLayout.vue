@@ -6,12 +6,13 @@
     <div class="container col-sm-12 col-lg-7 m-auto">
       <!-- TODO: здесь располагается шапка с ссылками -->
       <div class="col-10 m-auto">
+        <LogoBox class="m-3 mb-5"/>
         <ul class="d-flex mb-5" v-if="isAuthPage">
           <li>
-            <router-link to="/login" id="tabLinkLogin" class="h2">Авторизация</router-link>
+            <LinkTabBox title="Авторизация" name="tabLinkLogin" path="/login" class="h2"/>
           </li>
           <li>
-            <router-link to="/register" id="tabLinkRegister" class="h2 ms-4">Регистрация</router-link>
+            <LinkTabBox title="Регистрация" name="tabLinkRegister" path="/register" class="h2 ms-4"/>
           </li>
         </ul>
 
@@ -26,15 +27,15 @@
 <script>
 import LogoBox from "@/components/blocks/LogoBox.vue";
 import {useRoute} from 'vue-router'
+import LinkTabBox from "@/components/elements/LinkTabBox";
 
 export default {
   components: {
+    LinkTabBox,
     LogoBox
   },
   data() {
-    return {
-      path: "login"
-    }
+    return {}
   },
   computed: {
     isAuthPage() {

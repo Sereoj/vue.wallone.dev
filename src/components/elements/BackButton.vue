@@ -22,6 +22,8 @@ export default {
 @import "@/assets/style/variables"
 
 .backButton
-  color: $primary2
+  color: $primary3
+  &:hover
+    color: $primary
 
 </style>

@@ -4,8 +4,8 @@
     <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня" checked />
 
     <div class="d-flex align-items-center mt-4">
-      <input type="submit" class="btn btn-primary me-5" value="Войти" v-on="auth"/>
-      <router-link to="/forgot-password" class="missing_pass">Забыли пароль?</router-link>
+      <ButtonBox class="me-5" title="Войти" name="loginBtn" v-on="auth"/>
+      <LinkBox name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
     </div>
 <!--  <div class="d-flex mt-5 d-none d-lg-block">-->
 <!--    <div style="background: #2B2B2B; width: 47vw; height: 4rem;" class="container">-->
@@ -18,11 +18,15 @@
 import TextBox from "@/components/elements/TextBox";
 import PassWord from "@/components/elements/PassWord";
 import CheckBox from "@/components/elements/CheckBox";
+import LinkBox from "@/components/elements/LinkBox";
+import ButtonBox from "@/components/elements/ButtonBox";
+
 import router from "@/router";
 import { ref } from 'vue'
 
+
 export default {
-  components: { PassWord, TextBox, CheckBox },
+  components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox },
   data() {
     return {
       response: null,
@@ -48,7 +52,5 @@ export default {
 }
 </script>
 
-<style lang="sass">
-.missing_pass
-  font-size: 24px
+<style lang="scss">
 </style>

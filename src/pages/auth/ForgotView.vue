@@ -6,15 +6,16 @@
   <TextBox name="email" title="Email" placeholder="help@wallone.ru" />
 
   <div class="d-flex align-items-center mt-5">
-    <input type="submit" class="btn btn-primary" value="Восстановить пароль" />
+    <ButtonBox title="Восстановить пароль" name="ForgotPassword"/>
   </div>
 </template>
 <script>
 import TextBox from "@/components/elements/TextBox"
 import backButton from "@/components/elements/BackButton";
+import ButtonBox from "@/components/elements/ButtonBox";
 
 export default {
-  components: { TextBox, backButton },
+  components: {ButtonBox, TextBox, backButton },
   data() {
     return {
       //
@@ -28,8 +29,4 @@ export default {
 </script>
 
 <style lang="sass">
-@import "@/assets/style/variables"
-.backButton
-  color: $primary2
-
 </style>

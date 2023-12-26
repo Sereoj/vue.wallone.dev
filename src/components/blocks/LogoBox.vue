@@ -27,7 +27,9 @@
 
 .logo__brand
   font-size: 1rem
-  color: $primary
+  color: $primary3
   font-family: "Roboto", serif
+  &:hover
+    color: $primary
 
 </style>

@@ -6,13 +6,12 @@
   <PassWord name="password_confirmation" title="Повторите пароль" />
 
   <div class="text-center">
-    <p class="fs-20">Создавая аккаунт, вы соглашаетесь с нашим <a href="#">пользовательским соглашением</a> и <a
-        href="#">положением о
-        конфиденциальности.</a></p>
+    <p class="fs-20">Создавая аккаунт, вы соглашаетесь с нашим <link-box path="/user_agreement" title="пользовательским соглашением" name="user_agreement"/> и
+      <link-box path="/privacy_statement" title="положением о конфиденциальности." name="privacy_statement"/></p>
   </div>
 
   <div class="d-flex align-items-center mt-5">
-    <input type="submit" class="btn btn-primary" value="Регистрация" />
+    <ButtonBox title="Регистрация" name="Register"/>
   </div>
 <!--  <div class="d-flex mt-5 d-none d-lg-block">-->
 <!--    <div style="background: #2B2B2B; width: 47vw; height: 4rem;" class="container">-->
@@ -24,9 +23,11 @@
 <script>
 import TextBox from "@/components/elements/TextBox";
 import PassWord from "@/components/elements/PassWord";
+import LinkBox from "@/components/elements/LinkBox";
+import ButtonBox from "@/components/elements/ButtonBox";
 
 export default {
-  components: { PassWord, TextBox },
+  components: {ButtonBox, LinkBox, PassWord, TextBox},
   data() {
     return {
       //
@@ -39,5 +40,4 @@ export default {
 </script>
 
 <style lang="sass">
-
 </style>

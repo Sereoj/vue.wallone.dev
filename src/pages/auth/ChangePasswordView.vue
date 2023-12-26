@@ -7,14 +7,15 @@
   <PassWord name="password_configuration" title="Повторите пароль"/>
 
   <div class="d-flex align-items-center mt-5">
-    <input type="submit" class="btn btn-primary" value="Сменить пароль" />
+    <ButtonBox title="Сменить пароль" name="ChangePassword"/>
   </div>
 </template>
 <script>
 import PassWord from "@/components/elements/PassWord";
 import backButton from "@/components/elements/BackButton";
+import ButtonBox from "@/components/elements/ButtonBox";
 export default {
-  components: { PassWord, backButton },
+  components: {ButtonBox, PassWord, backButton },
   data() {
     return {
       //
