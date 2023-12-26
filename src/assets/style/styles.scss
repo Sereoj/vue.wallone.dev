@@ -65,7 +65,7 @@ $form-text-font-weight: 400;
 }
 
 // Dropdowns
-$dropdown-bg: none;
+$dropdown-bg: $background;
 $dropdown-border-color: $second;
 $dropdown-border-radius: 0rem 0rem 0.9rem 0.9rem;;
 
