@@ -1,10 +1,12 @@
 <template>
   <header-view/>
-  <sidebar-view/>
-  <!--    По макету SiteLinks, это отдельный блок, не входящий header -->
   <SiteLinks/>
-  <!--  Content -->
-  <router-view/>
+  <div class="container">
+    <sidebar-view/>
+    <!--    По макету SiteLinks, это отдельный блок, не входящий header -->
+    <!--  Content -->
+    <router-view/>
+  </div>
 </template>
 
 <script>
