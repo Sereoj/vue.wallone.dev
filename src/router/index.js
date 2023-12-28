@@ -21,6 +21,7 @@ const router = createRouter({
       component: AuthLayout,
       children: [
         {
+          name: 'LoginView',
           path: '',
           component: LoginView
         }
@@ -32,6 +33,7 @@ const router = createRouter({
       component: AuthLayout,
       children: [
         {
+          name: 'RegisterView',
           path: '',
           component: RegisterView
         }
@@ -43,6 +45,7 @@ const router = createRouter({
       component: AuthLayout,
       children: [
         {
+          name: 'ForgotView',
           path: '',
           component: ForgotView
         }
@@ -54,6 +57,7 @@ const router = createRouter({
       component: AuthLayout,
       children: [
         {
+          name: 'ChangePasswordView',
           path: '',
           component: ChangePasswordView
         }
@@ -65,6 +69,7 @@ const router = createRouter({
       component: MainLayout,
       children: [
         {
+          name: 'MainView',
           path: '',
           component: MainView
         }

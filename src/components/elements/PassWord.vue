@@ -2,12 +2,20 @@
 export default {
   props:[
     'title',
-    "name",
+    'name',
+    'message'
   ],
-  data() {
+  data(props) {
     return {
       showPassword: false,
-      password: ''
+      password: '',
+      PasswordBox:
+      {
+            name: props.name,
+            title: props.title,
+            placeholder: props.placeholder,
+            nameText: props.name + "_text"
+      }
     }
   }
 }
@@ -17,7 +25,7 @@ export default {
   <div class="mb-3">
     <label :for="name" class="form-label">{{ title }}</label>
     <div class="input-group">
-      <input v-bind:type="[showPassword ? 'text' : 'password']" :name="name" :id="name" class="form-control" v-model="password">
+      <input v-bind:type="[showPassword ? 'text' : 'password']" :name="name" :id="name" class="form-control" v-model="password" @input="$emit('update:password', $event.target.value)" :aria-describedby="PasswordBox.nameText">
       <button class="input-group-text" @click="showPassword = !showPassword">
         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none" v-if="showPassword">
           <g>
@@ -34,6 +42,7 @@ export default {
         </svg>
       </button>
     </div>
+    <div :id="PasswordBox.nameText" class="invalid-feedback">{{message}}</div>
   </div>
 </template>
 
