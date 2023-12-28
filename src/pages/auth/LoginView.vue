@@ -1,8 +1,9 @@
 <template>
     <TextBox name="login" title="Email или логин" placeholder="help@wallone.ru" ref="model"/>
     <PassWord name="password" title="Пароль"/>
-    <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня" checked />
-
+    <div class="row justify-content-center">
+      <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня" checked />
+    </div>
     <div class="d-flex align-items-center mt-4">
       <ButtonBox class="me-5" title="Войти" name="loginBtn" v-on="auth"/>
       <LinkBox name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
