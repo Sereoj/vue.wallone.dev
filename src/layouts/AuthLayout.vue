@@ -4,8 +4,8 @@
       <LogoBox class="m-3"/>
     </div>
     <div class="container col-sm-12 col-lg-7 m-auto">
-      <div class="col-10 m-auto">
-        <LogoBox class="m-3 mb-5 d-block d-md-none"/>
+      <div class="col-10 row justify-content-center m-auto">
+        <LogoBox class="mb-5 d-block d-md-none"/>
         <ul class="d-flex mb-5" v-if="isAuthPage">
           <li>
             <LinkTabBox title="Авторизация" name="tabLinkLogin" path="/login" class="h2"/>
