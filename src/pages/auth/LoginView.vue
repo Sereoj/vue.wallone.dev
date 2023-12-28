@@ -8,11 +8,7 @@
       <ButtonBox class="me-5" title="Войти" name="loginBtn" v-on="auth"/>
       <LinkBox name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
     </div>
-<!--  <div class="d-flex mt-5 d-none d-lg-block">-->
-<!--    <div style="background: #2B2B2B; width: 47vw; height: 4rem;" class="container">-->
-<!--      <img src="@/assets/banners/appwizard.png" style="width: 80%; height: 100%">-->
-<!--    </div>-->
-<!--  </div>-->
+  <AdboxView/>
 </template>
 
 <script>
@@ -21,13 +17,14 @@ import PassWord from "@/components/elements/PassWord";
 import CheckBox from "@/components/elements/CheckBox";
 import LinkBox from "@/components/elements/LinkBox";
 import ButtonBox from "@/components/elements/ButtonBox";
+import AdboxView from "@/components/ads/AdboxView";
 
 import router from "@/router";
 import { ref } from 'vue'
 
 
 export default {
-  components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox },
+  components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
   data() {
     return {
       response: null,
