@@ -4,10 +4,10 @@
 <script>
 export default {
   name: "IconBox",
-  props:[
-    'title',
-    'name',
-  ],
+  props:{
+    'title': String,
+    'name': String,
+  }
 }
 </script>
 <style lang="sass">

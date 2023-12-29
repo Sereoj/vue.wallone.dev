@@ -5,10 +5,10 @@
 <script>
 export default {
   name: "ButtonBox",
-  props:[
-    'title',
-    'name',
-  ],
+  props:{
+    'title': String,
+    'name': String,
+  }
 }
 </script>
 

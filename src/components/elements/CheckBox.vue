@@ -9,10 +9,10 @@
 
 <script>
 export default {
-    props: [
-        'name',
-        'title'
-    ]
+    props: {
+      'name': String,
+      'title': String
+    }
 }
 </script>
 

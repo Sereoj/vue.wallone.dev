@@ -5,11 +5,11 @@
 <script>
 export default {
   name: "LinkTabBox",
-  props:[
-    'title',
-    'name',
-    'path'
-  ],
+  props:{
+    'title': String,
+    'name': String,
+    'path': String
+  },
 }
 </script>
 

@@ -1,7 +1,20 @@
 <template>
-  <form class="needs-validation" novalidate>
-    <TextBox name="login" title="Email или логин" placeholder="help@wallone.ru" aria-autocomplete="both" @input="getEmail" :message="messages.email" required/>
-    <PassWord name="password" title="Пароль" @input="getPassword" :message="messages.password" required/>
+    <TextBox name="login"
+             title="Email или логин"
+             placeholder="help@wallone.ru"
+             aria-autocomplete="both"
+             v-model="getEmail"
+             :message="messages.email"
+             :is-valid="validations.email"
+             required/>
+
+    <PassWord name="password"
+              title="Пароль"
+              @input="getPassword"
+              :is-valid="validations.password"
+              :message="messages.password"
+              required/>
+
     <div class="justify-content-center">
       <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня"/>
     </div>
@@ -10,7 +23,6 @@
       <LinkBox name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
     </div>
     <AdboxView/>
-  </form>
 </template>
 
 <script>
@@ -35,6 +47,10 @@ export default {
       email: "",
       password: "",
       rememberMe: false,
+      validations: {
+        email : true,
+        password: true
+      },
       messages: {
         email: "",
         password: "",
@@ -42,8 +58,8 @@ export default {
       }
     };
   },
-  setup() {
-    // console.log(this.email)
+  watch(){
+
   },
   mounted() {
     document.title = 'Wallone • Авторизация'
@@ -57,6 +73,14 @@ export default {
     },
     router(){
       return router
+    },
+    test(e){
+      if(!this.email)
+      {
+        this.validations.email = false;
+        this.messages.email = "Укажите email"
+      }
+      e.preventDefault();
     },
     getAuth(e){
       apiRouter.postRequest(apiRouter.api.login, {
