@@ -2,21 +2,28 @@
   <div class="needs-validation">
     <TextBox name="login"
              title="Email или логин"
-             placeholder="help@wallone.ru"
+             placeholder="user@wallone.ru"
              aria-autocomplete="both"
+             :model-value="getEmail"
              min-length="4"/>
 
     <PassWord name="password"
+              placeholder="Самый сложный пароль"
               title="Пароль"
+              min-length="0"
               required/>
 
     <div class="justify-content-center">
-      <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня"/>
+      <CheckBox class="mt-5"
+                name="rememberMe"
+                title="Запомнить меня"/>
     </div>
+
     <div class="d-flex align-items-center mt-4">
       <ButtonBox class="me-5" title="Авторизироваться" name="loginBtn" v-on:click="getAuth"/>
       <LinkBox name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
     </div>
+
     <AdboxView/>
   </div>
 </template>
@@ -62,17 +69,18 @@ export default {
       return router
     },
     getAuth(e){
-      apiRouter.postRequest(apiRouter.api.login, {
+      let {result} = apiRouter.postRequest(apiRouter.api.login, {
         email: this.email,
-        password: this.password
+        password: this.password,
+        remember: this.rememberMe
       })
       .then(function (response) {
         console.log(response?.data)
       })
       .catch(function (error) {
-        let result = error?.response.data
-        this.messages.email = result.errors.email
+        return error
       })
+      console.log(result)
       e.preventDefault();
     }
   },

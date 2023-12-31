@@ -3,7 +3,8 @@ export default {
   props:{
     'title': String,
     'name': String,
-    'minLength' : Number
+    'placeholder': String,
+    'minLength' : String
   },
   data(props) {
     return {
@@ -27,7 +28,7 @@ export default {
     },
     validation(v)
     {
-      if(v.target.value.length <= this.minLength)
+      if(v.target.value.length <= parseInt(this.minLength))
       {
         this.isError = true
         this.PasswordBox.messageBox = `Минимальное количество символов составляет: ${this.minLength}`
@@ -49,6 +50,7 @@ export default {
           v-bind:type="[showPassword ? 'text' : 'password']"
           :name="name"
           :id="name"
+          :placeholder="placeholder"
           v-bind:class="{'form-control':true, 'is-invalid' : isError}"
           v-on:input="changeText"
           :aria-describedby="PasswordBox.nameText">

@@ -6,9 +6,8 @@ export default {
       'name': String,
       'placeholder': String,
       'modelValue' : String,
-      'minLength' : Number
+      'minLength' : String
   },
-  emits: ['modelValue'],
   data(props) {
     return {
       value : '',
@@ -31,7 +30,7 @@ export default {
     },
     validation(v)
     {
-      if(v.target.value.length <= this.minLength)
+      if(v.target.value.length <= parseInt(this.minLength))
       {
         this.isError = true
         this.TextBox.messageBox = `Минимальное количество символов составляет: ${this.minLength}`
