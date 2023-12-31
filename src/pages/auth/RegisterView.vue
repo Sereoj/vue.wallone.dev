@@ -1,9 +1,9 @@
 <template>
   <!-- ! Оставить только это: -->
-  <TextBox name="username" title="Логин" placeholder="Sergio Strange" />
-  <TextBox name="email" title="Email" placeholder="user@wallone.ru" />
-  <PassWord name="password" title="Пароль" />
-  <PassWord name="password_confirmation" title="Повторите пароль" />
+  <TextBox name="username" title="Логин" placeholder="Sergio Strange" min-length="4"/>
+  <TextBox name="email" title="Email" placeholder="user@wallone.ru" min-length="6"/>
+  <PassWord name="password" title="Пароль" min-length="6"/>
+  <PassWord name="password_confirmation" title="Повторите пароль" min-length="6"/>
 
   <div class="text-center">
     <p class="fs-20">Создавая аккаунт, вы соглашаетесь с нашим <link-box path="/user_agreement" title="пользовательским соглашением" name="user_agreement"/> и
@@ -11,7 +11,7 @@
   </div>
 
   <div class="d-flex align-items-center mt-5">
-    <ButtonBox title="Регистрация" name="Register"/>
+    <ButtonBox title="Зарегистрироваться" name="Register"/>
   </div>
 <!--  <div class="d-flex mt-5 d-none d-lg-block">-->
 <!--    <div style="background: #2B2B2B; width: 47vw; height: 4rem;" class="container">-->

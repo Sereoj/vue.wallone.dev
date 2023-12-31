@@ -5,13 +5,14 @@ export default {
       'title': String,
       'name': String,
       'placeholder': String,
-      'message': String,
-      'isValid': Boolean,
+      'modelValue' : String,
+      'minLength' : Number
   },
   emits: ['modelValue'],
   data(props) {
     return {
-      modelValue : '',
+      value : '',
+      isError : false,
       TextBox:
       {
         name: props.name,
@@ -19,6 +20,24 @@ export default {
         title: props.title,
         placeholder: props.placeholder,
         messageBox: props.message
+      }
+    }
+  },
+  methods: {
+    changeText(value)
+    {
+      this.validation(value)
+      this.$emit('update:modelValue', value)
+    },
+    validation(v)
+    {
+      if(v.target.value.length <= this.minLength)
+      {
+        this.isError = true
+        this.TextBox.messageBox = `Минимальное количество символов составляет: ${this.minLength}`
+      }else{
+        this.isError = false
+        this.TextBox.messageBox = ''
       }
     }
   }
@@ -31,12 +50,11 @@ export default {
     <input type="text"
            :name="name"
            :id="name"
-           v-bind:class="{'form-control':true, 'is-invalid' : !isValid}"
-           v-on:blur="!isValid"
+           v-bind:class="{'form-control':true, 'is-invalid' : isError}"
            :placeholder="placeholder"
-           class="form-control"
-           v-model="modelValue"
-           :aria-describedby="TextBox.nameText">
-    <div :id="TextBox.nameText" class="invalid-feedback">{{message}}</div>
+           v-on:input="changeText"
+           :aria-describedby="TextBox.nameText"
+           required>
+    <div :id="TextBox.nameText" v-bind:class ="{'d-block invalid-feedback' : isError}">{{TextBox.messageBox}}</div>
   </div>
 </template>

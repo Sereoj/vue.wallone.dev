@@ -3,8 +3,8 @@
 
   <h2 class="mb-5">Смена пароля</h2>
 
-  <PassWord name="password" title="Пароль"/>
-  <PassWord name="password_configuration" title="Повторите пароль"/>
+  <PassWord name="password" title="Пароль" min-length="6"/>
+  <PassWord name="password_configuration" title="Повторите пароль" min-length="6"/>
 
   <div class="d-flex align-items-center mt-5">
     <ButtonBox title="Сменить пароль" name="ChangePassword"/>

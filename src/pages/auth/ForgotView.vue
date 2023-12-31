@@ -3,7 +3,7 @@
 
   <h2 class="mb-5">Восстановление пароля</h2>
 
-  <TextBox name="email" title="Email" placeholder="help@wallone.ru" />
+  <TextBox name="email" title="Email" placeholder="help@wallone.ru" min-length="6" />
 
   <div class="d-flex align-items-center mt-5">
     <ButtonBox title="Восстановить пароль" name="ForgotPassword"/>

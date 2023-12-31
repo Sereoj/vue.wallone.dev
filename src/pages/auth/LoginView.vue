@@ -1,28 +1,24 @@
 <template>
+  <div class="needs-validation">
     <TextBox name="login"
              title="Email или логин"
              placeholder="help@wallone.ru"
              aria-autocomplete="both"
-             v-model="getEmail"
-             :message="messages.email"
-             :is-valid="validations.email"
-             required/>
+             min-length="4"/>
 
     <PassWord name="password"
               title="Пароль"
-              @input="getPassword"
-              :is-valid="validations.password"
-              :message="messages.password"
               required/>
 
     <div class="justify-content-center">
       <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня"/>
     </div>
     <div class="d-flex align-items-center mt-4">
-      <ButtonBox class="me-5" title="Войти" name="loginBtn" v-on:click="getAuth"/>
+      <ButtonBox class="me-5" title="Авторизироваться" name="loginBtn" v-on:click="getAuth"/>
       <LinkBox name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
     </div>
     <AdboxView/>
+  </div>
 </template>
 
 <script>
@@ -43,19 +39,9 @@ export default {
   components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
   data() {
     return {
-      response: "",
       email: "",
       password: "",
       rememberMe: false,
-      validations: {
-        email : true,
-        password: true
-      },
-      messages: {
-        email: "",
-        password: "",
-        message: ""
-      }
     };
   },
   watch(){
@@ -67,6 +53,7 @@ export default {
   methods: {
     getEmail(e){
       this.email = e.target.value
+      this.test(e)
     },
     getPassword(e){
       this.password = e.target.value
@@ -74,24 +61,17 @@ export default {
     router(){
       return router
     },
-    test(e){
-      if(!this.email)
-      {
-        this.validations.email = false;
-        this.messages.email = "Укажите email"
-      }
-      e.preventDefault();
-    },
     getAuth(e){
       apiRouter.postRequest(apiRouter.api.login, {
         email: this.email,
         password: this.password
       })
       .then(function (response) {
-        this.response = response?.data
+        console.log(response?.data)
       })
       .catch(function (error) {
-        this.response = error?.response?.data
+        let result = error?.response.data
+        this.messages.email = result.errors.email
       })
       e.preventDefault();
     }
