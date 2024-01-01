@@ -9,6 +9,8 @@ import ForgotView from "@/pages/auth/ForgotView";
 import ChangePasswordView from "@/pages/auth/ChangePasswordView";
 
 import MainView from "@/pages/images/MainView";
+import UserAgreementView from "@/pages/legal/UserAgreementView";
+import PrivacyStatementView from "@/pages/legal/PrivacyStatementView";
 
 
 const router = createRouter({
@@ -60,6 +62,30 @@ const router = createRouter({
           name: 'ChangePasswordView',
           path: '',
           component: ChangePasswordView
+        }
+      ]
+    },
+    {
+      path: '/user_agreement',
+      name: 'User Agreement',
+      component: MainLayout,
+      children: [
+        {
+          name: 'UserAgreementView',
+          path: '',
+          component: UserAgreementView
+        }
+      ]
+    },
+    {
+      path: '/privacy_statement',
+      name: 'Privacy Statement',
+      component: MainLayout,
+      children: [
+        {
+          name: 'PrivacyStatementView',
+          path: '',
+          component: PrivacyStatementView
         }
       ]
     },
