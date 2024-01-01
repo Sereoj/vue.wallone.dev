@@ -47,6 +47,7 @@ import AdboxView from "@/components/ads/AdboxView";
 
 import apiRouter from "@/router/api";
 import { useHead } from '@unhead/vue'
+import router from "@/router";
 
 export default {
   components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
@@ -87,12 +88,13 @@ export default {
         {
           vm.clear()
           alert("Вы авторизировались")
+          router.push('/')
         }
       })
       .catch(function (error) {
         let errors = error.response.data
 
-        if(errors?.message)
+        if(errors?.message && error.response.status === 401)
         {
           vm.messages.password = errors?.message
         }
