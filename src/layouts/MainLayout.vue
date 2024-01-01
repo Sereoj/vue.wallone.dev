@@ -35,4 +35,15 @@ export default {
 
 .form-text a
   color: $primary
+
+h2, .title
+  @extend %default
+  font-size: $font-size-label
+
+p, .description
+  @extend %p
+  color: $primary3
+  font-size: $font-p
+  text-overflow: ellipsis
+  white-space: normal
 </style>
