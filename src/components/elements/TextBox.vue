@@ -10,7 +10,6 @@ export default {
   },
   data(props) {
     return {
-      value : '',
       isError : false,
       TextBox:
       {
@@ -18,19 +17,22 @@ export default {
         nameText: props.name + "_text",
         title: props.title,
         placeholder: props.placeholder,
-        messageBox: props.message
+        messageBox: props.message,
+        value: ''
       }
     }
   },
   methods: {
-    changeText(value)
+    changeText(e)
     {
-      this.validation(value)
+      let value = e.target.value
+      this.TextBox.value = value
       this.$emit('update:modelValue', value)
+      this.validation(value)
     },
     validation(v)
     {
-      if(v.target.value.length <= parseInt(this.minLength))
+      if(v.length <= parseInt(this.minLength))
       {
         this.isError = true
         this.TextBox.messageBox = `Минимальное количество символов составляет: ${this.minLength}`
@@ -52,8 +54,9 @@ export default {
            v-bind:class="{'form-control':true, 'is-invalid' : isError}"
            :placeholder="placeholder"
            v-on:input="changeText"
+           :value="modelValue"
            :aria-describedby="TextBox.nameText"
-           required>
+           >
     <div :id="TextBox.nameText" v-bind:class ="{'d-block invalid-feedback' : isError}">{{TextBox.messageBox}}</div>
   </div>
 </template>

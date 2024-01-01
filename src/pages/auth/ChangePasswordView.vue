@@ -5,11 +5,13 @@
 
   <PassWord name="password"
             title="Пароль"
+            v-model="password"
             placeholder="Забыл свой уникальный пароль"
             min-length="6"/>
 
   <PassWord name="password_configuration"
             title="Повторите пароль"
+            v-model="password_configuration"
             placeholder="Запоминаю свой пароль"
             min-length="6"/>
 
@@ -25,7 +27,8 @@ export default {
   components: {ButtonBox, PassWord, backButton },
   data() {
     return {
-      //
+      'password' : '',
+      'password_configuration' : ''
     };
   },
   mounted() {

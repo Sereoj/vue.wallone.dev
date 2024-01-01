@@ -3,7 +3,11 @@
 
   <h2 class="mb-5">Восстановление пароля</h2>
 
-  <TextBox name="email" title="Email" placeholder="help@wallone.ru" min-length="6" />
+  <TextBox name="email"
+           title="Email"
+           v-model="email"
+           placeholder="help@wallone.ru"
+           min-length="6" />
 
   <div class="d-flex align-items-center mt-5">
     <ButtonBox title="Восстановить пароль" name="ForgotPassword"/>
@@ -18,7 +22,7 @@ export default {
   components: {ButtonBox, TextBox, backButton },
   data() {
     return {
-      //
+      'email' : ''
     }
   },
   mounted() {

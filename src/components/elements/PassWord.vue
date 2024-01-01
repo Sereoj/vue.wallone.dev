@@ -16,19 +16,22 @@ export default {
             title: props.title,
             placeholder: props.placeholder,
             nameText: props.name + "_text",
-            messageBox: props.message
+            messageBox: props.message,
+            value: ''
       },
     }
   },
   methods: {
-    changeText(value)
+    changeText(e)
     {
+      let value = e.target.value
+      this.PasswordBox.value = value
       this.validation(value)
       this.$emit('update:modelValue', value)
     },
     validation(v)
     {
-      if(v.target.value.length <= parseInt(this.minLength))
+      if(v.length <= parseInt(this.minLength))
       {
         this.isError = true
         this.PasswordBox.messageBox = `Минимальное количество символов составляет: ${this.minLength}`

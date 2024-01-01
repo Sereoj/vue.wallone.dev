@@ -4,19 +4,23 @@
   <TextBox name="username"
            title="Логин"
            placeholder="Sergio Strange"
+           v-model="username"
            min-length="4"/>
 
   <TextBox name="email"
            title="Email"
+           v-model="email"
            placeholder="user@wallone.ru"
            min-length="6"/>
 
   <PassWord name="password"
+            v-model="password"
             title="Пароль"
             placeholder="Мой уникальный пароль"
             min-length="6"/>
 
   <PassWord name="password_confirmation"
+            v-model="password_confirmation"
             title="Повторите пароль"
             placeholder="Повторяю уникальный пароль"
             min-length="6"/>
@@ -42,8 +46,11 @@ export default {
   components: {ButtonBox, LinkBox, PassWord, TextBox},
   data() {
     return {
-      //
-    };
+      username: '',
+      email: '',
+      password: '',
+      password_confirmation: ''
+    }
   },
   mounted() {
     document.title = 'Wallone • Регистрация' // TODO: Автоматизировать!

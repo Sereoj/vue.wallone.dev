@@ -4,18 +4,20 @@
              title="Email или логин"
              placeholder="user@wallone.ru"
              aria-autocomplete="both"
-             :model-value="getEmail"
+             v-model="email"
              min-length="4"/>
 
     <PassWord name="password"
               placeholder="Самый сложный пароль"
               title="Пароль"
+              v-model="password"
               min-length="0"
-              required/>
+              />
 
     <div class="justify-content-center">
       <CheckBox class="mt-5"
                 name="rememberMe"
+                v-model="rememberMe"
                 title="Запомнить меня"/>
     </div>
 
@@ -39,7 +41,6 @@ import LinkBox from "@/components/elements/LinkBox";
 import ButtonBox from "@/components/elements/ButtonBox";
 import AdboxView from "@/components/ads/AdboxView";
 
-import router from "@/router";
 import apiRouter from "@/router/api";
 
 export default {
@@ -49,7 +50,7 @@ export default {
       email: "",
       password: "",
       rememberMe: false,
-    };
+    }
   },
   watch(){
 
@@ -58,16 +59,6 @@ export default {
     document.title = 'Wallone • Авторизация'
   },
   methods: {
-    getEmail(e){
-      this.email = e.target.value
-      this.test(e)
-    },
-    getPassword(e){
-      this.password = e.target.value
-    },
-    router(){
-      return router
-    },
     getAuth(e){
       let {result} = apiRouter.postRequest(apiRouter.api.login, {
         email: this.email,

@@ -1,6 +1,9 @@
 <template>
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" :id="name">
+        <input class="form-check-input"
+               type="checkbox"
+               v-on:input="checkInput"
+               :id="name">
         <label class="form-check-label ms-3" :for="name">
             {{ title }}
         </label>
@@ -12,7 +15,24 @@ export default {
     props: {
       'name': String,
       'title': String
+    },
+    data(props) {
+      return {
+        CheckBox: {
+          name: props.name,
+          title: props.title,
+          checked: false
+        }
+      }
+    },
+    methods: {
+      checkInput(e){
+        let val = e.target.checked
+        this.$emit('update:modelValue', val)
+        this.CheckBox.checked = val
+      }
     }
+
 }
 </script>
 
