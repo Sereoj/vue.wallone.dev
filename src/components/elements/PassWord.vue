@@ -4,12 +4,13 @@ export default {
     'title': String,
     'name': String,
     'placeholder': String,
-    'minLength' : String
+    'minLength' : String,
+    'message': String,
+    'isError' : Boolean
   },
   data(props) {
     return {
       showPassword: false,
-      isError: false,
       PasswordBox:
       {
             name: props.name,
@@ -26,19 +27,7 @@ export default {
     {
       let value = e.target.value
       this.PasswordBox.value = value
-      this.validation(value)
       this.$emit('update:modelValue', value)
-    },
-    validation(v)
-    {
-      if(v.length <= parseInt(this.minLength))
-      {
-        this.isError = true
-        this.PasswordBox.messageBox = `Минимальное количество символов составляет: ${this.minLength}`
-      }else{
-        this.isError = false
-        this.PasswordBox.messageBox = ''
-      }
     }
   }
 }
@@ -74,7 +63,7 @@ export default {
         </svg>
       </button>
     </div>
-    <div :id="PasswordBox.nameText" v-bind:class ="{'d-block invalid-feedback' : isError}">{{PasswordBox.messageBox}}</div>
+    <div :id="PasswordBox.nameText" v-bind:class ="{'d-block invalid-feedback' : isError}">{{ message }}</div>
   </div>
 </template>
 

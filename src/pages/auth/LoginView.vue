@@ -5,12 +5,16 @@
              placeholder="user@wallone.ru"
              aria-autocomplete="both"
              v-model="email"
+             :message="getMessageEmail()"
+             :is-error="getMessageEmail() !== ''"
              min-length="4"/>
 
     <PassWord name="password"
               placeholder="Самый сложный пароль"
               title="Пароль"
               v-model="password"
+              :message="getMessagePassword()"
+              :is-error="getMessagePassword() !== ''"
               min-length="0"
               />
 
@@ -51,6 +55,10 @@ export default {
       email: "",
       password: "",
       rememberMe: false,
+      messages: {
+        email: '',
+        password: ''
+      }
     }
   },
   watch(){
@@ -62,20 +70,56 @@ export default {
     })
   },
   methods: {
-    getAuth(e){
-      let {result} = apiRouter.postRequest(apiRouter.api.login, {
+    clear(){
+      this.messages.email = ""
+      this.messages.password = ""
+    },
+    getResponse(){
+      let vm = this
+      apiRouter.postRequest(apiRouter.api.login, {
         email: this.email,
         password: this.password,
         remember: this.rememberMe
       })
       .then(function (response) {
-        console.log(response?.data)
+        vm.messages = response.data
+        if(vm.messages.token)
+        {
+          vm.clear()
+          alert("Вы авторизировались")
+        }
       })
       .catch(function (error) {
-        return error
+        let errors = error.response.data
+
+        if(errors?.message)
+        {
+          vm.messages.password = errors?.message
+        }
+
+        if(errors?.errors)
+        {
+          if(errors.errors?.email)
+          {
+            vm.messages.email = errors.errors?.email[0]
+          }
+          if(errors.errors?.password)
+          {
+            vm.messages.password = errors.errors?.password[0]
+          }
+        }
       })
-      console.log(result)
-      e.preventDefault();
+    },
+    getAuth(){
+      this.clear()
+      this.getResponse()
+    },
+    getMessageEmail()
+    {
+      return this.messages.email
+    },
+    getMessagePassword(){
+      return this.messages.password
     }
   },
 }
