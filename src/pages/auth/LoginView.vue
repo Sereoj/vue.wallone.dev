@@ -42,6 +42,7 @@ import ButtonBox from "@/components/elements/ButtonBox";
 import AdboxView from "@/components/ads/AdboxView";
 
 import apiRouter from "@/router/api";
+import { useHead } from '@unhead/vue'
 
 export default {
   components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
@@ -56,7 +57,9 @@ export default {
 
   },
   mounted() {
-    document.title = 'Wallone • Авторизация'
+    useHead({
+      title: 'Wallone • Авторизация'
+    })
   },
   methods: {
     getAuth(e){

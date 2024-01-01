@@ -41,6 +41,7 @@ import TextBox from "@/components/elements/TextBox";
 import PassWord from "@/components/elements/PassWord";
 import LinkBox from "@/components/elements/LinkBox";
 import ButtonBox from "@/components/elements/ButtonBox";
+import {useHead} from "@unhead/vue";
 
 export default {
   components: {ButtonBox, LinkBox, PassWord, TextBox},
@@ -53,7 +54,9 @@ export default {
     }
   },
   mounted() {
-    document.title = 'Wallone • Регистрация' // TODO: Автоматизировать!
+    useHead({
+      title: 'Wallone • Регистрация'
+    })
   }
 }
 </script>

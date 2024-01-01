@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex mt-5 d-none d-lg-block">
-      <div style="background: #2B2B2B; width: 45vw; height: 4rem;" class="container">
+      <div class="container adbox">
         <p class="text-center" v-if="isEnable">Отключите пожалуйста Adblock</p>
         <p class="text-center" v-if="!isEnable">Реклама, не мобильная</p>
       </div>
@@ -28,6 +28,11 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.adbox
+{
+  background: #2B2B2B;
+  width: 45vw;
+  height: 4rem ;
+}
 </style>

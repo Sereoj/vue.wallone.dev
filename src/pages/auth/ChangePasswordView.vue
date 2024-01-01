@@ -23,6 +23,7 @@
 import PassWord from "@/components/elements/PassWord";
 import backButton from "@/components/elements/BackButton";
 import ButtonBox from "@/components/elements/ButtonBox";
+import {useHead} from "@unhead/vue";
 export default {
   components: {ButtonBox, PassWord, backButton },
   data() {
@@ -32,7 +33,9 @@ export default {
     };
   },
   mounted() {
-    document.title = 'Wallone • Смена пароля' // TODO: Механика смены пароля
+    useHead({
+      title: 'Wallone • Смена пароля'
+    })
   }
 }
 </script>

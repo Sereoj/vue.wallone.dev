@@ -13,10 +13,19 @@
 <script>
 import IconBox from "@/components/elements/IconBox";
 import LinkBox from "@/components/elements/LinkBox";
+import {useHead} from "@unhead/vue";
 export default {
   components: {
     IconBox,
     LinkBox
+  },
+  data() {
+    return {}
+  },
+  mounted() {
+    useHead({
+      title: `Wallone • Красивые изображения на рабочий стол`
+    })
   }
 }
 

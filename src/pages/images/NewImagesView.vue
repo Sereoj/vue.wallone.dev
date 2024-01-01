@@ -5,8 +5,18 @@
 </template>
 
 <script>
+import {useHead} from "@unhead/vue";
+
 export default {
-  name: "NewImagesView"
+  name: "NewImagesView",
+  data() {
+    return {}
+  },
+  mounted() {
+    useHead({
+      title: `Wallone • Более 10тыс. новых изображений на рабочий стол`
+    })
+  }
 }
 </script>
 

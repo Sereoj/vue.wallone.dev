@@ -17,6 +17,7 @@
 import TextBox from "@/components/elements/TextBox"
 import backButton from "@/components/elements/BackButton";
 import ButtonBox from "@/components/elements/ButtonBox";
+import {useHead} from "@unhead/vue";
 
 export default {
   components: {ButtonBox, TextBox, backButton },
@@ -26,8 +27,9 @@ export default {
     }
   },
   mounted() {
-    // TODO: Механика восстановления пароля
-    document.title = 'Wallone • Восстановление пароля'
+    useHead({
+      title: 'Wallone • Восстановление пароля'
+    })
   }
 }
 </script>
