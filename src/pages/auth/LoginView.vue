@@ -92,7 +92,7 @@ export default {
       .catch(function (error) {
         let errors = error.response.data
 
-        if(errors?.message)
+        if(errors?.message && error.response.status === 401)
         {
           vm.messages.password = errors?.message
         }
