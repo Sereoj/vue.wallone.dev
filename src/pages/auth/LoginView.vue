@@ -116,8 +116,7 @@ export default {
       this.clear()
       this.getResponse()
     },
-    getMessageEmail()
-    {
+    getMessageEmail() {
       return this.messages.email
     },
     getMessagePassword(){
