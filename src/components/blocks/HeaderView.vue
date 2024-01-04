@@ -10,13 +10,13 @@
         </button>
         <div class="collapse navbar-collapse align-items-start" id="navbarMenu">
           <!--            TODO: По макету: ширина поисковика должна быть на 70+% всей ширины объекта-->
-          <search-box/>
+          <search-box />
 
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <router-link class="nav-link active border-end border-primary" to="ru">RU</router-link>
             </li>
-            <li>
+            <li class="nav-item">
               <router-link class="nav-link" to="en">EN</router-link>
             </li>
           </ul>
