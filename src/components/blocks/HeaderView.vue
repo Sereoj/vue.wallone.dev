@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg my-4" data-bs-theme="dark">
       <div class="container">
         <!--        Это логотип-->
-        <logo-box name="logoBox"/>
+        <logo-box name="logoBox" class="col-lg-4 col-xxl-2" />
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
           <span class="navbar-toggler-icon"></span>

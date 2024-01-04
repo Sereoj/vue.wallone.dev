@@ -1,5 +1,5 @@
 <template>
-  <div class="col-lg-3 col-xxl-2">
+  <div>
       <a href="/" class="d-flex align-items-center">
         <img src="@/assets/logo.png" alt="Logo" height="52" class="me-3">
         <div>

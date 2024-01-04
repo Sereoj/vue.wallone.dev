@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid row" style="height: 100vh">
     <div class="col-5 auth d-none d-lg-block">
-      <LogoBox class="m-3"/>
+      <LogoBox class="m-3 col-lg-4"/>
     </div>
     <div class="container col-sm-12 col-lg-7 m-auto">
       <div class="col-10 row justify-content-center m-auto">
