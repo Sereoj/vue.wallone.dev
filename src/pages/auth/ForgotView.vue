@@ -3,7 +3,11 @@
 
   <h2 class="mb-5">Восстановление пароля</h2>
 
-  <TextBox name="email" title="Email" placeholder="help@wallone.ru" />
+  <TextBox name="email"
+           title="Email"
+           v-model="email"
+           placeholder="help@wallone.ru"
+           min-length="6" />
 
   <div class="d-flex align-items-center mt-5">
     <ButtonBox title="Восстановить пароль" name="ForgotPassword"/>
@@ -13,17 +17,19 @@
 import TextBox from "@/components/elements/TextBox"
 import backButton from "@/components/elements/BackButton";
 import ButtonBox from "@/components/elements/ButtonBox";
+import {useHead} from "@unhead/vue";
 
 export default {
   components: {ButtonBox, TextBox, backButton },
   data() {
     return {
-      //
+      'email' : ''
     }
   },
   mounted() {
-    // TODO: Механика восстановления пароля
-    document.title = 'Wallone • Восстановление пароля'
+    useHead({
+      title: 'Wallone • Восстановление пароля'
+    })
   }
 }
 </script>

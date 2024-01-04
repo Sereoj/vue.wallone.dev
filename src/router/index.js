@@ -9,6 +9,11 @@ import ForgotView from "@/pages/auth/ForgotView";
 import ChangePasswordView from "@/pages/auth/ChangePasswordView";
 
 import MainView from "@/pages/images/MainView";
+import UserAgreementView from "@/pages/legal/UserAgreementView";
+import PrivacyStatementView from "@/pages/legal/PrivacyStatementView";
+import newImagesView from "@/pages/images/NewImagesView";
+import PopularImagesView from "@/pages/images/PopularImagesView";
+import SoonImagesView from "@/pages/images/SoonImagesView";
 
 
 const router = createRouter({
@@ -64,6 +69,30 @@ const router = createRouter({
       ]
     },
     {
+      path: '/user_agreement',
+      name: 'User Agreement',
+      component: MainLayout,
+      children: [
+        {
+          name: 'UserAgreementView',
+          path: '',
+          component: UserAgreementView
+        }
+      ]
+    },
+    {
+      path: '/privacy_statement',
+      name: 'Privacy Statement',
+      component: MainLayout,
+      children: [
+        {
+          name: 'PrivacyStatementView',
+          path: '',
+          component: PrivacyStatementView
+        }
+      ]
+    },
+    {
       path: '/',
       name: 'Index',
       component: MainLayout,
@@ -72,6 +101,42 @@ const router = createRouter({
           name: 'MainView',
           path: '',
           component: MainView
+        }
+      ]
+    },
+    {
+      path: '/images/new',
+      name: 'New Images',
+      component: MainLayout,
+      children: [
+        {
+          name: 'newImagesView',
+          path: '',
+          component: newImagesView
+        }
+      ]
+    },
+    {
+      path: '/images/popular',
+      name: 'Popular Images',
+      component: MainLayout,
+      children: [
+        {
+          name: 'PopularImagesView',
+          path: '',
+          component: PopularImagesView
+        }
+      ]
+    },
+    {
+      path: '/images/soon',
+      name: 'Soon Images',
+      component: MainLayout,
+      children: [
+        {
+          name: 'SoonImagesView',
+          path: '',
+          component: SoonImagesView
         }
       ]
     }

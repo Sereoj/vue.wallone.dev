@@ -1,28 +1,37 @@
 <template>
+  <div class="needs-validation">
     <TextBox name="login"
              title="Email или логин"
-             placeholder="help@wallone.ru"
+             placeholder="user@wallone.ru"
              aria-autocomplete="both"
-             v-model="getEmail"
-             :message="messages.email"
-             :is-valid="validations.email"
-             required/>
+             v-model="email"
+             :message="getMessageEmail()"
+             :is-error="getMessageEmail() !== ''"
+             min-length="4"/>
 
     <PassWord name="password"
+              placeholder="Самый сложный пароль"
               title="Пароль"
-              @input="getPassword"
-              :is-valid="validations.password"
-              :message="messages.password"
-              required/>
+              v-model="password"
+              :message="getMessagePassword()"
+              :is-error="getMessagePassword() !== ''"
+              min-length="0"
+              />
 
     <div class="justify-content-center">
-      <CheckBox class="mt-5" name="rememberMe" title="Запомнить меня"/>
+      <CheckBox class="mt-5"
+                name="rememberMe"
+                v-model="rememberMe"
+                title="Запомнить меня"/>
     </div>
+
     <div class="d-flex align-items-center mt-4">
-      <ButtonBox class="me-5" title="Войти" name="loginBtn" v-on:click="getAuth"/>
+      <ButtonBox class="me-5" title="Авторизироваться" name="loginBtn" v-on:click="getAuth"/>
       <LinkBox name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
     </div>
+
     <AdboxView/>
+  </div>
 </template>
 
 <script>
@@ -36,64 +45,82 @@ import LinkBox from "@/components/elements/LinkBox";
 import ButtonBox from "@/components/elements/ButtonBox";
 import AdboxView from "@/components/ads/AdboxView";
 
-import router from "@/router";
 import apiRouter from "@/router/api";
+import { useHead } from '@unhead/vue'
+import router from "@/router";
 
 export default {
   components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
   data() {
     return {
-      response: "",
       email: "",
       password: "",
       rememberMe: false,
-      validations: {
-        email : true,
-        password: true
-      },
       messages: {
-        email: "",
-        password: "",
-        message: ""
+        email: '',
+        password: ''
       }
-    };
+    }
   },
   watch(){
 
   },
   mounted() {
-    document.title = 'Wallone • Авторизация'
+    useHead({
+      title: 'Wallone • Авторизация'
+    })
   },
   methods: {
-    getEmail(e){
-      this.email = e.target.value
+    clear(){
+      this.messages.email = ""
+      this.messages.password = ""
     },
-    getPassword(e){
-      this.password = e.target.value
-    },
-    router(){
-      return router
-    },
-    test(e){
-      if(!this.email)
-      {
-        this.validations.email = false;
-        this.messages.email = "Укажите email"
-      }
-      e.preventDefault();
-    },
-    getAuth(e){
+    getResponse(){
+      let vm = this
       apiRouter.postRequest(apiRouter.api.login, {
         email: this.email,
-        password: this.password
+        password: this.password,
+        remember: this.rememberMe
       })
       .then(function (response) {
-        this.response = response?.data
+        vm.messages = response.data
+        if(vm.messages.token)
+        {
+          vm.clear()
+          alert("Вы авторизировались")
+          router.push('/')
+        }
       })
       .catch(function (error) {
-        this.response = error?.response?.data
+        let errors = error.response.data
+
+        if(errors?.message && error.response.status === 401)
+        {
+          vm.messages.password = errors?.message
+        }
+
+        if(errors?.errors)
+        {
+          if(errors.errors?.email)
+          {
+            vm.messages.email = errors.errors?.email[0]
+          }
+          if(errors.errors?.password)
+          {
+            vm.messages.password = errors.errors?.password[0]
+          }
+        }
       })
-      e.preventDefault();
+    },
+    getAuth(){
+      this.clear()
+      this.getResponse()
+    },
+    getMessageEmail() {
+      return this.messages.email
+    },
+    getMessagePassword(){
+      return this.messages.password
     }
   },
 }

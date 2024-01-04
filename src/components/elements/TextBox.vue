@@ -5,21 +5,29 @@ export default {
       'title': String,
       'name': String,
       'placeholder': String,
+      'modelValue' : String,
+      'minLength' : String,
       'message': String,
-      'isValid': Boolean,
+      'isError' : Boolean
   },
-  emits: ['modelValue'],
   data(props) {
     return {
-      modelValue : '',
       TextBox:
       {
         name: props.name,
         nameText: props.name + "_text",
         title: props.title,
         placeholder: props.placeholder,
-        messageBox: props.message
+        value: ''
       }
+    }
+  },
+  methods: {
+    changeText(e)
+    {
+      let value = e.target.value
+      this.TextBox.value = value
+      this.$emit('update:modelValue', value)
     }
   }
 }
@@ -31,12 +39,12 @@ export default {
     <input type="text"
            :name="name"
            :id="name"
-           v-bind:class="{'form-control':true, 'is-invalid' : !isValid}"
-           v-on:blur="!isValid"
+           v-bind:class="{'form-control':true, 'is-invalid' : isError}"
            :placeholder="placeholder"
-           class="form-control"
-           v-model="modelValue"
-           :aria-describedby="TextBox.nameText">
-    <div :id="TextBox.nameText" class="invalid-feedback">{{message}}</div>
+           v-on:input="changeText"
+           :value="modelValue"
+           :aria-describedby="TextBox.nameText"
+           >
+    <div :id="TextBox.nameText" v-bind:class ="{'d-block invalid-feedback' : isError}">{{message}}</div>
   </div>
 </template>

@@ -16,7 +16,12 @@ const api = {
 
 // eslint-disable-next-line no-unused-vars
 function postRequest(url, params) {
-    return axios.postForm(url, params)
+    return axios.postForm(url, params,{
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            'Accept': 'application/json'
+        }
+    })
 }
 
 export default {api, postRequest}

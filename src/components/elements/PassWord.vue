@@ -3,7 +3,10 @@ export default {
   props:{
     'title': String,
     'name': String,
-    'message': String
+    'placeholder': String,
+    'minLength' : String,
+    'message': String,
+    'isError' : Boolean
   },
   data(props) {
     return {
@@ -13,8 +16,18 @@ export default {
             name: props.name,
             title: props.title,
             placeholder: props.placeholder,
-            nameText: props.name + "_text"
-      }
+            nameText: props.name + "_text",
+            messageBox: props.message,
+            value: ''
+      },
+    }
+  },
+  methods: {
+    changeText(e)
+    {
+      let value = e.target.value
+      this.PasswordBox.value = value
+      this.$emit('update:modelValue', value)
     }
   }
 }
@@ -29,8 +42,9 @@ export default {
           v-bind:type="[showPassword ? 'text' : 'password']"
           :name="name"
           :id="name"
-          class="form-control"
-          @input="$emit('update:password', $event.target.value)"
+          :placeholder="placeholder"
+          v-bind:class="{'form-control':true, 'is-invalid' : isError}"
+          v-on:input="changeText"
           :aria-describedby="PasswordBox.nameText">
 
       <button class="input-group-text" @click="showPassword = !showPassword">
@@ -49,7 +63,7 @@ export default {
         </svg>
       </button>
     </div>
-    <div :id="PasswordBox.nameText" class="invalid-feedback">{{message}}</div>
+    <div :id="PasswordBox.nameText" v-bind:class ="{'d-block invalid-feedback' : isError}">{{ message }}</div>
   </div>
 </template>
 
