@@ -1,7 +1,7 @@
 <template>
   <header-view />
   <div class="container">
-    <site-links class="mb-5" />
+
     <div class="row">
       <sidebar-view class="col-md-3 col-lg-2" />
       <!--    По макету SiteLinks, это отдельный блок, не входящий header -->
@@ -14,10 +14,8 @@
 <script>
 import HeaderView from "@/components/blocks/HeaderView.vue";
 import SidebarView from "@/components/blocks/SidebarView";
-import SiteLinks from "@/components/blocks/SiteLinks";
 export default {
   components: {
-    SiteLinks,
     SidebarView,
     HeaderView
   }

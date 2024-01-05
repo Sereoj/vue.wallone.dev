@@ -1,27 +1,29 @@
 <template>
   <header>
     <nav class="navbar navbar-expand-lg my-4" data-bs-theme="dark">
-      <div class="container">
+      <div class="container align-items-start">
+
         <!--        Это логотип-->
-        <logo-box name="logoBox" class="col-lg-4 col-xxl-2" />
+        <logo-box name="logoBox" class="col-lg-3 col-xxl-2" />
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse align-items-start" id="navbarMenu">
-          <!--            TODO: По макету: ширина поисковика должна быть на 70+% всей ширины объекта-->
-          <search-box />
+        <div class="collapse navbar-collapse align-items-start justify-content-between" id="navbarMenu">
 
-          <ul class="navbar-nav mx-auto">
+          <search-box class="my-3 m-lg-0" />
+
+          <ul class="navbar-nav text-center">
             <li class="nav-item">
-              <router-link class="nav-link active border-end border-primary" to="ru">RU</router-link>
+              <router-link class="nav-link active" to="ru">RU</router-link>
             </li>
+            <li class="nav-item border-end border-primary d-none d-lg-block"></li>
             <li class="nav-item">
               <router-link class="nav-link" to="en">EN</router-link>
             </li>
           </ul>
 
-          <ul class="navbar-nav me-0">
+          <ul class="navbar-nav text-center">
             <li class="nav-item dropdown">
               <a class="nav-link icon-link dropdown-toggle mb-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.126 28.572" class="bi" aria-hidden="true">
@@ -49,6 +51,7 @@
 
 .active
   border-bottom: 0
+  padding-bottom: 0
 
 </style>
 

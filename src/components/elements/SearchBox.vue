@@ -1,5 +1,5 @@
 <template>
-  <form class="m-auto col-12 col-lg-7 col-xl-8" role="search">
+  <form class="col-lg-7 col-xl-8 ms-xxl-5" role="search">
     <div class="input-group">
       <input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск" @click="isSearch = !isSearch" v-model="searchText" maxlength="64">
       <button class="input-group-text">
@@ -8,6 +8,8 @@
         </svg>
       </button>
     </div>
+
+    <site-links />
 
     <ul class="dropdown-menu m-auto" :class="isSearch && 'show'">
       <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
@@ -20,8 +22,11 @@
 </template>
 
 <script>
+import SiteLinks from "@/components/blocks/SiteLinks.vue";
+
 export default {
   name: "SearchBox",
+  components: {SiteLinks},
   data() {
     return {
       searchText : "",
