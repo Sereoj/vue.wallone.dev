@@ -50,6 +50,7 @@ export default {
 <style lang="sass">
 @import "@/assets/style/variables"
 @import "@/assets/style/fonts"
+@import "@/assets/style/images.scss"
 
 .h1
   color: $primary2
@@ -65,7 +66,7 @@ export default {
   border-bottom: 0.125rem solid $second
 
 .auth
-  background: url('@/assets/images/auth.jpg') no-repeat center
+  background: url($img) no-repeat center
   background-size: cover
   object-fit: cover
   height: 100vh

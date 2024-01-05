@@ -1,6 +1,5 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader')
-const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
 
 module.exports = {
     entry: './src/main.js',
@@ -62,15 +61,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new VueLoaderPlugin(),
-        new SVGSpritemapPlugin(path.resolve("src/images/*.svg"), {
-            styles: path.resolve('src/assets/style/_sprites.scss'),
-            sprite: {
-                prefix: 'i-',
-                generate: {
-                    use: true
-                }
-            }
-        })
+        new VueLoaderPlugin()
     ]
 };

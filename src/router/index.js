@@ -105,7 +105,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/images/new',
+      path: '/icons/new',
       name: 'New Images',
       component: MainLayout,
       children: [
@@ -117,7 +117,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/images/popular',
+      path: '/icons/popular',
       name: 'Popular Images',
       component: MainLayout,
       children: [
@@ -129,7 +129,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/images/soon',
+      path: '/icons/soon',
       name: 'Soon Images',
       component: MainLayout,
       children: [

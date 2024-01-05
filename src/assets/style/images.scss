@@ -1,0 +1,10 @@
+//Изображения для auth-layout-form
+
+$images: (
+'@/assets/images/auth/1.jpg',
+'@/assets/images/auth/1.jpg',
+'@/assets/images/auth/1.jpg'
+);
+
+//Отображение рандомного изображения
+$img: nth($images, random(length($images)));
