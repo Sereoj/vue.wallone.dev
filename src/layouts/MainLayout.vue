@@ -3,10 +3,10 @@
   <div class="container">
 
     <div class="row">
-      <sidebar-view class="col-md-3 col-lg-2" />
+      <sidebar-view class="col-md-4 col-lg-3 col-xl-2" />
       <!--    По макету SiteLinks, это отдельный блок, не входящий header -->
       <!--  Content -->
-      <router-view class="col-md-9 col-lg-10" />
+      <router-view class="col-md-8 col-lg-9 col-xl-10" />
     </div>
   </div>
 </template>
