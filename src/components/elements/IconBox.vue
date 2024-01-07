@@ -1,21 +1,18 @@
 <template>
-  <div style=""></div>
+  <i class="icon" :class="name"></i>
 </template>
 <script>
 export default {
   name: "IconBox",
   props:{
-    'title': String,
     'name': String,
   }
 }
 </script>
 <style lang="sass">
-@import "src/assets/style/sprites"
+@import "@/assets/style/iconly/iconly.scss"
 
 .icon
-  @include sprite('x')
-  fill: #007AFF
-  width: 20px
-  height: 20px
+  width: 1.875rem
+  height: 1.875rem
 </style>
