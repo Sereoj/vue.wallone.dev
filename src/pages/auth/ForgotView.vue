@@ -3,14 +3,14 @@
 
   <h2 class="mb-5">Восстановление пароля</h2>
 
-  <TextBox name="email"
+  <text-box name="email"
            title="Email"
            v-model="email"
            placeholder="help@wallone.ru"
            min-length="6" />
 
   <div class="d-flex align-items-center mt-5">
-    <ButtonBox title="Восстановить пароль" name="ForgotPassword"/>
+    <button-box title="Восстановить пароль" name="ForgotPassword"/>
   </div>
 </template>
 <script>

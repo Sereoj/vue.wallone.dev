@@ -1,7 +1,7 @@
 <template>
 <div class="needs-validation">
   <!-- ! Оставить только это: -->
-  <TextBox name="username"
+  <text-box name="username"
            title="Логин"
            placeholder="Sergio Strange"
            v-model="username"
@@ -9,7 +9,7 @@
            :is-error="getMessageUsername() !== ''"
            min-length="4"/>
 
-  <TextBox name="email"
+  <text-box name="email"
            title="Email"
            v-model="email"
            :message="getMessageEmail()"
@@ -17,7 +17,7 @@
            placeholder="user@wallone.ru"
            min-length="6"/>
 
-  <PassWord name="password"
+  <pass-word name="password"
             v-model="password"
             :message="getMessagePassword()"
             :is-error="getMessagePassword() !== ''"
@@ -25,7 +25,7 @@
             placeholder="Мой уникальный пароль"
             min-length="6"/>
 
-  <PassWord name="password_confirmation"
+  <pass-word name="password_confirmation"
             v-model="password_confirmation"
             :message="getMessagePassword()"
             :is-error="getMessagePassword() !== ''"
@@ -39,7 +39,7 @@
   </div>
 
   <div class="d-flex align-items-center mt-5">
-    <ButtonBox title="Зарегистрироваться" name="Register" v-on:click="getAuth"/>
+    <button-box title="Зарегистрироваться" name="Register" v-on:click="getAuth"/>
   </div>
 </div>
 </template>
