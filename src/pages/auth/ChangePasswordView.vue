@@ -3,20 +3,20 @@
 
   <h2 class="mb-5">Смена пароля</h2>
 
-  <PassWord name="password"
+  <pass-word name="password"
             title="Пароль"
             v-model="password"
             placeholder="Забыл свой уникальный пароль"
             min-length="6"/>
 
-  <PassWord name="password_configuration"
+  <pass-word name="password_configuration"
             title="Повторите пароль"
             v-model="password_configuration"
             placeholder="Запоминаю свой пароль"
             min-length="6"/>
 
   <div class="d-flex align-items-center mt-5">
-    <ButtonBox title="Сменить пароль" name="ChangePassword"/>
+    <button-box title="Сменить пароль" name="ChangePassword"/>
   </div>
 </template>
 <script>

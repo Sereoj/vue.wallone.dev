@@ -1,17 +1,17 @@
 <template>
   <div class="container-fluid row" style="height: 100vh">
     <div class="col-5 auth d-none d-lg-block">
-      <LogoBox class="m-3 col-lg-4"/>
+      <logo-box class="m-3 col-lg-4"/>
     </div>
     <div class="container col-sm-12 col-lg-7 m-auto">
       <div class="col-10 row justify-content-center m-auto">
-        <LogoBox class="mb-5 d-block d-md-none" style="max-width: 15rem"/>
+        <logo-box class="mb-5 d-block d-md-none" style="max-width: 15rem"/>
         <ul class="d-flex mb-5" v-if="isAuthPage">
           <li>
-            <LinkTabBox title="Авторизация" name="tabLinkLogin" path="/login" class="h2"/>
+            <link-tab-box title="Авторизация" name="tabLinkLogin" path="/login" class="h2"/>
           </li>
           <li>
-            <LinkTabBox title="Регистрация" name="tabLinkRegister" path="/register" class="h2 ms-4"/>
+            <link-tab-box title="Регистрация" name="tabLinkRegister" path="/register" class="h2 ms-4"/>
           </li>
         </ul>
 
