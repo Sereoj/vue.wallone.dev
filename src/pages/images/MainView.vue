@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-5">
     <h2 class="mb-2 title">Красивые обои на рабочий стол</h2>
       <p class="description">
         Wallone - Огромная коллекция красивых изображений на рабочий стол. Cкачивайте, создайте персонализированные темы для приложения
@@ -15,13 +15,13 @@
       <div class="col-12">
         <div class="card">
           <img src="@/assets/images/atricles/card%201.jpg" alt="card" class="">
-          <a href="#" class="w-100 h-100 position-absolute d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
+          <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
             <div class="d-flex justify-content-between align-items-center">
               <span>
                 <i class="i-tag-popular"></i>
                 <i class="i-tag-star"></i>
               </span>
-              <span class="badge bg-primary">IMG</span>
+              <span class="badge bg-purple">IMG</span>
             </div>
             <h2 class="text-center fs-32">Хутава</h2>
             <div class="d-flex align-items-center">
@@ -35,15 +35,15 @@
       <div class="col-lg-6 col-xl-4">
         <div class="card">
           <img src="@/assets/images/atricles/card%202.jpg" alt="card" class="">
-          <a href="#" class="w-100 h-100 position-absolute d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
+          <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
             <div class="d-flex justify-content-between align-items-center">
               <span>
                 <i class="i-tag-popular"></i>
                 <i class="i-tag-star"></i>
               </span>
-              <span class="badge bg-primary">IMG</span>
+              <span class="badge bg-purple">IMG</span>
             </div>
-            <h2 class="text-center fs-32">Вайфу</h2>
+            <h2 class="text-center fs-32">Хутава</h2>
             <div class="d-flex align-items-center">
               <img src="@/assets/images/auth/1.jpg" alt="user" class="nav-icon ms-2">
               <p class="text-overflow me-2">Sergio Stranger</p>
@@ -61,9 +61,9 @@
                 <i class="i-tag-popular"></i>
                 <i class="i-tag-star"></i>
               </span>
-              <span class="badge bg-primary">IMG</span>
+              <span class="badge bg-purple">IMG</span>
             </div>
-            <h2 class="text-center fs-32">Бесконечное лето - библиотека</h2>
+            <h2 class="text-center fs-32">Хутава</h2>
             <div class="d-flex align-items-center">
               <img src="@/assets/images/auth/1.jpg" alt="user" class="nav-icon ms-2">
               <p class="text-overflow me-2">Sergio Stranger</p>
@@ -75,15 +75,15 @@
       <div class="col-lg-6 col-xl-4">
         <div class="card">
           <img src="@/assets/images/atricles/card%204.jpg" alt="card" class="">
-          <a href="#" class="w-100 h-100 position-absolute d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
+          <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
             <div class="d-flex justify-content-between align-items-center">
               <span>
                 <i class="i-tag-popular"></i>
                 <i class="i-tag-star"></i>
               </span>
-              <span class="badge bg-primary">IMG</span>
+              <span class="badge bg-purple">IMG</span>
             </div>
-            <h2 class="text-center fs-32">Тяночки</h2>
+            <h2 class="text-center fs-32">Хутава</h2>
             <div class="d-flex align-items-center">
               <img src="@/assets/images/auth/1.jpg" alt="user" class="nav-icon ms-2">
               <p class="text-overflow me-2">Sergio Stranger</p>
@@ -95,15 +95,15 @@
       <div class="col-lg-6 col-xl-4">
         <div class="card">
           <img src="@/assets/images/atricles/card%205.jpg" alt="card" class="">
-          <a href="#" class="w-100 h-100 position-absolute d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
+          <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
             <div class="d-flex justify-content-between align-items-center">
               <span>
                 <i class="i-tag-popular"></i>
                 <i class="i-tag-star"></i>
               </span>
-              <span class="badge bg-primary">IMG</span>
+              <span class="badge bg-purple">IMG</span>
             </div>
-            <h2 class="text-center fs-32">Без аниме</h2>
+            <h2 class="text-center fs-32">Хутава</h2>
             <div class="d-flex align-items-center">
               <img src="@/assets/images/auth/1.jpg" alt="user" class="nav-icon ms-2">
               <p class="text-overflow me-2">Sergio Stranger</p>
@@ -115,15 +115,15 @@
       <div class="col-lg-6 col-xl-4">
         <div class="card">
           <img src="@/assets/images/atricles/card%206.jpg" alt="card" class="">
-          <a href="#" class="w-100 h-100 position-absolute d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
+          <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
             <div class="d-flex justify-content-between align-items-center">
               <span>
                 <i class="i-tag-popular"></i>
                 <i class="i-tag-star"></i>
               </span>
-              <span class="badge bg-primary">IMG</span>
+              <span class="badge bg-purple">IMG</span>
             </div>
-            <h2 class="text-center fs-32">Яндерочка</h2>
+            <h2 class="text-center fs-32">Хутава</h2>
             <div class="d-flex align-items-center">
               <img src="@/assets/images/auth/1.jpg" alt="user" class="nav-icon ms-2">
               <p class="text-overflow me-2">Sergio Stranger</p>
@@ -135,15 +135,15 @@
       <div class="col-lg-6 col-xl-4">
         <div class="card">
           <img src="@/assets/images/atricles/card%207.jpg" alt="card" class="">
-          <a href="#" class="w-100 h-100 position-absolute d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
+          <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
             <div class="d-flex justify-content-between align-items-center">
               <span>
                 <i class="i-tag-popular"></i>
                 <i class="i-tag-star"></i>
               </span>
-              <span class="badge bg-primary">IMG</span>
+              <span class="badge bg-purple">IMG</span>
             </div>
-            <h2 class="text-center fs-32">Авиаперелеты только на nyako.ru</h2>
+            <h2 class="text-center fs-32">Хутава</h2>
             <div class="d-flex align-items-center">
               <img src="@/assets/images/auth/1.jpg" alt="user" class="nav-icon ms-2">
               <p class="text-overflow me-2">Sergio Stranger</p>
@@ -165,17 +165,17 @@
   object-fit: contain
 
 .card
-  min-height: 160px
-  max-height: 200px
-  border-radius: .65rem
+  border-radius: 0.625rem
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05)
 
 .card>img
   object-fit: cover
-  height: 100%
+  height: 200px
   border-radius: inherit
 
 .card-thumbnail
-  background-color: #0007
+  opacity: 0
+  background-color: #0008
   color: $primary
   border-radius: inherit
   position: absolute
@@ -183,6 +183,12 @@
   bottom: 0
   left: 0
   right: 0
+  transition: .5s
+  &:hover
+    opacity: 1
+
+.bg-purple
+  background-color: $purple
 
 </style>
 
