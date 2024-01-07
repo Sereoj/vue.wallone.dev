@@ -9,6 +9,8 @@
       <router-view class="col-md-8 col-lg-9 col-xl-10" />
     </div>
   </div>
+
+  <button class="btn-up i-inline-arrow-up" :class="isVisible ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
 </template>
 
 <script>
@@ -18,6 +20,25 @@ export default {
   components: {
     SidebarView,
     HeaderView
+  },
+  data() {
+    return {
+      isVisible: false
+    }
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    },
+    handleScroll() {
+      this.isVisible = window.scrollY > 300;
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
   }
 }
 </script>
@@ -44,4 +65,20 @@ p, .description
   font-size: $font-p
   text-overflow: ellipsis
   white-space: normal
+
+.btn-up
+  border: none
+  border-radius: 50%
+  height: 50px
+  width: 50px
+  background-color: $second
+  color: $primary
+  text-align: center
+  position: fixed
+  right: 24px
+  bottom: 40px
+  transition: .2s
+  &:hover
+    background-color: $background
+    border: 2px solid $second
 </style>
