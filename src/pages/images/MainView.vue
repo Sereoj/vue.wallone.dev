@@ -13,14 +13,14 @@
 
     <div class="row g-3">
       <div class="col-12">
-        <image-article-view class="card-main"/>
+        <image-article-view class="card-main" title="Hello" image="https://imgs.wallone.ru//previews//1ae1bed3d7f2895be555f656fa5a1341.jpg"/>
       </div>
-      <div class="col-lg-6 col-xl-4 col-cxl-3">
-        <image-article-view class="card"/>
+      <div class="col-lg-6 col-xl-4 col-cxl-3" v-for="image in images" :key="image">
+        <image-article-view class="card" :title="image.name" :image="image.preview"/>
       </div>
-      <div class="col-lg-6 col-xl-4 col-cxl-9">
-        <image-article-view class="card"/>
-      </div>
+<!--      <div class="col-lg-6 col-xl-4 col-cxl-9">-->
+<!--        <image-article-view class="card" :title="image.name" :image="image.preview"/>-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -37,6 +37,8 @@
 <script>
 import {useHead} from "@unhead/vue";
 
+import apiRouter from "@/router/api";
+
 import LinkBox from "@/components/elements/LinkBox";
 import adboxSplitView from "@/components/ads/AdboxSplitView";
 import imageArticleView from "@/components/blocks/images/ImageArticleView";
@@ -49,12 +51,27 @@ export default {
     imageArticleView
   },
   data() {
-    return {}
+    return {
+      'images' : null
+    }
   },
   mounted() {
     useHead({
       title: `Wallone • Красивые изображения на рабочий стол`
     })
+    this.loaded()
+  },
+  methods: {
+    loaded(){
+      let vm = this
+      apiRouter.getRequest('https://wallone.ru/api/v1/themes').then(function (response) {
+        if(response.status === 200)
+        {
+          vm.images = response.data
+        }
+      })
+
+    }
   }
 }
 

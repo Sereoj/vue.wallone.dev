@@ -24,4 +24,8 @@ function postRequest(url, params) {
     })
 }
 
-export default {api, postRequest}
+function getRequest(url){
+    return axios.get(url)
+}
+
+export default {api, postRequest, getRequest}

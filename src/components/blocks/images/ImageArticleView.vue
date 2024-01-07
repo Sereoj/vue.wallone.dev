@@ -1,6 +1,6 @@
 <template>
 <div class="card">
-  <img src="https://imgs.wallone.ru/previews/5f56b336b83667daecdd861aa3d44a23.jpg" alt="card" class="">
+  <img :src="image" alt="card">
   <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
     <div class="d-flex justify-content-between align-items-center">
           <span>
@@ -9,7 +9,7 @@
           </span>
       <span class="badge bg-purple">IMG</span>
     </div>
-    <h2 class="text-center fs-32">Хутава</h2>
+    <h2 class="text-center fs-32">{{ title }}</h2>
     <div class="d-flex align-items-center">
       <img src="@/assets/images/auth/1.jpg" alt="user" class="nav-icon ms-2">
       <p class="text-overflow me-2">Sergio Stranger</p>
@@ -25,7 +25,11 @@
 
 <script>
 export default {
-  name: "ImageArticleView"
+  name: "ImageArticleView",
+  props: {
+    'title' : String,
+    'image': String
+  }
 }
 </script>
 

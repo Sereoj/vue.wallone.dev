@@ -14,6 +14,9 @@ export default {
   name: "SiteLinks",
   components: {
     link2Box
+  },
+  data(){
+    return {}
   }
 }
 </script>
