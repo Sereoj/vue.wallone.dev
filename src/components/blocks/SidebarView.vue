@@ -60,7 +60,7 @@
         </li>
       </ul>
 
-      <ul class="nav navbar-nav text-center gap-3 mt-5">
+      <ul class="nav navbar-nav gap-3 mt-5">
         <li class="nav-item">
           <a href="#">Помощь</a>
         </li>

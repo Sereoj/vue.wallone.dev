@@ -48,9 +48,9 @@ export default {
           :aria-describedby="PasswordBox.nameText">
 
       <button class="input-group-text" @click="showPassword = !showPassword">
-        <i class="i-eye-off-2" v-if="showPassword"></i>
+        <i class="i-inline-eye-off" v-if="showPassword"></i>
 
-        <i class="i-eye-2" v-else></i>
+        <i class="i-inline-eye" v-else></i>
       </button>
     </div>
     <div :id="PasswordBox.nameText" v-bind:class ="{'d-block invalid-feedback' : isError}">{{ message }}</div>

@@ -1,7 +1,7 @@
 <template>
   <div class="mb-5">
     <h2 class="mb-2 title">Красивые обои на рабочий стол</h2>
-      <p class="description">
+      <p class="description mb-2">
         Wallone - Огромная коллекция красивых изображений на рабочий стол. Cкачивайте, создайте персонализированные темы для приложения
         <link-box title="Wallone (описание)." name="wallone" path="/landing/wallone"/> Подберите интересные фоновые изображения и скачайте их на компьютер в разрешении 2к.
       </p>
@@ -13,7 +13,7 @@
 
     <div class="row g-3">
       <div class="col-12">
-        <div class="card">
+        <div class="card card-main">
           <img src="@/assets/images/atricles/card%201.jpg" alt="card" class="">
           <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
             <div class="d-flex justify-content-between align-items-center">
@@ -32,7 +32,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-6 col-xl-4">
+      <div class="col-lg-6 col-xl-4 col-cxl-3">
         <div class="card">
           <img src="@/assets/images/atricles/card%202.jpg" alt="card" class="">
           <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
@@ -52,7 +52,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-6 col-xl-4">
+      <div class="col-lg-6 col-xl-4 col-cxl-3">
         <div class="card">
           <img src="@/assets/images/atricles/card%203.jpg" alt="card" class="">
           <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
@@ -72,7 +72,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-6 col-xl-4">
+      <div class="col-lg-6 col-xl-4 col-cxl-3">
         <div class="card">
           <img src="@/assets/images/atricles/card%204.jpg" alt="card" class="">
           <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
@@ -92,7 +92,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-6 col-xl-4">
+      <div class="col-lg-6 col-xl-4 col-cxl-3">
         <div class="card">
           <img src="@/assets/images/atricles/card%205.jpg" alt="card" class="">
           <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
@@ -112,7 +112,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-6 col-xl-4">
+      <div class="col-lg-6 col-xl-4 col-cxl-3">
         <div class="card">
           <img src="@/assets/images/atricles/card%206.jpg" alt="card" class="">
           <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
@@ -132,7 +132,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-6 col-xl-4">
+      <div class="col-lg-6 col-xl-4 col-cxl-9">
         <div class="card">
           <img src="@/assets/images/atricles/card%207.jpg" alt="card" class="">
           <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
@@ -186,6 +186,9 @@
   transition: .5s
   &:hover
     opacity: 1
+
+.card-main>img
+  height: 300px
 
 .bg-purple
   background-color: $purple

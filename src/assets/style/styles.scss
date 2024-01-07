@@ -2,6 +2,25 @@
 @import "bootstrap/scss/variables";
 @import "fonts";
 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  cxl: 1850px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  cxl: 1900px
+);
+
 $body-color:                   $white;
 $body-bg:                      $background;
 $font-size-base: 20px;
