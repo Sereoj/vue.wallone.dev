@@ -89,11 +89,4 @@
 
 .nav-link:hover
   color: $primary2
-
-.nav-icon
-  width: 32px
-  height: 32px
-  object-fit: cover
-  border-radius: 50%
-  margin-right: 8px
 </style>

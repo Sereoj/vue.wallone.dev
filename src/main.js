@@ -1,5 +1,6 @@
 import '@/assets/style/styles.scss'
 import 'bootstrap/dist/js/bootstrap.bundle'
+import '@/assets/style/iconly/iconly.sass'
 
 import { createApp } from 'vue'
 import App from './App.vue'
