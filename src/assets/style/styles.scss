@@ -79,6 +79,10 @@ $border-width: 2px;
    Стилизация базовых элементов
 */
 
+.fs-32 {
+  font-size: 2rem;
+}
+
 .fs-24 {
   font-size: 1.5rem
 }
@@ -97,4 +101,18 @@ $border-width: 2px;
 
 a {
   color: $second;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
