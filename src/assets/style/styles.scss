@@ -152,3 +152,22 @@ a {
 .i-tag-verified {
   color: #007AFF;
 }
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: $background;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $placeholder;
+  border-radius: 10px;
+  border: 5px solid $background;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $primary2;
+}
