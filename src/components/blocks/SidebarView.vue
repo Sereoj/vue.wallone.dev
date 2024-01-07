@@ -126,16 +126,16 @@
 
       <ul class="nav navbar-nav gap-3 mt-5">
         <li class="nav-item">
-          <a href="#">О проекте</a>
+          <link-box title="О проекте" path="/about" name="about"/>
         </li>
         <li class="nav-item">
-          <a href="#">Помощь</a>
+          <link-box title="Помощь" path="/help" name="help"/>
         </li>
         <li class="nav-item">
-          <a href="#">Для разработчиков</a>
+          <link-box title="Для разработчиков" path="/dev" name="dev"/>
         </li>
         <li class="nav-item">
-          <a href="#">Политика конфиденциальности</a>
+          <link-box title="Политика конфиденциальности" path="/policy" name="policy"/>
         </li>
       </ul>
     </div>
@@ -143,7 +143,13 @@
 </template>
 
 <script>
+import linkBox from "@/components/elements/LinkBox";
 
+export default {
+  components: {
+    linkBox
+  }
+}
 </script>
 
 <style lang="sass" scoped>
