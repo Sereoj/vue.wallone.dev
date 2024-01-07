@@ -59,12 +59,12 @@ export default {
     useHead({
       title: `Wallone • Красивые изображения на рабочий стол`
     })
-    this.loaded()
+    this.loaded(1)
   },
   methods: {
-    loaded(){
+    loaded(page){
       let vm = this
-      apiRouter.getRequest('https://wallone.ru/api/v1/themes').then(function (response) {
+      apiRouter.getRequest(`https://wallone.ru/api/v1/themes?page=${page}`).then(function (response) {
         if(response.status === 200)
         {
           vm.images = response.data

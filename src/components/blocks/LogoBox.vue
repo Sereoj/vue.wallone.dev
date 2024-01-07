@@ -4,7 +4,7 @@
         <img src="@/assets/logo.png" alt="Logo" height="52" class="me-3">
         <div>
           <h1 class="logo__name">Wallone</h1>
-          <a href="/tags/popular" class="logo__brand">#One Day Container</a>
+          <a href="/tags/popular" class="logo__brand">#Самый популярный бренд</a>
         </div>
       </a>
   </div>
