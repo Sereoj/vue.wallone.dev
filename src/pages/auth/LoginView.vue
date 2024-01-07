@@ -1,6 +1,6 @@
 <template>
   <div class="needs-validation">
-    <TextBox name="login"
+    <text-box name="login"
              title="Email или логин"
              placeholder="user@wallone.ru"
              aria-autocomplete="both"
@@ -9,7 +9,7 @@
              :is-error="getMessageEmail() !== ''"
              min-length="4"/>
 
-    <PassWord name="password"
+    <pass-word name="password"
               placeholder="Самый сложный пароль"
               title="Пароль"
               v-model="password"
@@ -19,18 +19,18 @@
               />
 
     <div class="justify-content-center">
-      <CheckBox class="mt-5"
+      <check-box class="mt-5"
                 name="rememberMe"
                 v-model="rememberMe"
                 title="Запомнить меня"/>
     </div>
 
     <div class="d-flex align-items-center mt-4">
-      <ButtonBox class="me-5" title="Авторизироваться" name="loginBtn" v-on:click="getAuth"/>
-      <LinkBox name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
+      <button-box class="me-5" title="Авторизироваться" name="loginBtn" v-on:click="getAuth"/>
+      <link-box name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
     </div>
 
-    <AdboxView/>
+    <adbox-view/>
   </div>
 </template>
 
