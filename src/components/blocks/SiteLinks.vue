@@ -1,23 +1,25 @@
 <template>
-  <div class="form-text" id="site-links">
-    <router-link to="/images/new">#Новые </router-link>
-    <router-link to="/images/popular">#Популярные </router-link>
-    <!--      TODO: Важно понимать, что это объект первой видимости, он может пополняться, либо уменьшаться-->
-    <router-link to="/images/popular">#Популярные </router-link>
-    <router-link to="/images/popular">#Популярные </router-link>
-    <router-link to="/images/popular">#Популярные </router-link>
-    <router-link to="/images/soon">#Oжидаемые</router-link>
+  <div class="nav-item mt-1" id="site-links">
+    <link2-box name="newyear" path="https://wallone.ru/search?query=New year" title="#New year "/>
+    <link2-box name="new" path="/images/new" title="#Новые "/>
+    <link2-box name="popular" path="/images/popular" title="#Популярные "/>
+    <link2-box name="soon" path="/images/soon" title="#Ожидающие"/>
   </div>
 </template>
 
 <script>
+import link2Box from "@/components/elements/Link2Box";
 
 export default {
   name: "SiteLinks",
-  components: {}
+  components: {
+    link2Box
+  }
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+a {
+  font-size: 0.875rem;
+}
 </style>
