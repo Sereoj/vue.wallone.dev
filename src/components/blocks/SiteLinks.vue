@@ -1,6 +1,6 @@
 <template>
   <div class="nav-item mt-1" id="site-links">
-    <link2-box name="newyear" path="https://wallone.ru/search?query=New year" title="#New year "/>
+    <link2-box name="newyear" path="/search?query=New year" title="#New year "/>
     <link2-box name="new" path="/images/new" title="#Новые "/>
     <link2-box name="popular" path="/images/popular" title="#Популярные "/>
     <link2-box name="soon" path="/images/soon" title="#Ожидающие"/>
