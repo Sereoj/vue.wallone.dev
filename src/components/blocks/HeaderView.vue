@@ -6,9 +6,9 @@
         <!--        Это логотип-->
         <logo-box name="logoBox" class="col-lg-3 col-xxl-2" />
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+          <span class="i-inline-menu"></span>
+        </a>
         <div class="collapse navbar-collapse align-items-start justify-content-between" id="navbarMenu">
 
           <search-box class="my-3 m-lg-0" />
