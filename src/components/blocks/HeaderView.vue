@@ -13,7 +13,7 @@
 
           <search-box class="my-3 m-lg-0" />
 
-          <ul class="navbar-nav text-center">
+          <ul class="navbar-nav text-center d-none d-md-flex">
             <li class="nav-item">
               <router-link class="nav-link active" to="ru">RU</router-link>
             </li>
@@ -23,7 +23,7 @@
             </li>
           </ul>
 
-          <ul class="navbar-nav text-center">
+          <ul class="navbar-nav text-center d-none d-md-block">
             <li class="nav-item dropdown">
               <a class="nav-link icon-link dropdown-toggle mb-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="i-inline-userb"></i>
