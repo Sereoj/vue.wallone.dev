@@ -107,7 +107,7 @@ p, .description
   left: 0
   right: 0
   padding: 1.6rem 2.5rem
-  background: $componentColor
+  background: $background
   color: $primary2
   .active
     border: 0
