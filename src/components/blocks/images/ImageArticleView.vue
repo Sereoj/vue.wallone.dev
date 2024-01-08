@@ -58,8 +58,11 @@ export default {
   &:hover
     opacity: 1
 
-.card-main>img
-  height: 300px
+.card-main
+  h2
+    font-size: 3rem
+  &>img
+    height: 300px
 
 .bg-purple
   background-color: $purple

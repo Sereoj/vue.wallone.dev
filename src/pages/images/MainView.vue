@@ -11,12 +11,12 @@
         <adbox-split-view/>
       </div>
 
-    <div class="row g-3">
+    <div class="row g-3" v-if="images">
       <div class="col-12">
-        <image-article-view class="card-main" title="Hello" image="https://imgs.wallone.ru//previews//1ae1bed3d7f2895be555f656fa5a1341.jpg"/>
+        <image-article-view class="card-main" :title="images[0].name" :image="images[0].preview" />
       </div>
-      <div class="col-lg-6 col-xl-4 col-cxl-3" v-for="image in images" :key="image">
-        <image-article-view class="card" :title="image.name" :image="image.preview"/>
+      <div :class="index === images.length - 2 ? 'col' : 'col-lg-6 col-xl-4 col-cxl-3'" v-for="(image, index) in images.slice(1)" :key="image">
+        <image-article-view class="card" :title="image.name" :image="image.preview" />
       </div>
 <!--      <div class="col-lg-6 col-xl-4 col-cxl-9">-->
 <!--        <image-article-view class="card" :title="image.name" :image="image.preview"/>-->
