@@ -3,11 +3,25 @@
   <div class="container">
 
     <div class="row">
-      <sidebar-view class="col-md-4 col-lg-3 col-xl-2" />
+      <sidebar-view class="col-md-4 col-lg-3 col-xl-2 d-none d-md-block" />
       <!--    По макету SiteLinks, это отдельный блок, не входящий header -->
       <!--  Content -->
       <router-view class="col-md-8 col-lg-9 col-xl-10" />
     </div>
+  </div>
+
+  <div class="d-md-none mobile-sidebar fs-32">
+    <ul class="d-flex justify-content-between text-center">
+      <li class="nav-item col">
+        <router-link to="/" class="nav-link"><i class="i-inline-view-grid"></i></router-link>
+      </li>
+      <li class="nav-item col">
+        <router-link to="/" class="nav-link"><i class="i-inline-view-grid-add"></i></router-link>
+      </li>
+      <li class="nav-item col">
+        <router-link to="/" class="nav-link"><i class="i-inline-userb"></i></router-link>
+      </li>
+    </ul>
   </div>
 
   <button class="btn-up i-inline-arrow-up" :class="isVisible ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
@@ -75,10 +89,27 @@ p, .description
   color: $primary
   text-align: center
   position: fixed
-  right: 24px
-  bottom: 40px
+  right: 1.5rem
+  bottom: 2.5rem
   transition: .2s
   &:hover
     background-color: $background
     border: 2px solid $second
+
+@media (max-width: 768px)
+  .btn-up
+    right: 2.4rem
+    bottom: 6.7rem
+
+.mobile-sidebar
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 1.6rem 2.5rem
+  background: $componentColor
+  color: $primary2
+  .active
+    border: 0
+    color: $primary
 </style>
