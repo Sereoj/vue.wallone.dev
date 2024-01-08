@@ -132,10 +132,10 @@
           <link-box title="Помощь" path="/help" name="help"/>
         </li>
         <li class="nav-item">
-          <link-box title="Для разработчиков" path="/dev" name="dev"/>
+          <link-box title="Для разработчиков" path="/devs" name="devs"/>
         </li>
         <li class="nav-item">
-          <link-box title="Политика конфиденциальности" path="/policy" name="policy"/>
+          <link-box title="Политика конфиденциальности" path="/privacy_statement" name="privacy_statement"/>
         </li>
       </ul>
     </div>

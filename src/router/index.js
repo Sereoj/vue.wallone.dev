@@ -14,6 +14,10 @@ import PrivacyStatementView from "@/pages/legal/PrivacyStatementView";
 import newImagesView from "@/pages/images/NewImagesView";
 import PopularImagesView from "@/pages/images/PopularImagesView";
 import SoonImagesView from "@/pages/images/SoonImagesView";
+import SearchView from "@/pages/images/SearchView";
+import AboutView from "@/pages/static/AboutView";
+import HelpView from "@/pages/static/HelpView";
+import DevView from "@/pages/static/DevView";
 
 
 const router = createRouter({
@@ -105,7 +109,19 @@ const router = createRouter({
       ]
     },
     {
-      path: '/icons/new',
+      path: '/search',
+      name: 'Search Images',
+      component: MainLayout,
+      children: [
+        {
+          name: 'SearchView',
+          path: '',
+          component: SearchView
+        }
+      ]
+    },
+    {
+      path: '/images/new',
       name: 'New Images',
       component: MainLayout,
       children: [
@@ -117,7 +133,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/icons/popular',
+      path: '/images/popular',
       name: 'Popular Images',
       component: MainLayout,
       children: [
@@ -129,7 +145,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/icons/soon',
+      path: '/images/soon',
       name: 'Soon Images',
       component: MainLayout,
       children: [
@@ -139,7 +155,43 @@ const router = createRouter({
           component: SoonImagesView
         }
       ]
-    }
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: MainLayout,
+      children: [
+        {
+          name: 'AboutView',
+          path: '',
+          component: AboutView
+        }
+      ]
+    },
+    {
+      path: '/help',
+      name: 'Help',
+      component: MainLayout,
+      children: [
+        {
+          name: 'HelpView',
+          path: '',
+          component: HelpView
+        }
+      ]
+    },
+    {
+      path: '/devs',
+      name: 'Devs',
+      component: MainLayout,
+      children: [
+        {
+          name: 'DevView',
+          path: '',
+          component: DevView
+        }
+      ]
+    },
   ]
 })
 
