@@ -24,7 +24,19 @@
     </ul>
   </div>
 
-  <button class="btn-up i-inline-arrow-up" :class="isVisible ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
+  <div class="fixed-object d-flex flex-wrap align-items-center gap-4">
+    <div class="toast align-items-center text-bg-primary border-0 fade show fs-16 px-3 rounded-4" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex align-items-center">
+        <i class="i-outline-information-circle fs-20"></i>
+        <div class="toast-body">
+          Мы используем cookie для обработки ваших персональных данных.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+    </div>
+
+    <button class="btn-up i-inline-arrow-up" :class="isVisible ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
+  </div>
 </template>
 
 <script>
@@ -88,18 +100,23 @@ p, .description
   background-color: $second
   color: $primary
   text-align: center
-  position: fixed
-  right: 1.5rem
-  bottom: 2.5rem
   transition: .2s
   &:hover
     background-color: $background
     border: 2px solid $second
 
+.fixed-object
+  position: fixed
+  right: 1.5rem
+  bottom: 2.5rem
+
 @media (max-width: 768px)
-  .btn-up
+  .fixed-object
     right: 2.4rem
     bottom: 6.7rem
+
+  .toast
+    max-width: 350px
 
 .mobile-sidebar
   position: fixed
