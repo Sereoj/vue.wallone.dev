@@ -25,15 +25,8 @@
   </div>
 
   <div class="fixed-object d-flex flex-wrap align-items-center gap-4">
-    <div class="toast align-items-center text-bg-primary border-0 fade show fs-16 px-3 rounded-4" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="d-flex align-items-center">
-        <i class="i-outline-information-circle fs-20"></i>
-        <div class="toast-body">
-          Мы используем cookie для обработки ваших персональных данных.
-        </div>
-        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
-      </div>
-    </div>
+    <toast-box text="Добро пожаловать в Wallone"/>
+    <toast-box text="Мы используем cookie для обработки ваших персональных данных."/>
 
     <button class="btn-up i-inline-arrow-up" :class="isVisible ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
   </div>
@@ -42,10 +35,13 @@
 <script>
 import HeaderView from "@/components/blocks/HeaderView.vue";
 import SidebarView from "@/components/blocks/SidebarView";
+import toastBox from "@/components/elements/ToastBox";
+
 export default {
   components: {
     SidebarView,
-    HeaderView
+    HeaderView,
+    toastBox
   },
   data() {
     return {
