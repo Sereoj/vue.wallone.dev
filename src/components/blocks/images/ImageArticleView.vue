@@ -9,7 +9,7 @@
           </span>
       <span class="badge bg-purple">{{ image.type }}</span>
     </div>
-    <h2 class="text-center fs-32">{{ image.title }}</h2>
+    <h2 class="text-center fs-32">{{ image.name }}</h2>
     <a :href="userSlug" class="username">
       <div class="d-flex align-items-center">
         <img :src="user.avatar" alt="user" class="nav-icon ms-2">
