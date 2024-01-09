@@ -1,7 +1,7 @@
 <template>
 <div class="card" v-if="user && image">
   <img :src="image.preview" alt="card">
-  <a href="#" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
+  <a :href="slug" class="d-flex flex-column justify-content-between p-2 overflow-hidden card-thumbnail">
     <div class="d-flex justify-content-between align-items-center">
           <span>
             <i class="i-tag-popular" v-if="image.fields.popular"></i>
@@ -34,7 +34,8 @@ export default {
   },
   data(props){
     return {
-      'userSlug': `/profile/${props.user.slug}`
+      'userSlug': `/profile/${props.user.slug}`,
+      'slug': props.image === 'IMG' ? `/images/${props.image.slug}` : `/themes/${props.image.slug}`
     }
   }
 }
