@@ -32,6 +32,9 @@
               <ul class="dropdown-menu text-center">
                 <li><router-link class="dropdown-item" to="/login">Вход</router-link></li>
                 <li><router-link class="dropdown-item" to="/register">Регистрация</router-link></li>
+
+                <li><router-link class="dropdown-item" to="/profile">Профиль</router-link></li>
+                <li><router-link class="dropdown-item" to="/logout">Выход</router-link></li>
               </ul>
             </li>
           </ul>

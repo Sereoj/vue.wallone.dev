@@ -53,6 +53,7 @@ export default {
   components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
   data() {
     return {
+      user: null,
       email: "",
       password: "",
       rememberMe: false,
@@ -87,7 +88,7 @@ export default {
         if(vm.messages.token)
         {
           vm.clear()
-          alert("Вы авторизировались")
+          vm.user = vm.messages
           router.push('/')
         }
       })
