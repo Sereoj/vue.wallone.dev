@@ -70,7 +70,6 @@ export default {
           vm.images = response.data
         }
       })
-
     }
   }
 }
