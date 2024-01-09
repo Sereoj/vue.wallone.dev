@@ -89,6 +89,7 @@ export default {
         {
           vm.clear()
           vm.user = vm.messages
+          localStorage.setItem('_token', vm.messages.token)
           router.push('/')
         }
       })

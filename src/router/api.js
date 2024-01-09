@@ -12,6 +12,7 @@ axios.defaults.baseURL = 'https://dev.w2me.ru/api/v1'
 const api = {
     'register' : '/register',
     'login': '/login',
+    'checkUser': '/user'
 }
 
 // eslint-disable-next-line no-unused-vars
