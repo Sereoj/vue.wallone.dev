@@ -45,9 +45,9 @@ import LinkBox from "@/components/elements/LinkBox";
 import ButtonBox from "@/components/elements/ButtonBox";
 import AdboxView from "@/components/ads/AdboxView";
 
-import apiRouter from "@/router/api";
 import { useHead } from '@unhead/vue'
 import router from "@/router";
+import Authorization from "@/js/auth/authorization";
 
 export default {
   components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
@@ -60,11 +60,9 @@ export default {
       messages: {
         email: '',
         password: ''
-      }
+      },
+      authorization : null
     }
-  },
-  watch(){
-
   },
   mounted() {
     useHead({
@@ -77,42 +75,16 @@ export default {
       this.messages.password = ""
     },
     getResponse(){
-      let vm = this
-      apiRouter.postRequest(apiRouter.api.login, {
+      //let vm = this
+      let values = {
         email: this.email,
         password: this.password,
         remember: this.rememberMe
-      })
-      .then(function (response) {
-        vm.messages = response.data
-        if(vm.messages.token)
-        {
-          vm.clear()
-          vm.user = vm.messages
-          localStorage.setItem('_token', vm.messages.token)
-          router.push('/')
-        }
-      })
-      .catch(function (error) {
-        let errors = error.response.data
+      }
+      new Authorization().login(values)
 
-        if(errors?.message && error.response.status === 401)
-        {
-          vm.messages.password = errors?.message
-        }
+      router.push('/')
 
-        if(errors?.errors)
-        {
-          if(errors.errors?.email)
-          {
-            vm.messages.email = errors.errors?.email[0]
-          }
-          if(errors.errors?.password)
-          {
-            vm.messages.password = errors.errors?.password[0]
-          }
-        }
-      })
     },
     getAuth(){
       this.clear()

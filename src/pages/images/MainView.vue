@@ -13,10 +13,10 @@
 
     <div class="row g-3" v-if="images">
       <div class="col-12">
-        <image-article-view class="card-main" :title="images[0].name" :image="images[0].preview" />
+        <image-article-view class="card-main" :image="images[0]" :user="images[0].user"/>
       </div>
       <div :class="index === images.length - 2 ? 'col' : 'col-lg-6 col-xl-4 col-cxl-3'" v-for="(image, index) in images.slice(1)" :key="image">
-        <image-article-view class="card" :title="image.name" :image="image.preview" />
+        <image-article-view class="card" :image="image" :user="image.user"/>
       </div>
 <!--      <div class="col-lg-6 col-xl-4 col-cxl-9">-->
 <!--        <image-article-view class="card" :title="image.name" :image="image.preview"/>-->
@@ -62,9 +62,9 @@ export default {
     this.loaded(1)
   },
   methods: {
-    loaded(page){
+    loaded(){
       let vm = this
-      apiRouter.getRequest(`https://wallone.ru/api/v1/themes?page=${page}`).then(function (response) {
+      apiRouter.getRequest(`${apiRouter.api.index}`).then(function (response) {
         if(response.status === 200)
         {
           vm.images = response.data
