@@ -4,7 +4,7 @@
         <img src="@/assets/logo.png" alt="Logo" height="52" class="me-3">
         <div>
           <h1 class="logo__name">Wallone</h1>
-          <a href="/tags/popular" class="logo__brand">#Самый популярный бренд</a>
+          <a href="/tags/popular" class="logo__brand text-overflow pe-5">#Визуальная новелла</a>
         </div>
       </a>
   </div>

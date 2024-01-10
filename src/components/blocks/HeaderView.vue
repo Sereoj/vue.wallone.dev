@@ -4,7 +4,7 @@
       <div class="container align-items-start">
 
         <!--        Это логотип-->
-        <logo-box name="logoBox" class="col-lg-3 col-xxl-2" />
+        <logo-box name="logoBox" class="col-lg-3 col-cxl-2" />
 
         <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
           <span class="i-inline-menu"></span>
