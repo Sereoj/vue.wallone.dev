@@ -1,10 +1,13 @@
 <template>
-  <img src="@/assets/banners/appwizard.png" alt="ADs1" class="AD-box col-lg-6">
+    <div v-html="html"></div>
 </template>
 
 <script>
 export default {
-  name: "adboxSplitView"
+  name: "adboxSplitView",
+  props: [
+    'html',
+  ]
 }
 </script>
 
