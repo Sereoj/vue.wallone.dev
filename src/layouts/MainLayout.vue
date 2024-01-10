@@ -24,8 +24,8 @@
     </ul>
   </div>
 
-  <div class="fixed-object d-flex flex-wrap align-items-center gap-4">
-    <toast-box text="Добро пожаловать в Wallone"/>
+  <div class="fixed-object d-flex flex-column align-items-end gap-3">
+    <toast-box text="Добро пожаловать в Wallone" class="bg-success"/>
     <toast-box text="Мы используем cookie для обработки ваших персональных данных."/>
 
     <button class="btn-up i-inline-arrow-up" :class="isVisible ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
