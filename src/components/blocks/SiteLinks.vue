@@ -3,7 +3,7 @@
     <link2-box name="newyear" path="/search?query=New year" title="#New year "/>
     <link2-box name="new" path="/images/new" title="#Новые "/>
     <link2-box name="popular" path="/images/popular" title="#Популярные "/>
-    <link2-box name="soon" path="/images/soon" title="#Ожидающие"/>
+    <link2-box name="soon" path="/images/soon" title="#Ожидающие "/>
   </div>
 </template>
 

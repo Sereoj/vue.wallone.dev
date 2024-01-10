@@ -1,5 +1,5 @@
 <template>
-    <div v-html="html"></div>
+    <div class="col-lg-6" v-html="html"></div>
 </template>
 
 <script>
