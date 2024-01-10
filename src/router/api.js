@@ -13,7 +13,8 @@ const api = {
     'register' : '/register',
     'login': '/login',
     'checkUser': '/user',
-    'index': ''
+    'index': '',
+    'ads': '/ads'
 }
 
 // eslint-disable-next-line no-unused-vars

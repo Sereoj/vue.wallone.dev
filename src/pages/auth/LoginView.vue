@@ -47,7 +47,7 @@ import AdboxView from "@/components/ads/AdboxView";
 
 import { useHead } from '@unhead/vue'
 import router from "@/router";
-import Authorization from "@/js/auth/authorization";
+import apiRouter from "@/router/api";
 
 export default {
   components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
@@ -75,16 +75,48 @@ export default {
       this.messages.password = ""
     },
     getResponse(){
-      //let vm = this
+      let vm = this
       let values = {
         email: this.email,
         password: this.password,
         remember: this.rememberMe
       }
-      new Authorization().login(values)
+      apiRouter.postRequest(apiRouter.api.register, values)
+          .then(function (response) {
+            let data = response.data
+            let token = data.token
 
-      router.push('/')
+            if(token)
+            {
+              console.log(`Пользователь авторизирован`)
+              router.push('/')
+            }
+          })
+          .catch(function (error) {
+            let errors = error.response.data
 
+            if(errors?.message && error.response.status === 401)
+            {
+              vm.messages.password = errors?.message
+            }
+
+            if(errors?.errors)
+            {
+              if(errors.errors?.username)
+              {
+                vm.messages.username = errors.errors?.username[0]
+              }
+              if(errors.errors?.email)
+              {
+                vm.messages.email = errors.errors?.email[0]
+              }
+              if(errors.errors?.password)
+              {
+                vm.messages.password = errors.errors?.password[0]
+              }
+            }
+          })
+        router.push('/')
     },
     getAuth(){
       this.clear()
