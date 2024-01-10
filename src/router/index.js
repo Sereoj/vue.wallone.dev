@@ -8,16 +8,21 @@ import RegisterView from "@/pages/auth/RegisterView";
 import ForgotView from "@/pages/auth/ForgotView";
 import ChangePasswordView from "@/pages/auth/ChangePasswordView";
 
-import MainView from "@/pages/images/MainView";
+import MainViewImages from "@/pages/images/MainViewImages";
 import UserAgreementView from "@/pages/legal/UserAgreementView";
 import PrivacyStatementView from "@/pages/legal/PrivacyStatementView";
 import newImagesView from "@/pages/images/NewImagesView";
 import PopularImagesView from "@/pages/images/PopularImagesView";
 import SoonImagesView from "@/pages/images/SoonImagesView";
-import SearchView from "@/pages/images/SearchView";
+import SearchView from "@/pages/search/SearchView";
 import AboutView from "@/pages/static/AboutView";
 import HelpView from "@/pages/static/HelpView";
 import DevView from "@/pages/static/DevView";
+import mainViewImages from "@/pages/images/MainViewImages";
+import mainThemesView from "@/pages/themes/MainThemesView";
+import newThemesView from "@/pages/themes/NewThemesView";
+import popularThemesView from "@/pages/themes/PopularThemesView";
+import soonThemesView from "@/pages/themes/SoonThemesView";
 
 
 const router = createRouter({
@@ -102,9 +107,9 @@ const router = createRouter({
       component: MainLayout,
       children: [
         {
-          name: 'MainView',
+          name: 'MainViewImages',
           path: '',
-          component: MainView
+          component: MainViewImages
         }
       ]
     },
@@ -117,6 +122,18 @@ const router = createRouter({
           name: 'SearchView',
           path: '',
           component: SearchView
+        }
+      ]
+    },
+    {
+      path: '/images',
+      name: 'Images',
+      component: MainLayout,
+      children: [
+        {
+          name: 'mainViewImages',
+          path: '',
+          component: mainViewImages
         }
       ]
     },
@@ -153,6 +170,54 @@ const router = createRouter({
           name: 'SoonImagesView',
           path: '',
           component: SoonImagesView
+        }
+      ]
+    },
+    {
+      path: '/themes',
+      name: 'Themes',
+      component: MainLayout,
+      children: [
+        {
+          name: 'mainThemesView',
+          path: '',
+          component: mainThemesView
+        }
+      ]
+    },
+    {
+      path: '/themes/new',
+      name: 'New Themes',
+      component: MainLayout,
+      children: [
+        {
+          name: 'newThemesView',
+          path: '',
+          component: newThemesView
+        }
+      ]
+    },
+    {
+      path: '/themes/popular',
+      name: 'Popular Themes',
+      component: MainLayout,
+      children: [
+        {
+          name: 'popularThemesView',
+          path: '',
+          component: popularThemesView
+        }
+      ]
+    },
+    {
+      path: '/themes/soon',
+      name: 'Soon Themes',
+      component: MainLayout,
+      children: [
+        {
+          name: 'soonThemesView',
+          path: '',
+          component: soonThemesView
         }
       ]
     },
