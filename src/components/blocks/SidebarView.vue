@@ -4,7 +4,7 @@
     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start navbar-nav" id="menu">
       <li>
         <a href="#type" data-bs-toggle="collapse" class="nav-link">
-          <i class="fs-4 i-inline-photograph"></i><span class="ms-1 d-none d-sm-inline">Тип</span> </a>
+          <i class="fs-4 i-inline-photograph blue"></i><span class="ms-1 d-none d-sm-inline">Тип</span> </a>
         <ul class="collapse flex-column ms-4" id="type" data-bs-parent="#menu">
           <li class="w-100">
             <a href="/themes" class="nav-link"><img src="@/assets/images/auth/1.jpg" alt="icon" class="nav-icon"> <span class="d-none d-sm-inline">Темы</span></a>
@@ -16,37 +16,37 @@
       </li>
       <li>
         <a href="#trends" data-bs-toggle="collapse" class="nav-link">
-          <i class="fs-4 i-inline-fire"></i><span class="ms-1 d-none d-sm-inline">Тренды</span></a>
+          <i class="fs-4 i-inline-fire red"></i><span class="ms-1 d-none d-sm-inline">Тренды</span></a>
         <ul class="collapse show flex-column ms-4" id="trends" data-bs-parent="#menu">
           <li class="w-100">
-            <a href="#" class="nav-link"><i class="i-outline-chart-bar"/><span class="d-none d-sm-inline">Новинки</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-chart-bar red"/><span class="d-none d-sm-inline">Новинки</span></a>
           </li>
           <li class="w-100">
-            <a href="#" class="nav-link"><i class="i-outline-sparkles"/><span class="d-none d-sm-inline">Просматриваемые</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-sparkles yellow"/><span class="d-none d-sm-inline">Просматриваемые</span></a>
           </li>
           <li class="w-100">
-            <a href="#" class="nav-link"><i class="i-outline-trending-up"/><span class="d-none d-sm-inline">Самые скачиваемые</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-trending-up blue"/><span class="d-none d-sm-inline">Самые скачиваемые</span></a>
           </li>
         </ul>
       </li>
       <li>
         <a href="#main" data-bs-toggle="collapse" class="nav-link">
-          <i class="fs-4 i-inline-lightning-bolt"></i><span class="ms-1 d-none d-sm-inline">Основное</span></a>
+          <i class="fs-4 i-inline-lightning-bolt yellow"></i><span class="ms-1 d-none d-sm-inline">Основное</span></a>
         <ul class="collapse flex-column ms-4" id="main" data-bs-parent="#menu">
           <li class="w-100">
-            <a href="#" class="nav-link"><i class="i-outline-photograph"/> <span class="d-none d-sm-inline">Мои изображения</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-photograph blue"/> <span class="d-none d-sm-inline">Мои изображения</span></a>
           </li>
           <li class="w-100">
-            <a href="#" class="nav-link"><i class="i-outline-collection"/> <span class="d-none d-sm-inline">Мои коллекции</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-collection red"/> <span class="d-none d-sm-inline">Мои коллекции</span></a>
           </li>
           <li class="w-100">
-            <a href="#" class="nav-link"><i class="i-outline-star"/> <span class="d-none d-sm-inline">Мои закладки</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-star yellow"/> <span class="d-none d-sm-inline">Мои закладки</span></a>
           </li>
         </ul>
       </li>
       <li>
         <a href="#categories1" data-bs-toggle="collapse" class="nav-link">
-          <i class="fs-4 i-outline-view-grid"></i><span class="ms-1 d-none d-sm-inline">Категории</span></a>
+          <i class="fs-4 i-outline-view-grid blue"></i><span class="ms-1 d-none d-sm-inline">Категории</span></a>
         <ul class="collapse flex-column ms-4" id="categories1" data-bs-parent="#menu">
           <li class="w-100" v-for="category in categories" :key="category">
             <a href="#" class="nav-link"><img src="@/assets/images/auth/1.jpg" alt="icon" class="nav-icon"> <span class="d-none d-sm-inline">{{ category }}</span></a>
@@ -55,16 +55,16 @@
       </li>
       <li>
         <a href="#optional" data-bs-toggle="collapse" class="nav-link">
-          <i class="fs-4 i-inline-adjustments"></i><span class="ms-1 d-none d-sm-inline">Дополнительно</span></a>
+          <i class="fs-4 i-inline-adjustments red"></i><span class="ms-1 d-none d-sm-inline">Дополнительно</span></a>
         <ul class="collapse flex-column ms-4" id="optional" data-bs-parent="#menu">
           <li class="w-100">
-            <a href="#" class="nav-link"><i class="i-outline-puzzle"/><span class="d-none d-sm-inline">Все теги</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-puzzle yellow"/><span class="d-none d-sm-inline">Все теги</span></a>
           </li>
           <li>
-            <a href="#" class="nav-link"><i class="i-outline-view-grid"/><span class="d-none d-sm-inline">Все категории</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-view-grid blue"/><span class="d-none d-sm-inline">Все категории</span></a>
           </li>
           <li>
-            <a href="#" class="nav-link"><i class="i-outline-users"/><span class="d-none d-sm-inline">Все пользователи</span></a>
+            <a href="#" class="nav-link"><i class="i-outline-users red"/><span class="d-none d-sm-inline">Все пользователи</span></a>
           </li>
         </ul>
       </li>
