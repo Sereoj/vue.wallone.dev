@@ -7,10 +7,13 @@
           <i class="fs-4 i-inline-photograph blue"></i><span class="ms-1 d-none d-sm-inline">Тип</span> </a>
         <ul class="collapse flex-column ms-4" id="type" data-bs-parent="#menu">
           <li class="w-100">
-            <a href="/themes" class="nav-link"><img src="@/assets/images/auth/1.jpg" alt="icon" class="nav-icon"> <span class="d-none d-sm-inline">Темы</span></a>
+            <a href="/themes" class="nav-link">
+              <span class="d-none d-sm-inline">Темы</span></a>
           </li>
           <li class="w-100">
-            <a href="/images" class="nav-link"><img src="@/assets/images/auth/1.jpg" alt="icon" class="nav-icon"> <span class="d-none d-sm-inline">Изображения</span></a>
+            <a href="/images" class="nav-link">
+              <span class="d-none d-sm-inline">Изображения</span>
+            </a>
           </li>
         </ul>
       </li>
