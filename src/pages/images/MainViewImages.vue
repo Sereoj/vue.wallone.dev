@@ -1,16 +1,13 @@
 <template>
   <div class="mb-5">
-    <h2 class="mb-2 title">Красивые изображения на рабочий стол</h2>
-      <p class="description mb-2">
-        Wallone. <i class="i-inline-heart red"/> — Огромная коллекция красивых изображений на рабочий стол. Cкачивайте, создайте персонализированные темы для приложения
-        <link-box title="Wallone (описание)." name="wallone" path="/landing/wallone"/> Подберите интересные фоновые изображения и скачайте их на компьютер в разрешении 2к.
-      </p>
+    <div v-if="config" v-html="config.title"></div>
+    <div v-if="config" v-html="config.description"></div>
 
       <div class="d-flex justify-content-center align-items-center row my-3" v-if="ads">
         <adbox-split-view v-for="ad in ads" :html="ad" v-bind:key="ad"/>
       </div>
 
-    <div class="row g-3" v-if="images">
+    <div id="imageView" class="row g-3" v-if="images">
       <div class="col-12">
         <image-article-view class="card-main" :image="images[0]" :user="images[0].user"/>
       </div>
@@ -35,27 +32,19 @@ import {useHead} from "@unhead/vue";
 
 import apiRouter from "@/router/api";
 
-import LinkBox from "@/components/elements/LinkBox";
-import adboxSplitView from "@/components/ads/AdboxSplitView";
-import imageArticleView from "@/components/blocks/images/ImageArticleView";
-
-
 export default {
   components: {
-    LinkBox,
     adboxSplitView,
     imageArticleView
   },
   data() {
     return {
+      'config' : null,
       'images' : null,
       'ads': null
     }
   },
   mounted() {
-    useHead({
-      title: `Wallone • Красивые изображения на рабочий стол`
-    })
     this.loaded(1)
     this.adsLoaded()
   },
@@ -65,7 +54,13 @@ export default {
       apiRouter.getRequest(`${apiRouter.api.index}`).then(function (response) {
         if(response.status === 200)
         {
-          vm.images = response.data
+          vm.images = response.data[1]
+          vm.config = response.data[0]
+
+          useHead({
+            'title': vm.config.seo_title,
+            'description': vm.config.seo_description
+          })
         }
       })
     },
@@ -82,5 +77,9 @@ export default {
     }
   }
 }
+import adboxSplitView from "@/components/ads/AdboxSplitView";
+
+
+import imageArticleView from "@/components/blocks/images/ImageArticleView";
 
 </script>

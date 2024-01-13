@@ -4,6 +4,7 @@ import axios from "axios";
  * Установка базового роутера
  */
 axios.defaults.baseURL = 'https://dev.w2me.ru/api/v1'
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
 
 /**
  * Установка базовых запросов
