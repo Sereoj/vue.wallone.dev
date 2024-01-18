@@ -116,7 +116,6 @@ export default {
               }
             }
           })
-        router.push('/')
     },
     getAuth(){
       this.clear()

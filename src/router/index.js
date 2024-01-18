@@ -257,6 +257,17 @@ const router = createRouter({
         }
       ]
     },
+    {
+      path: '*',
+      component: MainLayout,
+      children: [
+        {
+          name: 'DevView',
+          path: '',
+          component: DevView
+        }
+      ]
+    },
   ]
 })
 
