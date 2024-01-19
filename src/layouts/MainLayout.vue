@@ -13,13 +13,13 @@
   <div class="d-md-none mobile-sidebar fs-32">
     <ul class="d-flex justify-content-between text-center">
       <li class="nav-item col">
-        <router-link to="/" class="nav-link"><i class="i-inline-view-grid"></i></router-link>
+        <router-link to="/categories" class="nav-link"><i class="i-inline-view-grid"></i></router-link>
       </li>
       <li class="nav-item col">
         <router-link to="/" class="nav-link"><i class="i-inline-view-grid-add"></i></router-link>
       </li>
       <li class="nav-item col">
-        <router-link to="/" class="nav-link"><i class="i-inline-userb"></i></router-link>
+        <router-link to="/login" class="nav-link"><i class="i-inline-userb"></i></router-link>
       </li>
     </ul>
   </div>

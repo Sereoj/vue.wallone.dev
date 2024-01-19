@@ -23,6 +23,7 @@ import mainThemesView from "@/pages/themes/MainThemesView";
 import newThemesView from "@/pages/themes/NewThemesView";
 import popularThemesView from "@/pages/themes/PopularThemesView";
 import soonThemesView from "@/pages/themes/SoonThemesView";
+import categoriesView from "@/pages/categories/CategoriesView";
 
 
 const router = createRouter({
@@ -258,13 +259,14 @@ const router = createRouter({
       ]
     },
     {
-      path: '*',
+      path: '/categories',
+      name: 'Categories',
       component: MainLayout,
       children: [
         {
-          name: 'DevView',
+          name: 'categoriesView',
           path: '',
-          component: DevView
+          component: categoriesView
         }
       ]
     },
