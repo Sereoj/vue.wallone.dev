@@ -77,7 +77,7 @@
       </li>
     </ul>
     <div class="nav navbar-nav bg-component gap-3 mt-5 rounded-2">
-        <p class="text-center mt-3">Динамические обои для вашего персональное компьютера</p>
+        <p class="text-center mt-3">Динамические обои для вашего персонального компьютера</p>
         <link-box class="mt-3 mb-3 text-center" title="Скачать" path="/download" name="download.app"/>
         <div class="d-flex justify-content-center m-3">
           <p>Платформа:</p>
