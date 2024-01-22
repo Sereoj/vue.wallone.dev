@@ -1,0 +1,48 @@
+<template>
+<div class="mb-5">
+  <h2>Страница не найдена</h2>
+  <div class="justify-content-center">
+    <svg width="353" height="299" viewBox="0 0 353 299" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-5">
+      <path d="M189.681 127.881C196.364 112.089 185.297 90.957 198.372 77.0498C211.353 63.2416 246.281 68.0532 264.229 62.1375C304.701 48.7982 276.288 24.9216 284.122 1" stroke="#DDDDDD" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"/>
+      <path d="M4.10417 114C2.83807 169.231 12.216 286.859 82.2323 185.048C89.2988 174.773 100.719 111.461 90.4513 132.133C65.4649 182.44 77.2946 244.048 92.5297 295" stroke="#007AFF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M171.341 284.5C95.693 275 120.263 154.74 153.577 134.5C186.816 109 235.527 144 240.112 187.824C237.246 212.5 240.112 282 171.341 284.5Z" stroke="white" stroke-width="8" stroke-linecap="round"/>
+      <path d="M267.673 126C267.673 151.755 260.61 190.109 280.782 211.676C305.828 238.453 339.285 195.479 344.046 181.753C345.721 176.924 350.947 136.29 348.231 138.866C339.277 147.36 335.773 171.312 333.408 181.753C327.259 208.903 328.058 244.049 341.375 270" stroke="#007AFF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M187.414 128C187.414 135.237 178.219 162.5 187.413 172.5" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      <path d="M133.089 173.47C156.742 168.686 177.25 165.621 197.849 178.047C211.711 186.409 225.506 194.457 240.091 201.824" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <div class="">
+      <h4>Возможно Вы искали</h4>
+      <div class="links">
+        <link-box name="find" title="Как опубликовать тему для Wallone?" path="/"/>
+        <link-box name="find" title="Как загрузить тему в программу Wallone?" path="/"/>
+      </div>
+      <div class="links">
+        <link2-box name="find" title="#Природа " path="/"/>
+        <link2-box name="find" title="#Светлые тона " path="/"/>
+        <link2-box name="find" title="#Яблоки " path="/"/>
+        <link2-box name="find" title="#Аниме " path="/"/>
+        <link2-box name="find" title="#Девушка с бантиком " path="/"/>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+<script>
+
+import linkBox from "@/components/elements/LinkBox";
+import link2Box from "@/components/elements/Link2Box";
+
+export default {
+  name: "NotFoundView",
+  components: {
+    linkBox,
+    link2Box
+  }
+
+}
+</script>
+
+<style scoped>
+
+</style>

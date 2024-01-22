@@ -24,10 +24,12 @@ import newThemesView from "@/pages/themes/NewThemesView";
 import popularThemesView from "@/pages/themes/PopularThemesView";
 import soonThemesView from "@/pages/themes/SoonThemesView";
 import categoriesView from "@/pages/categories/CategoriesView";
+import NotFoundView from "@/pages/static/NotFoundView";
 
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
+  mode: 'hash',
   linkActiveClass: "active",
   routes: [
     {
@@ -255,6 +257,18 @@ const router = createRouter({
           name: 'DevView',
           path: '',
           component: DevView
+        }
+      ]
+    },
+    {
+      path: '/404',
+      name: 'Not Found',
+      component: MainLayout,
+      children: [
+        {
+          name: 'NotFoundView',
+          path: '',
+          component: NotFoundView
         }
       ]
     },
