@@ -14,6 +14,9 @@
       <div :class="index === images.length - 2 ? 'col' : 'col-lg-6 col-xl-4 col-cxl-3'" v-for="(image, index) in images.slice(1)" :key="image">
         <image-article-view class="card" :image="image" :user="image.user"/>
       </div>
+      <div class="col-lg-6 col-xl-4 col-cxl-3">
+        <adbox-image-view class="card"/>
+      </div>
     </div>
   </div>
 </template>
@@ -30,18 +33,24 @@
 <script>
 import {useHead} from "@unhead/vue";
 
+import adboxSplitView from "@/components/ads/AdboxSplitView";
+import imageArticleView from "@/components/blocks/images/ImageArticleView";
+import adboxImageView from "@/components/ads/AdboxImageView";
+
 import apiRouter from "@/router/api";
 
 export default {
   components: {
     adboxSplitView,
-    imageArticleView
+    imageArticleView,
+    adboxImageView
   },
   data() {
     return {
       'config' : null,
       'images' : null,
-      'ads': null
+      'ads': null,
+      'randRender' : 0,
     }
   },
   mounted() {
@@ -77,9 +86,4 @@ export default {
     }
   }
 }
-import adboxSplitView from "@/components/ads/AdboxSplitView";
-
-
-import imageArticleView from "@/components/blocks/images/ImageArticleView";
-
 </script>

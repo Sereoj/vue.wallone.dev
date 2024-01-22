@@ -76,7 +76,10 @@
           <i class="fs-4 i-inline-newspaper"></i><span class="ms-1 d-none d-sm-inline">Статьи</span></a>
       </li>
     </ul>
-
+    <div class="nav navbar-nav bg-component gap-3 mt-5 rounded-2">
+        <p class="text-center mt-3">Динамические обои для вашего персональное компьютера</p>
+        <link-box class="mt-3 mb-3 text-center" title="Скачать" path="/download" name="download.app"/>
+    </div>
     <ul class="nav navbar-nav gap-3 mt-5">
       <li class="nav-item">
         <link-box title="О проекте" path="/about" name="about"/>
@@ -133,4 +136,7 @@ export default {
 
 .nav-link:hover
   color: $primary2
+
+.bg-component
+  background: $componentColor
 </style>
