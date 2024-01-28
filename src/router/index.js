@@ -25,6 +25,7 @@ import popularThemesView from "@/pages/themes/PopularThemesView";
 import soonThemesView from "@/pages/themes/SoonThemesView";
 import categoriesView from "@/pages/categories/CategoriesView";
 import NotFoundView from "@/pages/static/NotFoundView";
+import EmailVerifyView from "@/pages/auth/EmailVerifyView";
 
 
 const router = createRouter({
@@ -53,6 +54,18 @@ const router = createRouter({
           name: 'RegisterView',
           path: '',
           component: RegisterView
+        }
+      ]
+    },
+    {
+      path: '/verify',
+      name: 'Verify',
+      component: AuthLayout,
+      children: [
+        {
+          name: 'EmailVerifyView',
+          path: '',
+          component: EmailVerifyView
         }
       ]
     },
