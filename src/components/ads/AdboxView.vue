@@ -6,26 +6,15 @@
       </div>
     </div>
 </template>
-
-<script>
+<script setup>
+import { ref } from 'vue';
 import { detectAnyAdblocker } from 'vue-adblock-detector'
 
-export default {
-  name: "AdboxView",
-  data() {
-    return {
-      'isEnable': false
-    }
-  },
-  computed(){
-    this.adblockCheck()
-  },
-  methods: {
-    adblockCheck(){
-      this.isEnable = detectAnyAdblocker().then((detected) => { return detected })
-    }
-  }
-}
+const isEnable = ref(false);
+
+detectAnyAdblocker().then((detected) => {
+  isEnable.value = detected
+})
 </script>
 
 <style lang="scss" scoped>

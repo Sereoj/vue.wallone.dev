@@ -1,5 +1,5 @@
 <template>
-  <input type="submit" class="btn btn-primary" :name="name" :value="title" />
+  <input type="submit" class="btn btn-primary" :class="{'disabled' : disabled}" :name="name" :value="title" />
 </template>
 
 <script>
@@ -8,6 +8,7 @@ export default {
   props:{
     'title': String,
     'name': String,
+    'disabled' : Boolean
   }
 }
 </script>

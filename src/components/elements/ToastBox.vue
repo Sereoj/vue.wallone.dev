@@ -1,5 +1,5 @@
 <template>
-  <div class="toast align-items-center text-bg-primary border-0 fade show fs-16 px-3 rounded-4" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast align-items-center text-bg-primary border-0 fade fs-16 px-3 rounded-4" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex align-items-center">
       <i class="i-outline-information-circle fs-20"></i>
       <div class="toast-body">

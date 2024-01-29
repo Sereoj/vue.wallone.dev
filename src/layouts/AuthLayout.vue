@@ -6,44 +6,47 @@
     <div class="container col-sm-12 col-lg-7 m-auto">
       <div class="col-10 row justify-content-center m-auto">
         <logo-box class="mb-5 d-block d-md-none" style="max-width: 15rem"/>
-        <ul class="d-flex mb-5" v-if="isAuthPage">
+        <ul class="d-flex mb-5" v-if="isAuthPage()">
           <li>
-            <link-tab-box title="Авторизация" name="tabLinkLogin" path="/login" class="h2"/>
+            <link-tab-box
+                :title="$t('pages.login')"
+                name="tabLinkLogin"
+                path="/login"
+                class="h2"/>
           </li>
           <li>
-            <link-tab-box title="Регистрация" name="tabLinkRegister" path="/register" class="h2 ms-4"/>
+            <link-tab-box
+                :title="$t('pages.register')"
+                name="tabLinkRegister"
+                path="/register"
+                class="h2 ms-4"/>
           </li>
         </ul>
 
         <!-- ! Отображение страниц регистрации, авторизации и т.п. -->
         <router-view></router-view>
       </div>
-
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+/**
+ * Компоненты
+ */
 import LogoBox from "@/components/blocks/LogoBox.vue";
-import {useRoute} from 'vue-router'
 import LinkTabBox from "@/components/elements/LinkTabBox";
 
-export default {
-  components: {
-    LinkTabBox,
-    LogoBox
-  },
-  data() {
-    return {}
-  },
-  computed: {
-    isAuthPage() {
-      const route = useRoute();
-      return route.path.slice(1) === 'register' || route.path.slice(1) === 'login'
-    }
-  },
-  methods: {
-  },
+import {useRoute} from 'vue-router'
+import {useI18n} from "vue-i18n/dist/vue-i18n"
+
+// eslint-disable-next-line no-unused-vars
+const {t} = useI18n({useScope: 'global'});
+
+const isAuthPage = () => {
+  const route = useRoute();
+  return route.path.slice(1) === 'register' ||
+      route.path.slice(1) === 'login'
 }
 </script>
 

@@ -10,10 +10,10 @@
     <site-links />
 
     <ul class="dropdown-menu m-auto" :class="isSearch && 'show'">
-      <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
-      <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
-      <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
-      <li><a class="dropdown-item" href="#">{{ searchText }}</a></li>
+      <li><a class="dropdown-item" href="#"><i class="i-outline-search"/> {{ searchText }}</a></li>
+      <li><a class="dropdown-item" href="#"><i class="i-outline-search"/> {{ searchText }}</a></li>
+      <li><a class="dropdown-item" href="#"><i class="i-outline-search"/> {{ searchText }}</a></li>
+      <li><a class="dropdown-item" href="#"><i class="i-outline-search"/> {{ searchText }}</a></li>
       <li><p class="dropdown-item">Не найдено</p></li>
     </ul>
   </form>

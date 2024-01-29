@@ -1,40 +1,52 @@
 <template>
   <div class="needs-validation">
+    <!--Login-->
     <text-box name="login"
-             title="Email или логин"
-             placeholder="user@wallone.ru"
-             aria-autocomplete="both"
-             v-model="email"
-             :message="getMessageEmail()"
-             :is-error="getMessageEmail() !== ''"
-             min-length="4"/>
-
+             :title="$t('LoginForm.email.title')"
+             :placeholder="$t('LoginForm.email.placeholder')"
+              v-model="username"
+              v-on:change="validateEmail(EmailMinLen)"
+              :message="emailValidate"
+             :min-length="EmailMinLen"/>
+    <!--Password-->
     <pass-word name="password"
-              placeholder="Самый сложный пароль"
-              title="Пароль"
-              v-model="password"
-              :message="getMessagePassword()"
-              :is-error="getMessagePassword() !== ''"
+               :placeholder="$t('LoginForm.password.placeholder')"
+               :title="$t('LoginForm.password.title')"
+               v-model="password"
+               :message="getMessagePassword(message)"
+               v-on:keyup.enter="autorize()"
+               v-on:change="enableButton()"
               min-length="0"
               />
-
+    <!--Checkbox-->
     <div class="justify-content-center">
       <check-box class="mt-5"
                 name="rememberMe"
                 v-model="rememberMe"
-                title="Запомнить меня"/>
+                 v-on:click="setRememberMeStorage()"
+                 :title="$t('LoginForm.rememberMe.title')"
+                :required="true"
+      />
     </div>
-
+    <!--  Actions  -->
     <div class="d-flex align-items-center mt-4">
-      <button-box class="me-5" title="Авторизироваться" name="loginBtn" v-on:click="getAuth"/>
-      <link-box name="forgot_password" title="Забыли пароль?" path="/forgot-password"/>
+      <button-box
+          class="me-5"
+          :title="$t('LoginForm.buttons.loginBtn.title')"
+          name="loginBtn"
+          :disabled="btnDisabled"
+          v-on:click="autorize()"/>
+      <link-box
+          name="forgot_password"
+          :title="$t('LoginForm.buttons.forgot_password.title')"
+          path="/forgot-password"/>
     </div>
-
+    <!--Adbox-->
     <adbox-view/>
   </div>
 </template>
 
-<script>
+<script setup>
 /**
  * Компоненты
  */
@@ -45,91 +57,119 @@ import LinkBox from "@/components/elements/LinkBox";
 import ButtonBox from "@/components/elements/ButtonBox";
 import AdboxView from "@/components/ads/AdboxView";
 
-import { useHead } from '@unhead/vue'
-import router from "@/router";
+import { ref } from 'vue';
+import {useI18n} from "vue-i18n";
+import { useHead } from '@unhead/vue';
 import apiRouter from "@/router/api";
+import router from "@/router";
+import {getItem, setItem} from "@/js/storage";
 
-export default {
-  components: {LinkBox, PassWord, TextBox, CheckBox, ButtonBox, AdboxView },
-  data() {
-    return {
-      user: null,
-      email: "",
-      password: "",
-      rememberMe: false,
-      messages: {
-        email: '',
-        password: ''
-      },
-      authorization : null
-    }
-  },
-  mounted() {
-    useHead({
-      title: 'Wallone • Авторизация'
-    })
-  },
-  methods: {
-    clear(){
-      this.messages.email = ""
-      this.messages.password = ""
-    },
-    getResponse(){
-      let vm = this
-      let values = {
-        email: this.email,
-        password: this.password,
-        remember: this.rememberMe
-      }
-      apiRouter.postRequest(apiRouter.api.register, values)
-          .then(function (response) {
-            let data = response.data
-            let token = data.token
+/**
+ * Переменные
+ */
+const username = ref('');
+const emailValidate = ref('');
+const password = ref('');
+const message = ref('');
+const rememberMe = ref(false);
 
-            if(token)
-            {
-              console.log(`Пользователь авторизирован`)
-              router.push('/')
-            }
-          })
-          .catch(function (error) {
-            let errors = error.response.data
+const EmailMinLen = ref(4);
+const NOT_AUTHORIZED = ref(false);
+const btnDisabled = ref(true);
+// eslint-disable-next-line no-unused-vars
+const {t} = useI18n({useScope: 'global'});
 
-            if(errors?.message && error.response.status === 401)
-            {
-              vm.messages.password = errors?.message
-            }
+/**
+ * Seo
+ */
+useHead({
+  title: () => 'Wallone • Авторизация',
+  meta: [
+    {
+      name: () => 'description',
+      content: () => 'Wallone • Авторизация пользователя на сайте Wallone',
+    },
+  ],
+})
 
-            if(errors?.errors)
-            {
-              if(errors.errors?.username)
-              {
-                vm.messages.username = errors.errors?.username[0]
-              }
-              if(errors.errors?.email)
-              {
-                vm.messages.email = errors.errors?.email[0]
-              }
-              if(errors.errors?.password)
-              {
-                vm.messages.password = errors.errors?.password[0]
-              }
-            }
-          })
-    },
-    getAuth(){
-      this.clear()
-      this.getResponse()
-    },
-    getMessageEmail() {
-      return this.messages.email
-    },
-    getMessagePassword(){
-      return this.messages.password
-    }
-  },
+/**
+ * Валидаторы
+ */
+const validateEmail = (count) => {
+  username.value.length <= count ?
+      setEmailMessage(t('messages.symbols', {'count': count})) :
+      setEmailMessage('');
+  enableButton();
+  setEmailStorage();
 }
-</script>
 
-<style lang="scss">
-</style>
+/**
+ * Функции
+ */
+const setEmailMessage = (message) => {
+  emailValidate.value = message;
+}
+
+const getMessagePassword = (message) => {
+  return message;
+}
+
+const enableButton = () => {
+  btnDisabled.value = !(emailValidate.value === '' && message.value === '');
+}
+
+const setEmailStorage = () => {
+  setItem('username', username.value)
+}
+
+const getEmailStorage = () => {
+  username.value =  getItem('username');
+}
+
+const setRememberMeStorage = () => {
+  let val = !rememberMe.value
+  setItem('rememberMe', val)
+  console.log(val)
+}
+
+const getRememberMeStorage = () => {
+  rememberMe.value = getItem('rememberMe') !== 'false';
+}
+
+
+const autorize = () => {
+  let values = {
+    username: username.value,
+    password: password.value,
+    remember: rememberMe.value
+  }
+  apiRouter.postRequest(apiRouter.api.login, values)
+      .then(function (response) {
+        let data = response.data
+        let token = data.token
+
+        if(token)
+        {
+          router.push('/')
+        }
+      })
+      .catch(function (error) {
+        let errors = error.response.data
+
+        if(errors?.message && error.response.status === 401)
+        {
+          NOT_AUTHORIZED.value = true;
+          alert(errors?.message);
+        }
+
+        if(errors?.message && error.response.status === 422)
+        {
+          setEmailMessage(errors?.message?.email)
+          message.value = errors?.message?.password
+        }
+      })
+}
+
+getEmailStorage();
+getRememberMeStorage();
+</script>

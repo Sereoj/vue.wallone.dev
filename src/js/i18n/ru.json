@@ -1,0 +1,64 @@
+{
+  "test" : "Тест",
+  "pages" : {
+    "login" : "Авторизация",
+    "register" : "Регистрация"
+  },
+  "messages": {
+    "symbols" : "Поле должно содержать больше {count} символов"
+  },
+  "LoginForm": {
+    "email": {
+      "title": "Email или логин",
+      "placeholder": "user{'@'}wallone.ru"
+    },
+    "password": {
+      "title": "Пароль",
+      "placeholder": "Самый сложный пароль"
+    },
+    "rememberMe": {
+      "title": "Запомнить меня"
+    },
+    "buttons" : {
+      "loginBtn" : {
+        "title": "Авторизироваться"
+      },
+      "forgot_password" :  {
+        "title" : "Забыли пароль?"
+      }
+    }
+  },
+  "RegisterForm": {
+    "username" : {
+      "title": "Логин",
+      "placeholder": "Sergio Strange"
+    },
+    "email" : {
+      "title": "Email",
+      "placeholder": "user{'@'}wallone.ru"
+    },
+    "password" : {
+      "title" : "Пароль",
+      "placeholder": "Мой уникальный пароль"
+    },
+    "password_confirmation" : {
+      "title" : "Повторите пароль",
+      "placeholder": "Повторяю уникальный пароль"
+    },
+    "user_politics" : {
+      "title" : "Создавая аккаунт, вы соглашаетесь с нашим ",
+      "user_agreement": "пользовательским соглашением",
+      "and": "и",
+      "privacy_statement": "положением о конфиденциальности."
+    },
+    "buttons": {
+      "register" : {
+        "title": "Зарегистрироваться"
+      },
+      "password" : {
+        "title": "Сгенерировать",
+        "pass": "пароль"
+      }
+    }
+  }
+}

@@ -1,140 +1,169 @@
 <template>
 <div class="needs-validation">
   <!-- ! Оставить только это: -->
-  <text-box name="username"
-           title="Логин"
-           placeholder="Sergio Strange"
-           v-model="username"
-           :message="getMessageUsername()"
-           :is-error="getMessageUsername() !== ''"
-           min-length="4"/>
-
-  <text-box name="email"
-           title="Email"
-           v-model="email"
-           :message="getMessageEmail()"
-           :is-error="getMessageEmail() !== ''"
-           placeholder="user@wallone.ru"
-           min-length="6"/>
-
-  <pass-word name="password"
-            v-model="password"
-            :message="getMessagePassword()"
-            :is-error="getMessagePassword() !== ''"
-            title="Пароль"
-            placeholder="Мой уникальный пароль"
-            min-length="6"/>
-
-  <pass-word name="password_confirmation"
-            v-model="password_confirmation"
-            :message="getMessagePassword()"
-            :is-error="getMessagePassword() !== ''"
-            title="Повторите пароль"
-            placeholder="Повторяю уникальный пароль"
-            min-length="6"/>
-
-  <div class="text-center">
-    <p class="fs-20">Создавая аккаунт, вы соглашаетесь с нашим <link-box path="/user_agreement" title="пользовательским соглашением" name="user_agreement"/> и
-      <link-box path="/privacy_statement" title="положением о конфиденциальности." name="privacy_statement"/></p>
+  <div class="register" v-if="getEmailStorage()">
+    <h2>Регистрация недоступна</h2>
+    <p class="mt-2 mb-2 fs-16">Привет, {{ getEmailStorage() }}!</p>
+    <p class="mt-1">Данный аккаунт уже существует в системе. Если Вы забыли пароль от аккаунта <link-box title="восстановите его" name="forgot_password" path="/forgot-password"/></p>
+    <p class="mt-1">Если у Вас есть вопросы, обратитесь в техническую поддержку: <link-box name="tech_email" title="help@wallone.ru" path="mailto:help@wallone.ru"/></p>
   </div>
 
-  <div class="d-flex align-items-center mt-5">
-    <button-box title="Зарегистрироваться" name="Register" v-on:click="getAuth"/>
+  <div class="register" v-if="!getEmailStorage()">
+    <!--Username-->
+    <text-box name="username"
+              :title="$t('RegisterForm.username.title')"
+              :placeholder="$t('RegisterForm.username.placeholder')"
+              v-model="username"
+              v-on:change="validateUsername(4)"
+              :message="usernameValidate"
+              min-length="4"/>
+
+    <!--Email-->
+    <text-box name="email"
+              :title="$t('RegisterForm.email.title')"
+              :placeholder="$t('RegisterForm.email.placeholder')"
+              v-model="email"
+              v-on:change="validateEmail(6)"
+              :message="emailValidate"
+              min-length="6"/>
+
+    <!--Password-->
+    <pass-word name="password"
+               :title="$t('RegisterForm.password.title')"
+               :placeholder="$t('RegisterForm.password.placeholder')"
+               v-model="password"
+               v-on:change="validatePassword(6)"
+               :message="passwordValidate"
+               min-length="6"/>
+    <div class="mt-2 mb-2">
+      <p>{{ $t('RegisterForm.buttons.password.title') }} <link-box
+          name="password_generation"
+          :title="$t('RegisterForm.buttons.password.pass')"
+          path="#"
+          v-on:click="password_confirmation = password = passwordGeneration(16)"/></p>
+    </div>
+
+    <!--password_confirmation-->
+    <pass-word name="password_confirmation"
+               :title="$t('RegisterForm.password_confirmation.title')"
+               :placeholder="$t('RegisterForm.password_confirmation.placeholder')"
+               v-model="password_confirmation"
+               v-on:change="validatePassword(6)"
+               :message="passwordValidate"
+               min-length="6"/>
+
+    <!--user politics-->
+    <div class="text-center">
+      <p class="fs-20">{{ $t('RegisterForm.user_politics.title') }}
+        <link-box path="/user_agreement"
+                  :title="$t('RegisterForm.user_politics.user_agreement')"
+                  name="user_agreement"/>
+        {{ $t('RegisterForm.user_politics.and') }}
+        <link-box path="/privacy_statement"
+                  :title="$t('RegisterForm.user_politics.privacy_statement')"
+                  name="privacy_statement"/>
+      </p>
+    </div>
+
+    <div class="d-flex align-items-center mt-5">
+      <button-box
+          :title="$t('RegisterForm.buttons.register.title')"
+          name="Register"
+          v-on:click="autorize"/>
+    </div>
   </div>
 </div>
 </template>
-
-<script>
+<script setup>
+/**
+ * Компоненты
+ */
 import TextBox from "@/components/elements/TextBox";
 import PassWord from "@/components/elements/PassWord";
 import LinkBox from "@/components/elements/LinkBox";
 import ButtonBox from "@/components/elements/ButtonBox";
+
+import { ref } from 'vue';
+import {useI18n} from "vue-i18n/dist/vue-i18n";
 import {useHead} from "@unhead/vue";
-import apiRouter from "@/router/api";
 import router from "@/router";
+import {getItem} from "@/js/storage";
+import {passwordGeneration} from "@/js/password";
 
-export default {
-  components: {ButtonBox, LinkBox, PassWord, TextBox},
-  data() {
-    return {
-      username: '',
-      email: '',
-      password: '',
-      password_confirmation: '',
-      messages: {
-        username: '',
-        email: '',
-        password: ''
-      }
-    }
-  },
-  mounted() {
-    useHead({
-      title: 'Wallone • Регистрация'
-    })
-  },
-  methods: {
-    clear(){
-      this.messages.username = ""
-      this.messages.email = ""
-      this.messages.password = ""
-    },
-    getResponse(){
-      let vm = this
-      apiRouter.postRequest(apiRouter.api.register, {
-        username: this.username,
-        email: this.email,
-        password: this.password,
-        password_confirmation: this.password_confirmation
-      })
-          .then(function (response) {
-            vm.messages = response.data
-            if(vm.messages.token)
-            {
-              vm.clear()
-              alert("Вы авторизировались")
-              router.push('/')
-            }
-          })
-          .catch(function (error) {
-            let errors = error.response.data
+const emailValidator = require("email-validator");
+/**
+ * Переменные
+ */
+const username = ref("");
+const usernameValidate = ref('');
+const email = ref("");
+const emailValidate = ref('');
+const password = ref("");
+const passwordValidate = ref('');
+const password_confirmation = ref("");
 
-            if(errors?.message && error.response.status === 401)
-            {
-              vm.messages.password = errors?.message
-            }
+// eslint-disable-next-line no-unused-vars
+const {t} = useI18n({useScope: 'global'});
 
-            if(errors?.errors)
-            {
-              if(errors.errors?.username)
-              {
-                vm.messages.username = errors.errors?.username[0]
-              }
-              if(errors.errors?.email)
-              {
-                vm.messages.email = errors.errors?.email[0]
-              }
-              if(errors.errors?.password)
-              {
-                vm.messages.password = errors.errors?.password[0]
-              }
-            }
-          })
+/**
+ * Seo
+ */
+useHead({
+  title: () => 'Wallone • Регистрация',
+  meta: [
+    {
+      name: () => 'description',
+      content: () => 'Wallone • Регистрация пользователя на сайте Wallone',
     },
-    getAuth(){
-      this.clear()
-      this.getResponse()
-    },
-    getMessageUsername(){
-      return this.messages.username
-    },
-    getMessageEmail() {
-      return this.messages.email
-    },
-    getMessagePassword(){
-      return this.messages.password
-    }
-  }
+  ],
+})
+
+/**
+ * Валидаторы
+ */
+const validateEmail = (count) => {
+  email.value.length <= count ?
+      setEmailMessage(t('messages.symbols', {'count': count})) :
+      setEmailMessage('')
+  regularEmail()
+}
+
+const regularEmail = (email) => {
+  console.log(emailValidator.validate(email))
+  emailValidator.validate(email) ? setEmailMessage('Email не валидный') :
+      setEmailMessage('')
+}
+
+const validateUsername = (count) => {
+  username.value.length <= count ?
+      setUsernameMessage(t('messages.symbols', {'count': count})) :
+      setUsernameMessage('')
+}
+
+const validatePassword = (count) => {
+  password.value.length <= count ?
+      setPasswordMessage(t('messages.symbols', {'count': count})) :
+      setPasswordMessage('')
+}
+
+const autorize = () => {
+  router.push('/verify');
+}
+
+const setUsernameMessage = (message) => {
+  usernameValidate.value = message;
+}
+
+const setEmailMessage = (message) => {
+  emailValidate.value = message;
+}
+
+const setPasswordMessage = (message) => {
+  passwordValidate.value = message;
+}
+
+const getEmailStorage = () => {
+  return getItem('email');
 }
 </script>
 

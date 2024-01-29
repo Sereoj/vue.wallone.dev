@@ -1,38 +1,3 @@
-<script>
-export default {
-  props:{
-    'title': String,
-    'name': String,
-    'placeholder': String,
-    'minLength' : String,
-    'message': String,
-    'isError' : Boolean
-  },
-  data(props) {
-    return {
-      showPassword: false,
-      PasswordBox:
-      {
-            name: props.name,
-            title: props.title,
-            placeholder: props.placeholder,
-            nameText: props.name + "_text",
-            messageBox: props.message,
-            value: ''
-      },
-    }
-  },
-  methods: {
-    changeText(e)
-    {
-      let value = e.target.value
-      this.PasswordBox.value = value
-      this.$emit('update:modelValue', value)
-    }
-  }
-}
-</script>
-
 <template>
   <div class="mb-3">
     <label :for="name" class="form-label">{{ title }}</label>
@@ -43,9 +8,9 @@ export default {
           :name="name"
           :id="name"
           :placeholder="placeholder"
-          v-bind:class="{'form-control':true, 'is-invalid' : isError}"
-          v-on:input="changeText"
-          :aria-describedby="PasswordBox.nameText">
+          v-bind:class="{'form-control':true, 'is-invalid' : message !== ''}"
+          v-model="modelValue"
+          :aria-describedby="inputName(name)">
 
       <button class="input-group-text" @click="showPassword = !showPassword">
         <i class="i-inline-eye-off" v-if="showPassword"></i>
@@ -53,9 +18,23 @@ export default {
         <i class="i-inline-eye" v-else></i>
       </button>
     </div>
-    <div :id="PasswordBox.nameText" v-bind:class ="{'d-block invalid-feedback' : isError}">{{ message }}</div>
+    <div :id="inputName(name)" v-bind:class ="{'d-block invalid-feedback' : message !== ''}">{{ message }}</div>
   </div>
 </template>
+
+<script setup>
+
+import {defineProps, defineModel, ref} from 'vue';
+// eslint-disable-next-line no-unused-vars
+const props = defineProps(['title', 'name','placeholder', 'minLength', 'message']);
+const showPassword = ref(false)
+
+const modelValue = defineModel();
+
+const inputName = (name) => {
+  return  name + "_message"
+}
+</script>
 
 <style lang="sass" scoped>
 label
