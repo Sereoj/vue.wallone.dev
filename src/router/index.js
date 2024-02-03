@@ -19,10 +19,6 @@ import AboutView from "@/pages/static/AboutView";
 import HelpView from "@/pages/static/HelpView";
 import DevView from "@/pages/static/DevView";
 import mainViewImages from "@/pages/images/MainViewImages";
-import mainThemesView from "@/pages/themes/MainThemesView";
-import newThemesView from "@/pages/themes/NewThemesView";
-import popularThemesView from "@/pages/themes/PopularThemesView";
-import soonThemesView from "@/pages/themes/SoonThemesView";
 import categoriesView from "@/pages/categories/CategoriesView";
 import NotFoundView from "@/pages/static/NotFoundView";
 import EmailVerifyView from "@/pages/auth/EmailVerifyView";
@@ -186,54 +182,6 @@ const router = createRouter({
           name: 'SoonImagesView',
           path: '',
           component: SoonImagesView
-        }
-      ]
-    },
-    {
-      path: '/themes',
-      name: 'Themes',
-      component: MainLayout,
-      children: [
-        {
-          name: 'mainThemesView',
-          path: '',
-          component: mainThemesView
-        }
-      ]
-    },
-    {
-      path: '/themes/new',
-      name: 'New Themes',
-      component: MainLayout,
-      children: [
-        {
-          name: 'newThemesView',
-          path: '',
-          component: newThemesView
-        }
-      ]
-    },
-    {
-      path: '/themes/popular',
-      name: 'Popular Themes',
-      component: MainLayout,
-      children: [
-        {
-          name: 'popularThemesView',
-          path: '',
-          component: popularThemesView
-        }
-      ]
-    },
-    {
-      path: '/themes/soon',
-      name: 'Soon Themes',
-      component: MainLayout,
-      children: [
-        {
-          name: 'soonThemesView',
-          path: '',
-          component: soonThemesView
         }
       ]
     },
