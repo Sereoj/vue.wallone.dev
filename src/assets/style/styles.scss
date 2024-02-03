@@ -3,43 +3,43 @@
 @import "fonts";
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px,
-  cxl: 1850px
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px,
+        cxl: 1850px
 );
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-  cxl: 1900px
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+        cxl: 1900px
 );
 
-$body-color:                   $white;
-$body-bg:                      $background;
-$font-size-base:               20px;
+$body-color: $white;
+$body-bg: $background;
+$font-size-base: 20px;
 
 // Inputs
-$input-bg:                     $componentColor;
-$input-focus-bg:               $componentColor;
-$input-color:                  $white;
-$input-focus-color:            $white;
+$input-bg: $componentColor;
+$input-focus-bg: $componentColor;
+$input-color: $white;
+$input-focus-color: $white;
 
-$input-padding-y:              8px;
-$input-padding-x:              16px;
+$input-padding-y: 8px;
+$input-padding-x: 16px;
 
-$input-border-radius:          10px;
-$input-border-color:           none;
-$input-border:                 none;
+$input-border-radius: 10px;
+$input-border-color: none;
+$input-border: none;
 
-$input-placeholder-color:      $primary2;
-$input-height:                 40px;
+$input-placeholder-color: $primary2;
+$input-height: 40px;
 $input-focus-box-shadow: 0 0 0 2px $second;
 
 $input-group-addon-bg: $componentColor;
@@ -86,7 +86,7 @@ $form-text-font-weight: 400;
 // Dropdowns
 $dropdown-bg: $background;
 $dropdown-border-color: $second;
-$dropdown-border-radius: 0rem 0rem 0.9rem 0.9rem;;
+$dropdown-border-radius: 0rem 0rem 0.9rem 0.9rem;
 
 // Borders
 $border-width: 2px;
@@ -100,6 +100,50 @@ $toast-max-width: 400px;
 /* Основной файл подключение всех стилей
    Стилизация базовых элементов
 */
+
+h1, h2, h3, h4, h5, h6, p, b, a, strong {
+  @extend %default;
+}
+
+a {
+  color: $second;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $font-h1;
+}
+
+h2, .title {
+  font-size: $font-h2;
+}
+
+h3 {
+  font-size: $font-h3;
+}
+
+h4 {
+  font-size: $font-h4;
+}
+
+h5 {
+  font-size: $font-h5;
+}
+
+h6 {
+  font-size: $font-h6;
+}
+
+p, .description {
+  @extend %p;
+  color: $primary3;
+  font-size: $font-p;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
 
 .fs-32 {
   font-size: 2rem;
@@ -119,10 +163,6 @@ $toast-max-width: 400px;
 
 .fs-14 {
   font-size: 0.875rem
-}
-
-a {
-  color: $second;
 }
 
 .nav-icon {

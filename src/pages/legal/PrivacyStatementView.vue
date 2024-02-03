@@ -12,17 +12,17 @@
     <div class="col-11">
       <div class="card p-3">
         <div v-html="data?.title" class="card-title"></div>
-        <div v-html="data?.text" class=""></div>
-        <div class="card-body overflow-auto">
+        <div v-html="data?.text" class="mb-4"></div>
+        <div class="overflow-auto">
           <div
               v-if="data?.content[pageIndex]"
               v-html="data.content[pageIndex]"
               class="d-grid mb-3 gap-3">
           </div>
         </div>
-        <div class="card-footer d-flex justify-content-between align-items-center">
-          <a href="mailto:help@wallone.ru">help@wallone.ru</a>
-          <p>Обновлено: 01/01/2002</p>
+        <div class="card-footer d-flex justify-content-between align-items-center mt-2">
+          <a href="mailto:help@wallone.ru" class="fs-16">help@wallone.ru</a>
+          <p class="fs-16 date-updated">Обновлено: 01/01/2002</p>
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @import "@/assets/style/variables"
 @import "@/assets/style/fonts"
 
@@ -81,7 +81,7 @@ export default {
   border: 0
 
 .card
-  height: 100%
+  height: 560px
 
 .card-body
   @extend %default
@@ -99,7 +99,10 @@ export default {
   &:hover, &.active
     background-color: $background
 
-
 .bg-component
   background: $componentColor
+
+.date-updated
+  color: $primary2
+
 </style>

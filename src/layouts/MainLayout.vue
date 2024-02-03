@@ -3,8 +3,8 @@
   <div class="container">
 
     <div class="row">
-      <sidebar-view class="col-md-4 col-lg-3 col-cxl-2 d-none d-md-block" />
-      <router-view class="col-md-8 col-lg-9 col-cxl-10" />
+      <sidebar-view class="col-md-4 col-lg-3 col-cxl-2 d-none d-md-block"/>
+      <router-view class="col-md-8 col-lg-9 col-cxl-10"/>
     </div>
   </div>
 
@@ -26,11 +26,12 @@
     <toast-box text="Добро пожаловать в Wallone" class="bg-success"/>
     <toast-box text="Мы используем cookie для обработки ваших персональных данных."/>
 
-    <button class="btn-up i-inline-arrow-up" :class="VisibleScrollToTop ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
+    <button class="btn-up i-inline-arrow-up" :class="VisibleScrollToTop ? 'opacity-100' : 'opacity-0'"
+            @click="scrollToTop()"></button>
   </div>
 </template>
 <script setup>
-import { ref,onMounted } from 'vue'
+import {ref, onMounted} from 'vue'
 
 import HeaderView from "@/components/blocks/HeaderView.vue";
 import SidebarView from "@/components/blocks/SidebarView";
@@ -38,7 +39,7 @@ import ToastBox from "@/components/elements/ToastBox";
 
 const VisibleScrollToTop = ref(false)
 
-const  handleScroll = () => {
+const handleScroll = () => {
   VisibleScrollToTop.value = window.scrollY > 300;
 }
 
@@ -66,17 +67,6 @@ onMounted(() => {
 .form-text a
   color: $primary
 
-h2, .title
-  @extend %default
-  font-size: $font-size-label
-
-p, .description
-  @extend %p
-  color: $primary3
-  font-size: $font-p
-  text-overflow: ellipsis
-  white-space: normal
-
 .btn-up
   border: none
   border-radius: 50%
@@ -86,6 +76,7 @@ p, .description
   color: $primary
   text-align: center
   transition: .2s
+
   &:hover
     background-color: $background
     border: 2px solid $second
@@ -111,6 +102,7 @@ p, .description
   padding: 1.6rem 2.5rem
   background: $background
   color: $primary2
+
   .active
     border: 0
     color: $primary
