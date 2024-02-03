@@ -52,3 +52,49 @@ $font-h6: 18px
 
 .logo_font
   font-family: $logo-font
+
+h1, h2, h3, h4, h5, h6, p, b, a, strong
+  @extend %default
+
+strong, b
+  font-weight: 700
+
+h1
+  font-size: $font-h1
+
+h2, .title
+  font-size: $font-h2
+
+h3
+  font-size: $font-h3
+
+h4
+  font-size: $font-h4
+
+h5
+  font-size: $font-h5
+
+h6
+  font-size: $font-h6
+
+p, .description
+  @extend %p
+  color: $primary3
+  font-size: $font-p
+  text-overflow: ellipsis
+  white-space: normal
+
+.fs-32
+  font-size: 2rem
+
+.fs-24
+  font-size: 1.5rem
+
+.fs-20
+  font-size: 1.25rem
+
+.fs-16
+  font-size: 1rem
+
+.fs-14
+  font-size: 0.875rem
