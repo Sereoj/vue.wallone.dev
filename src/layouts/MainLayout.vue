@@ -4,8 +4,6 @@
 
     <div class="row">
       <sidebar-view class="col-md-4 col-lg-3 col-cxl-2 d-none d-md-block" />
-      <!--    По макету SiteLinks, это отдельный блок, не входящий header -->
-      <!--  Content -->
       <router-view class="col-md-8 col-lg-9 col-cxl-10" />
     </div>
   </div>
@@ -24,7 +22,7 @@
     </ul>
   </div>
 
-  <div class="fixed-object d-flex flex-column align-items-end gap-3">
+  <div class="fixed-object d-flex flex-column align-items-end gap-3 d-none">
     <toast-box text="Добро пожаловать в Wallone" class="bg-success"/>
     <toast-box text="Мы используем cookie для обработки ваших персональных данных."/>
 
