@@ -13,7 +13,7 @@
       <a :href="userSlug" class="username">
         <div class="d-flex align-items-center">
           <img :src="user.avatar" alt="user" class="nav-icon ms-2">
-          <p class="text-overflow me-2">{{ user.username }}</p>
+          <p class="text-overflow me-2 white">{{ user.username }}</p>
 
           <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"
                v-if="user.verify">

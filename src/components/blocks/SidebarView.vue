@@ -53,19 +53,6 @@
           <i class="fs-4 i-inline-newspaper"></i><span class="ms-1 d-none d-sm-inline">Статьи</span></a>
       </li>
     </ul>
-    <div class="nav navbar-nav bg-component gap-3 mt-5 rounded-2">
-      <p class="text-center mt-3">Динамические обои для вашего персонального компьютера</p>
-      <link-box class="mt-3 mb-3 text-center" title="Скачать" path="/download" name="download.app"/>
-      <div class="d-flex justify-content-center m-3">
-        <p>Платформа:</p>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="6.66667" height="6.66667" fill="#F8510C"/>
-          <rect y="7.33331" width="6.66667" height="6.66667" fill="#00A3F4"/>
-          <rect x="7.33301" width="6.66667" height="6.66667" fill="#7EBA00"/>
-          <rect x="7.33301" y="7.33331" width="6.66667" height="6.66667" fill="#FFBA00"/>
-        </svg>
-      </div>
-    </div>
     <ul class="nav navbar-nav gap-3 mt-5">
       <li class="nav-item">
         <link-box title="О проекте" path="/about" name="about"/>
