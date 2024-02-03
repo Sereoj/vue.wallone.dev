@@ -135,8 +135,6 @@ const setRememberMeStorage = () => {
 const getRememberMeStorage = () => {
   rememberMe.value = getItem('rememberMe') !== 'false';
 }
-
-
 const autorize = () => {
   let values = {
     username: username.value,
@@ -150,6 +148,7 @@ const autorize = () => {
 
         if(token)
         {
+          setItem('access_token', token)
           router.push('/')
         }
       })

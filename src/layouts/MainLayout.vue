@@ -1,5 +1,5 @@
 <template>
-  <header-view />
+  <header-view/>
   <div class="container">
 
     <div class="row">
@@ -26,41 +26,32 @@
     <toast-box text="Добро пожаловать в Wallone" class="bg-success"/>
     <toast-box text="Мы используем cookie для обработки ваших персональных данных."/>
 
-    <button class="btn-up i-inline-arrow-up" :class="isVisible ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
+    <button class="btn-up i-inline-arrow-up" :class="VisibleScrollToTop ? 'opacity-100' : 'opacity-0'" @click="scrollToTop()"></button>
   </div>
 </template>
+<script setup>
+import { ref,onMounted } from 'vue'
 
-<script>
 import HeaderView from "@/components/blocks/HeaderView.vue";
 import SidebarView from "@/components/blocks/SidebarView";
-import toastBox from "@/components/elements/ToastBox";
+import ToastBox from "@/components/elements/ToastBox";
 
-export default {
-  components: {
-    SidebarView,
-    HeaderView,
-    toastBox
-  },
-  data() {
-    return {
-      isVisible: false
-    }
-  },
-  methods: {
-    scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    },
-    handleScroll() {
-      this.isVisible = window.scrollY > 300;
-    }
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
+const VisibleScrollToTop = ref(false)
+
+const  handleScroll = () => {
+  VisibleScrollToTop.value = window.scrollY > 300;
 }
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+})
 </script>
 
 <style lang="sass">

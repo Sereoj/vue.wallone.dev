@@ -9,6 +9,7 @@ import router from './router'
 import {defaultLocale, languages} from '@/js/i18n'
 import { createI18n, useI18n } from 'vue-i18n'
 import { createHead } from '@unhead/vue'
+import { createPinia } from 'pinia'
 
 const messages = Object.assign(languages)
 
@@ -18,6 +19,7 @@ const I18n = createI18n({
     fallbackLocale: 'ru',
     messages
 });
+const pinia = createPinia()
 
 createApp(App, {
     setup() {
@@ -25,6 +27,7 @@ createApp(App, {
         return {t}
     }
 })
+    .use(pinia)
     .use(router)
     .use(I18n)
     .use(createHead())

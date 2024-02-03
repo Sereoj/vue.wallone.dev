@@ -30,8 +30,8 @@
                 Профиль
               </a>
               <ul class="dropdown-menu text-center">
-                <li><router-link class="dropdown-item" to="/login">Вход</router-link></li>
-                <li><router-link class="dropdown-item" to="/register">Регистрация</router-link></li>
+                <li><router-link class="dropdown-item" to="/login" v-if="isAuth">Вход</router-link></li>
+                <li><router-link class="dropdown-item" to="/register" v-if="isAuth">Регистрация</router-link></li>
 
                 <li><router-link class="dropdown-item" to="/profile">Профиль</router-link></li>
                 <li><router-link class="dropdown-item" to="/logout">Выход</router-link></li>
@@ -56,12 +56,11 @@
 
 </style>
 
-<script>
+<script setup>
 import LogoBox from "@/components/blocks/LogoBox.vue";
 import SearchBox from "@/components/elements/SearchBox";
-export default {
-  components: {
-    LogoBox, SearchBox
-  }
-}
+
+import { ref } from 'vue';
+
+const isAuth = ref(false);
 </script>
