@@ -2,10 +2,9 @@
   <div class="row">
     <div class="col-1">
       <div class="d-flex flex-column gap-3 text-center bg-component align-items-center rounded-4 py-4">
-        <a class="btn-circle p-1" v-for="(item, index) in data?.content" :key="index"
-           @click="this.pageIndex = index" :class="pageIndex === index ? 'active' : ''">
-          {{ parseInt(index) + 1 }}
-        </a>
+        <circle-button-box v-for="(item, index) in data?.content" :key="index"
+                           @click="this.pageIndex = index" :class="pageIndex === index ? 'active' : ''"
+                           :title="setPage(index)"/>
       </div>
     </div>
 
@@ -30,11 +29,15 @@
 </template>
 
 <script>
+import CircleButtonBox from "@/components/elements/CircleButtonBox";
+
 import {useHead} from "@unhead/vue";
 // import apiRouter from "@/router/api";
 
 export default {
   name: "PrivacyStatementView",
+  components: {CircleButtonBox},
+
   data() {
     return {
       data: {
@@ -62,6 +65,9 @@ export default {
     // this.loaded()
   },
   methods: {
+    setPage(index) {
+      return parseInt(index) + 1
+    }
     // loaded() {
     //   let vm = this
     //   apiRouter.getRequest(`https://dev.w2me.ru/api/v1/privacy_statement`).then(function (response) {
@@ -85,19 +91,6 @@ export default {
 
 .card-body
   @extend %default
-
-.btn-circle
-  height: 40px
-  width: 40px
-  border-radius: 50%
-  color: $primary
-  cursor: pointer
-  font-size: $font-size
-  background-color: $second
-  border: 2px solid $second
-
-  &:hover, &.active
-    background-color: $background
 
 .bg-component
   background: $componentColor
