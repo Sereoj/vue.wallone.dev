@@ -1,6 +1,6 @@
 <template>
   <header-view/>
-  <div class="container">
+  <div class="container" style="margin-bottom: calc(100px + 24px);">
 
     <div class="row">
       <sidebar-view class="col-md-4 col-lg-3 col-cxl-2 d-none d-md-block"/>
