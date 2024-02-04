@@ -1,15 +1,20 @@
 <template>
   <div class="row">
     <div class="col-1">
-      <div class="d-flex flex-column gap-3 text-center bg-component align-items-center rounded-4 py-4">
-        <circle-button-box v-for="(item, index) in data?.content" :key="index"
-                           @click="this.pageIndex = index" :class="pageIndex === index ? 'active' : ''"
-                           :title="setPage(index)"/>
+      <div
+          class="d-flex flex-column gap-3 text-center bg-component align-items-center rounded-4 py-4 height-7 overflow-auto">
+        <circle-button-box
+            v-for="(item, index) in data?.content"
+            :key="index"
+            @click="this.pageIndex = index"
+            :class="pageIndex === index ? 'active' : ''"
+            :title="setPage(index)"
+        />
       </div>
     </div>
 
     <div class="col-11">
-      <div class="card p-3">
+      <div class="card p-3 rounded-4 height-7">
         <div v-html="data?.title" class="card-title"></div>
         <div v-html="data?.text" class="mb-4"></div>
         <div class="overflow-auto">
@@ -86,8 +91,8 @@ export default {
   background: $componentColor
   border: 0
 
-.card
-  height: 560px
+.height-7
+  height: 70vh
 
 .card-body
   @extend %default
