@@ -22,6 +22,7 @@ import mainViewImages from "@/pages/images/MainViewImages";
 import categoriesView from "@/pages/categories/CategoriesView";
 import NotFoundView from "@/pages/static/NotFoundView";
 import EmailVerifyView from "@/pages/auth/EmailVerifyView";
+import FeedbackView from "@/pages/static/FeedbackView";
 
 
 const router = createRouter({
@@ -194,6 +195,18 @@ const router = createRouter({
           name: 'AboutView',
           path: '',
           component: AboutView
+        }
+      ]
+    },
+    {
+      path: '/feedback',
+      name: 'Feedback',
+      component: MainLayout,
+      children: [
+        {
+          name: 'FeedbackView',
+          path: '',
+          component: FeedbackView
         }
       ]
     },

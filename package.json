@@ -15,7 +15,6 @@
     "core-js": "^3.8.3",
     "email-validator": "^2.0.4",
     "normalize-scss": "^8.0.0",
-    "pinia": "^2.1.7",
     "vue": "^3.3.11",
     "vue-adblock-detector": "^1.2.4",
     "vue-i18n": "^9.9.0",
