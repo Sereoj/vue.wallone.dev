@@ -40,7 +40,7 @@ export default {
   data(props) {
     return {
       'userSlug': `/profile/${props.user.slug}`,
-      'slug': props.image === 'IMG' ? `/images/${props.image.slug}` : ''
+      'slug': `/images/${props.image.slug}`
     }
   }
 }

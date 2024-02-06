@@ -23,6 +23,7 @@ import categoriesView from "@/pages/categories/CategoriesView";
 import NotFoundView from "@/pages/static/NotFoundView";
 import EmailVerifyView from "@/pages/auth/EmailVerifyView";
 import FeedbackView from "@/pages/static/FeedbackView";
+import postView from "@/pages/posts/PostView";
 
 
 const router = createRouter({
@@ -183,6 +184,18 @@ const router = createRouter({
           name: 'SoonImagesView',
           path: '',
           component: SoonImagesView
+        }
+      ]
+    },
+    {
+      path: '/images/:image',
+      name: 'Post',
+      component: MainLayout,
+      children: [
+        {
+          name: 'postView',
+          path: '',
+          component: postView
         }
       ]
     },
