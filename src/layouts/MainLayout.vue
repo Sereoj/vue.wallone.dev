@@ -5,21 +5,20 @@
     <div class="row">
       <sidebar-view class="col-md-4 col-lg-3 col-cxl-2 d-none d-md-block"/>
       <router-view class="col-md-8 col-lg-9 col-cxl-10"/>
+      <div class="d-md-none mobile-sidebar fs-32">
+        <ul class="d-flex justify-content-between text-center">
+          <li class="nav-item col">
+            <router-link to="/categories" class="nav-link"><i class="i-inline-view-grid"></i></router-link>
+          </li>
+          <li class="nav-item col">
+            <router-link to="/" class="nav-link"><i class="i-inline-view-grid-add"></i></router-link>
+          </li>
+          <li class="nav-item col">
+            <router-link to="/login" class="nav-link"><i class="i-inline-userb"></i></router-link>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="d-md-none mobile-sidebar fs-32">
-    <ul class="d-flex justify-content-between text-center">
-      <li class="nav-item col">
-        <router-link to="/categories" class="nav-link"><i class="i-inline-view-grid"></i></router-link>
-      </li>
-      <li class="nav-item col">
-        <router-link to="/" class="nav-link"><i class="i-inline-view-grid-add"></i></router-link>
-      </li>
-      <li class="nav-item col">
-        <router-link to="/login" class="nav-link"><i class="i-inline-userb"></i></router-link>
-      </li>
-    </ul>
   </div>
 
   <div class="fixed-object d-flex flex-column align-items-end gap-3 d-none">

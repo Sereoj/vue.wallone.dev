@@ -2,8 +2,7 @@
   <div class="row">
     <breadcrumb-box/>
     <p>Привет, user! Возникли вопросы? Наша техподдержка ответить на Ваши вопросы.</p>
-    <textarea>
-    </textarea>
+    <textarea-box name="text" title="Обои"/>
     <combobox>
     </combobox>
     <button-box title="Отправить"/>
@@ -26,10 +25,12 @@
 import ButtonBox from "@/components/elements/ButtonBox";
 import LinkBox from "@/components/elements/LinkBox";
 import BreadcrumbBox from "@/components/elements/BreadcrumbBox";
+import TextareaBox from "@/components/elements/TextareaBox";
 
 export default {
   name: "FeedbackView",
   components: {
+    TextareaBox,
     BreadcrumbBox,
     ButtonBox,
     LinkBox

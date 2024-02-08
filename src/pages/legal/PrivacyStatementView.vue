@@ -1,5 +1,6 @@
 <template>
   <div class="row">
+    <breadcrumb-box/>
     <div class="col-1">
       <div
           class="d-flex flex-column gap-3 text-center bg-component align-items-center rounded-4 py-4 height-7 overflow-auto">
@@ -37,11 +38,12 @@
 import CircleButtonBox from "@/components/elements/CircleButtonBox";
 
 import {useHead} from "@unhead/vue";
+import BreadcrumbBox from "@/components/elements/BreadcrumbBox";
 // import apiRouter from "@/router/api";
 
 export default {
   name: "PrivacyStatementView",
-  components: {CircleButtonBox},
+  components: {BreadcrumbBox, CircleButtonBox},
 
   data() {
     return {

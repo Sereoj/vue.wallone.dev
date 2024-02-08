@@ -1,12 +1,15 @@
 <template>
-  <div>
-    
+  <div class="row">
+    <breadcrumb-box/>
   </div>
 </template>
 
 <script>
+import BreadcrumbBox from "@/components/elements/BreadcrumbBox";
+
 export default {
-  name: "AboutView"
+  name: "AboutView",
+  components: {BreadcrumbBox}
 }
 </script>
 
