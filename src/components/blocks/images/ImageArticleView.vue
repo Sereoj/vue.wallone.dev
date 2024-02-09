@@ -39,7 +39,7 @@ export default {
   },
   data(props) {
     return {
-      'userSlug': `/profile/${props.user.slug}`,
+      'userSlug': `/user/${props.user.slug}`,
       'slug': `/images/${props.image.slug}`
     }
   }

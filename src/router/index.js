@@ -24,6 +24,8 @@ import NotFoundView from "@/pages/static/NotFoundView";
 import EmailVerifyView from "@/pages/auth/EmailVerifyView";
 import FeedbackView from "@/pages/static/FeedbackView";
 import postView from "@/pages/posts/PostView";
+import profileView from "@/pages/profile/ProfileView";
+import profileEditView from "@/pages/profile/ProfileEditView";
 
 
 const router = createRouter({
@@ -196,6 +198,42 @@ const router = createRouter({
           name: 'postView',
           path: '',
           component: postView
+        }
+      ]
+    },
+    {
+      path: '/user',
+      name: 'My profile',
+      component: MainLayout,
+      children: [
+        {
+          name: 'profileView',
+          path: '',
+          component: profileView
+        }
+      ]
+    },
+    {
+      path: '/user/:user',
+      name: 'Other profile',
+      component: MainLayout,
+      children: [
+        {
+          name: 'profileView',
+          path: '',
+          component: profileView
+        }
+      ]
+    },
+    {
+      path: '/user/edit',
+      name: 'Profile Edit',
+      component: MainLayout,
+      children: [
+        {
+          name: 'profileEditView',
+          path: '',
+          component: profileEditView
         }
       ]
     },

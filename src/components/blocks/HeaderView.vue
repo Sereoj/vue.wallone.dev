@@ -4,14 +4,15 @@
       <div class="container align-items-start">
 
         <!--        Это логотип-->
-        <logo-box name="logoBox" class="col-lg-3 col-cxl-2" />
+        <logo-box name="logoBox" class="col-lg-3 col-cxl-2"/>
 
-        <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+        <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
           <span class="i-inline-menu"></span>
         </a>
         <div class="collapse navbar-collapse align-items-start justify-content-between" id="navbarMenu">
 
-          <search-box class="my-3 m-lg-0" />
+          <search-box class="my-3 m-lg-0"/>
 
           <ul class="navbar-nav text-center d-none d-md-flex">
             <li class="nav-item">
@@ -25,16 +26,24 @@
 
           <ul class="navbar-nav text-center d-none d-md-block">
             <li class="nav-item dropdown">
-              <a class="nav-link icon-link dropdown-toggle mb-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link icon-link dropdown-toggle mb-2" href="#" role="button" data-bs-toggle="dropdown"
+                 aria-expanded="false">
                 <i class="i-inline-userb"></i>
                 Профиль
               </a>
               <ul class="dropdown-menu text-center">
-                <li><router-link class="dropdown-item" to="/login" v-if="isAuth">Вход</router-link></li>
-                <li><router-link class="dropdown-item" to="/register" v-if="isAuth">Регистрация</router-link></li>
-
-                <li><router-link class="dropdown-item" to="/profile">Профиль</router-link></li>
-                <li><router-link class="dropdown-item" to="/logout">Выход</router-link></li>
+                <li>
+                  <router-link class="dropdown-item" to="/login">Вход</router-link>
+                </li>
+                <li>
+                  <router-link class="dropdown-item" to="/register">Регистрация</router-link>
+                </li>
+                <li>
+                  <router-link class="dropdown-item" to="/user">Профиль</router-link>
+                </li>
+                <li>
+                  <router-link class="dropdown-item" to="/logout">Выход</router-link>
+                </li>
               </ul>
             </li>
           </ul>
@@ -59,8 +68,4 @@
 <script setup>
 import LogoBox from "@/components/blocks/LogoBox.vue";
 import SearchBox from "@/components/elements/SearchBox";
-
-import { ref } from 'vue';
-
-const isAuth = ref(false);
 </script>
